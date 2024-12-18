@@ -1,5 +1,5 @@
 import React from 'react';
-import './Projects.css';
+import './Projects.css'; // Import the CSS if it exists
 
 function Projects() {
   const projects = [
@@ -21,3 +21,5 @@ function Projects() {
     </section>
   );
 }
+
+export default Projects; // Default export for the component
