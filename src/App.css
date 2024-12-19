@@ -24,8 +24,8 @@
 }
 
 :root {
-  --background-color: #0b0c10;
-  --primary-color: #1f2833;
+  --background-color: #ffffff;
+  --primary-color: #d8dee5;
   --secondary-color: #66fcf1;
   --accent-color: #c5c6c7;
   --text-color: #ffffff;
@@ -38,9 +38,20 @@ body {
   background: linear-gradient(-45deg, #1f2833, #0b0c10, #66fcf1, #c5c6c7);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
-  color: var(--text-color);
+  color: white;
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
