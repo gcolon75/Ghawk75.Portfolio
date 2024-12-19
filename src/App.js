@@ -34,7 +34,12 @@ function App() {
           },
         }}
       />
-      {/* Other components go here */}
+      {/* Include your components here */}
+      <Header />
+      <Hero />
+      <Projects />
+      <About />
+      <Contact />
     </div>
   );
 }
