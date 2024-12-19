@@ -44,7 +44,6 @@ button:hover {
   text-align: center;
   padding: 100px 20px;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
 }
 
 .projects, .about, .contact {
