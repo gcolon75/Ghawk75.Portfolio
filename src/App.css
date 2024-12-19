@@ -1,17 +1,18 @@
 .hero {
   text-align: center;
-  background-color: #f5f5f5;
   padding: 50px;
+  background-color: var(--background-color);
+  color: var(--accent-color);
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin: 10px 0;
+  color: var(--primary-color);
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--secondary-color);
 }
 
 .hero button {
@@ -20,4 +21,34 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+}
+
+:root {
+  --background-color: #0b0c10;
+  --primary-color: #1f2833;
+  --secondary-color: #66fcf1;
+  --accent-color: #c5c6c7;
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(-45deg, #1f2833, #0b0c10, #66fcf1, #c5c6c7);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: var(--text-color);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
