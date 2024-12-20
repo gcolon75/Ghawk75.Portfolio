@@ -15,10 +15,14 @@ function App() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
+        minHeight: '100vh', // Ensures full-height coverage
+        overflow: 'auto',   // Prevents content overflow
       }}
     >
+      {/* Sticky Header */}
       <Header />
-      
+
+      {/* Sections */}
       <Hero />
       <Projects />
       <Flowchart />
