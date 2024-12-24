@@ -1,56 +1,31 @@
-.flowchart {
-  padding: 50px;
+.footer {
   text-align: center;
-}
-
-.flowchart-level {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
   padding: 20px;
-  border: 2px solid #66fcf1;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  transition: transform 0.3s ease;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: relative;
 }
 
-.flowchart-level:hover {
-  transform: scale(1.05);
-}
-
-.flowchart-level.locked {
-  background: rgba(0, 0, 0, 0.4);
-  border: 2px dashed #c5c6c7;
-}
-
-.flowchart-badge {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.flowchart-content h2 {
-  font-size: 1.5rem;
+.footer-icons a {
+  margin: 0 10px;
+  text-decoration: none;
   color: #66fcf1;
-  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-.flowchart-content p {
-  font-size: 1rem;
+.footer-icons a:hover {
   color: #c5c6c7;
 }
 
-.flowchart-arrow {
-  font-size: 30px;
+.back-to-top {
+  display: inline-block;
   margin-top: 10px;
-  animation: bounce 1s infinite;
+  text-decoration: none;
+  color: #66fcf1;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.back-to-top:hover {
+  color: #c5c6c7;
 }
