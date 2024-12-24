@@ -1,22 +1,56 @@
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  padding: 80px 20px;
   text-align: center;
-  min-height: 70vh;
-  color: #66fcf1;
-  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
   padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent box for text */
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 15px;
-  text-shadow: 0 4px 10px rgba(102, 252, 241, 0.7);
+  font-weight: bold;
+  color: #66fcf1; /* Futuristic teal */
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.8), 0 0 20px rgba(102, 252, 241, 0.6);
 }
 
 .hero p {
   font-size: 1.5rem;
-  color: #c5c6c7;
+  color: #c5c6c7; /* Softer secondary color */
+  margin-top: 10px;
+}
+
+.hero-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #66fcf1;
+  border: none;
+  border-radius: 5px;
+  color: #0b0c10;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+  background: #c5c6c7;
+  color: #000;
 }
