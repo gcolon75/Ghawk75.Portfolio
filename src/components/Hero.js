@@ -3,9 +3,11 @@ import './Hero.css';
 
 function Hero() {
   return (
-    <section id="hero" className="hero" data-aos="fade-up">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Exploring futuristic design, tech, and creativity.</p>
+    <section className="hero">
+      <div className="hero-content">
+        <h1>Ghawk75: Exploring Realms of Fantasy, Tech, and the Future</h1>
+        <p>Your guide through the worlds of creativity and innovation.</p>
+      </div>
     </section>
   );
 }

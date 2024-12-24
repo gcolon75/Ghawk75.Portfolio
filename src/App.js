@@ -6,10 +6,9 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Flowchart from './components/Flowchart';
 import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import ContactFooter from './components/ContactFooter';
 import './App.css';
-import backgroundImage from './assets/background.png'; // Import background image
+import backgroundImage from './assets/Background2.png';
 
 function App() {
   useEffect(() => {
@@ -23,7 +22,7 @@ function App() {
   return (
     <div
       style={{
-        backgroundImage: `url(${backgroundImage})`, // Use imported background image
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -34,10 +33,9 @@ function App() {
       <Header />
       <Hero />
       <Projects />
-      <Flowchart />
       <About />
-      <Contact />
-      <Footer />
+      <Flowchart />
+      <ContactFooter />
     </div>
   );
 }

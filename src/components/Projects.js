@@ -5,7 +5,8 @@ function Projects() {
   const projects = [
     { title: "Spotify Redesign", description: "A modern redesign of Spotify's UI.", link: "#" },
     { title: "Game Development Prototype", description: "Unity-based platformer game prototype.", link: "#" },
-    { title: "Portfolio Website", description: "Personal portfolio built with React and CSS.", link: "#" },
+    { title: "TritonGo", description: "Personal portfolio built with React and CSS.", link: "#" },
+    { title: "Volleyball Mobile", description: "Personal portfolio built with React and CSS.", link: "#" }
   ];
 
   return (
