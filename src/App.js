@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
-import Flowchart from './components/Flowchart';
+import Journey from './components/Journey';
 import About from './components/About';
 import ContactFooter from './components/ContactFooter';
 import './App.css';
@@ -13,9 +13,9 @@ import backgroundImage from './assets/Background2.png';
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in ms
-      offset: 100, // Trigger offset
-      once: true, // Only animate once
+      duration: 1000,
+      offset: 100,
+      once: true,
     });
   }, []);
 
@@ -34,7 +34,7 @@ function App() {
       <Hero />
       <Projects />
       <About />
-      <Flowchart />
+      <Journey />
       <ContactFooter />
     </div>
   );

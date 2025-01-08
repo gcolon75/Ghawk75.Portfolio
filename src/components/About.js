@@ -1,14 +1,20 @@
+// About.js
 import React from 'react';
 import './About.css';
 
 function About() {
   return (
-    <section className="about">
-      <h2>My Story</h2>
+    <section id="about" className="about">
+      <h2>About Me</h2>
       <p>
-        I am Gabriel Colon, a UX designer and researcher with a Cognitive Science
-        degree specializing in Design and Interaction from the University of California, 
-        San Diego, which I earned in 2025, along with a minor in Computational Social Science.
+        Hi, I'm Gabriel Colon, a Cognitive Science major specializing in Human Interaction and Design, with a minor in Computational Social Science from UC San Diego. 
+        I'm passionate about the intersection of technology, design, and human behavior, with skills spanning project management, coding (Java, Python, Data Structures), and user experience design.
+      </p>
+      <p>
+        As the Social Chair of the Tritonthenix Calisthenics Club, I've honed skills in event planning, leadership, and teamwork while also expanding my technical abilities through coursework in HCI, data-driven UX design, and cognitive neuroscience.
+      </p>
+      <p>
+        I’m always striving to combine my technical expertise with creative design, hoping to build products and experiences that inspire and empower others. 
       </p>
     </section>
   );
