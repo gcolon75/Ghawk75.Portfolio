@@ -1,45 +1,90 @@
+/* General Styling */
 .journey {
   text-align: center;
-  padding: 40px;
+  padding: 60px 20px;
   color: white;
 }
 
+.journey h2 {
+  font-size: 3rem;
+  color: #66fcf1;
+  margin-bottom: 40px;
+}
+
+/* Carousel Styling */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 10px;
+}
+
+/* Track Holding the Cards */
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Card Styling */
 .journey-card {
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  max-width: 500px;
-  margin: 0 auto;
+  flex: 0 0 70%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid #66fcf1;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.8);
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
-.journey-card:hover {
-  transform: scale(1.05);
+.journey-card.locked {
+  border: 2px dashed #c5c6c7;
+  opacity: 0.5;
 }
 
+/* Icon Styling */
 .journey-icon {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 15px;
 }
 
-.journey-buttons button {
-  margin: 10px;
-  padding: 10px 20px;
-  background: #66fcf1;
+/* Button Styling */
+.carousel-btn {
   border: none;
-  border-radius: 10px;
+  border-radius: 50%;
+  padding: 10px;
   cursor: pointer;
-  font-weight: bold;
-  color: black;
+  font-size: 2rem;
+  background: #66fcf1;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.8);
+  transition: all 0.3s ease;
+  height: 50px;
+  width: 50px;
 }
 
-.journey-buttons button:hover {
+.carousel-btn:hover {
   background: #c5c6c7;
 }
 
-.journey h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #66fcf1;
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Positioning Adjustments */
+.carousel-btn.left {
+  position: absolute;
+  left: -80px;
+}
+
+.carousel-btn.right {
+  position: absolute;
+  right: -80px;
 }
