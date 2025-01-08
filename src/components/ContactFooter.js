@@ -3,6 +3,10 @@ import './ContactFooter.css';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function ContactFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer id="contact" className="contact-footer">
       <h2>Contact Me</h2>
@@ -20,17 +24,20 @@ function ContactFooter() {
           <p>Location: California</p>
         </div>
       </div>
+
       <div className="social-links">
-        <a href="https://www.linkedin.com/in/gcolon75" target="_blank" rel="noopener noreferrer">
+        <a href="https://linkedin.com/in/gcolon75" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" />
         </a>
         <a href="https://github.com/gcolon75" target="_blank" rel="noopener noreferrer">
           <FaGithub className="social-icon" />
         </a>
       </div>
+
+      {/* Working Back to Top Button */}
       <div className="footer-details">
         <p>&copy; 2024 Ghawk75. All Rights Reserved.</p>
-        <a href="#hero" className="back-to-top">Back to Top</a>
+        <button className="back-to-top" onClick={scrollToTop}>Back to Top</button>
       </div>
     </footer>
   );

@@ -1,24 +1,24 @@
 .contact-footer {
-  padding: 50px 20px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 12px;
   color: white;
-  border-radius: 10px;
-  margin-top: 50px;
-  max-width: 800px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  margin: 50px auto;
 }
 
 .contact-footer h2 {
   font-size: 2.5rem;
   color: #66fcf1;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 30px;
 }
 
@@ -39,7 +39,7 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   margin-top: 20px;
 }
 
@@ -50,25 +50,32 @@
 }
 
 .social-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: #c5c6c7;
 }
 
 .footer-details {
   margin-top: 30px;
-  font-size: 0.9rem;
-  color: #c5c6c7;
-}
-
-.footer-details .back-to-top {
-  display: block;
-  margin-top: 10px;
-  color: #66fcf1;
-  text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  color: #c5c6c7;
 }
 
-.footer-details .back-to-top:hover {
-  color: #c5c6c7;
+/* Styling the Back to Top Button */
+.back-to-top {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #66fcf1;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.back-to-top:hover {
+  background: #c5c6c7;
+  color: black;
 }
