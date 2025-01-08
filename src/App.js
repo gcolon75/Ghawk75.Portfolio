@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
-import Journey from './components/Journey';
+import Journey from './components/Journey'; 
 import About from './components/About';
 import ContactFooter from './components/ContactFooter';
 import './App.css';
