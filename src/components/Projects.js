@@ -3,14 +3,16 @@ import './Projects.css';
 
 function Projects() {
   const projects = [
-    { title: "Spotify Redesign", description: "A modern redesign of Spotify's UI.", link: "#" },
-    { title: "Game Development Prototype", description: "Unity-based platformer game prototype.", link: "#" },
-    { title: "TritonGo", description: "Personal portfolio built with React and CSS.", link: "#" },
-    { title: "Volleyball Mobile", description: "Personal portfolio built with React and CSS.", link: "#" }
+    { title: "Spotify Redesign", description: "A modern redesign of Spotify’s UI.", link: "#" },
+    { title: "Game Development Prototype", description: "A Unity-based platformer game.", link: "#" },
+    { title: "TritonGo", description: "A campus-based social mobile game.", link: "#" },
+    { title: "Volleyball Mobile", description: "A mobile app for volleyball game scheduling.", link: "#" },
+    { title: "VR Health Screening", description: "A VR-based mental health screening system.", link: "#" },
+    { title: "Ghawk's Space Adventure", description: "An interactive web-based space game.", link: "#" }
   ];
 
   return (
-    <section id="projects" className="projects">
+    <section className="projects">
       <h2>My Projects</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
