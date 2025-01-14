@@ -83,9 +83,9 @@
 }
 
 /* Position Each Planet Around the Center */
-.orbit-0 { top: 10%; left: 50%; transform: translateX(-50%); }
-.orbit-1 { top: 50%; left: 10%; transform: translateY(-50%); }
-.orbit-2 { top: 50%; right: 10%; transform: translateY(-50%); }
+.orbit-0 { top: 010%; left: 40%; transform: translateX(-50%); }
+.orbit-1 { top: 40%; left: 10%; transform: translateY(-50%); }
+.orbit-2 { top: 40%; right: 10%; transform: translateY(-50%); }
 .orbit-3 { bottom: 10%; left: 25%; }
 .orbit-4 { bottom: 10%; right: 25%; }
 
@@ -95,7 +95,7 @@
     padding: 20px;
     border: 2px solid #66fcf1;
     border-radius: 20px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
     color: white;
     font-size: 1.2rem;
@@ -126,4 +126,19 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Apply Pulse to Planets */
+.orbit-planet {
+    animation: pulseGlow 5s infinite ease-in-out;
+}
+
+/* Floating Effect */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.orbit-planet {
+    animation: float 5s ease-in-out infinite;
 }
