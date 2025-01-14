@@ -1,0 +1,29 @@
+.planet {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff4d4d, #0b0c10);
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.8);
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+}
+
+.planet:hover {
+    box-shadow: 0 0 50px rgba(255, 77, 77, 1);
+    transform: scale(1.2);
+}
+
+.planet.selected {
+    transform: scale(1.5) !important;
+    box-shadow: 0 0 50px #66fcf1;
+    z-index: 3;
+}
+
+.planet-glow {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    line-height: 80px;
+    text-shadow: 0 0 10px white;
+}
