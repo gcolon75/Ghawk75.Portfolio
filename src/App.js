@@ -7,6 +7,8 @@ import Projects from './components/Projects';
 import Journey from './components/Journey'; 
 import About from './components/About';
 import ContactFooter from './components/ContactFooter';
+import SkillTree from './components/SkillTree';
+import Planet from './components/Planet';
 import './App.css';
 import backgroundImage from './assets/Background2.png';
 
