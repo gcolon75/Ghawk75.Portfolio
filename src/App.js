@@ -4,11 +4,9 @@ import 'aos/dist/aos.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
-import Journey from './components/Journey'; 
+import SkillTree from './components/SkillTree'; 
 import About from './components/About';
 import ContactFooter from './components/ContactFooter';
-import SkillTree from './components/SkillTree';
-import Planet from './components/Planet';
 import './App.css';
 import backgroundImage from './assets/Background2.png';
 
@@ -36,7 +34,7 @@ function App() {
       <Hero />
       <Projects />
       <About />
-      <Journey />
+      <SkillTree />
       <ContactFooter />
     </div>
   );

@@ -1,39 +1,110 @@
+/* Styling for the Skill Tree Section */
 .skill-tree {
+    text-align: center;
+    padding: 80px 20px;
+    color: #ffffff;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Matching About Me Section */
+    border: 2px solid #66fcf1;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease-in-out;
+    margin-top: 150px; /* Added space ABOVE Skill Tree */
+}
+
+.skill-tree-title {
+    font-size: 3rem;
+    color: #66fcf1;
+    text-shadow: 0 0 20px rgba(102, 252, 241, 0.8);
+    margin-bottom: 40px;
+}
+
+/* Orbit Container */
+.orbit-container {
     position: relative;
-    height: 100vh;
-    width: 100vw;
-    background: url('../assets/Background2.png') no-repeat center center fixed;
-    background-size: cover;
-    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px;
 }
 
-.center-star {
-    position: absolute;
+/* Center Planet */
+.center-planet {
     width: 150px;
     height: 150px;
+    background: #66fcf1;
     border-radius: 50%;
-    background: radial-gradient(circle, #66fcf1, #1f2833);
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 50px #66fcf1;
-    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 0 50px rgba(102, 252, 241, 1);
+    z-index: 3;
+    position: absolute;
 }
 
-.planet-description {
+/* Orbiting Planets with Fixed Positions */
+.orbiting-planet {
+    width: 100px;
+    height: 100px;
+    background: rgba(102, 252, 241, 0.3);
+    border: 2px solid #66fcf1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
     position: absolute;
-    bottom: 10%;
-    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.8);
+    transition: transform 0.3s ease;
+}
+
+/* Non-overlapping Planet Positions */
+.planet-1 { top: 10%; left: 50%; transform: translateX(-50%); }
+.planet-2 { top: 50%; right: 5%; transform: translateY(-50%); }
+.planet-3 { bottom: 10%; left: 50%; transform: translateX(-50%); }
+.planet-4 { top: 50%; left: 5%; transform: translateY(-50%); }
+.planet-5 { top: 20%; right: 20%; }
+.planet-6 { bottom: 20%; left: 20%; }
+
+/* Hover Effect */
+.orbiting-planet:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px rgba(102, 252, 241, 1);
+}
+
+/* Active Planet */
+.orbiting-planet.active {
+    background: #66fcf1;
+    color: black;
+    transform: scale(1.3);
+}
+
+/* Planet Description Box */
+.planet-description {
+    margin-top: 80px;
     padding: 20px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 0 20px #66fcf1;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    border: 2px solid #66fcf1;
+    box-shadow: 0 0 40px rgba(102, 252, 241, 1);
+    max-width: 400px;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.planet-description h3 {
+    font-size: 2rem;
+    color: #66fcf1;
+    text-shadow: 0 0 20px rgba(102, 252, 241, 1);
 }

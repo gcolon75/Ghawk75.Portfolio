@@ -11,6 +11,7 @@
   box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
   backdrop-filter: blur(10px);
   animation: fadeIn 1.5s ease-in-out;
+  margin-bottom: 150px; /* Added space BELOW About Me */
 }
 
 .about-section h2 {
