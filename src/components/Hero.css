@@ -3,44 +3,65 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 100px;
-  max-width: 1200px;
+  padding: 50px;
+  max-width: 90%;
   margin: auto;
   gap: 50px;
   color: white;
+  position: relative;
 }
 
-/* Left Side Text Styling */
+/* Circle for Text (Kept Original Size) */
+.hero-circle {
+  position: relative;
+  width: 920px;  /* Kept the original circle size */
+  height: 920px; /* Kept the original circle size */
+  border-radius: 50%;
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 50px rgba(102, 252, 241, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 60px; /* Increased padding for better spacing */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Text Inside Circle with Better Spacing */
 .hero-text {
+  text-align: center;
+  max-width: 70%; /* Reduced max width for better centering */
+  z-index: 2;
   color: white;
-  text-align: left;
+  font-size: 2rem;
+  line-height: 2.8rem; /* Adjusted line height for spacing */
 }
 
+/* Title Styling Adjustments */
 .hero-title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
+  line-height: 4.7rem;
   color: #66fcf1;
   text-shadow: 0 0 30px rgba(102, 252, 241, 1);
-  margin-bottom: 20px;
+  margin-bottom: 60px; /* Increased margin for better separation */
 }
 
-.hero-description {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: #c5c6c7;
-}
-
-/* Button Styling */
+/* Button Section Styling */
 .hero-buttons {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
+/* Button Styling (Consistent for Both Buttons) */
 .chat-button {
-  padding: 15px 30px;
+  padding: 15px 35px;
+  font-size: 1.5rem;
   border: none;
   border-radius: 50px;
   background: #66fcf1;
@@ -48,7 +69,7 @@
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 0 25px rgba(102, 252, 241, 1);
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .chat-button:hover {
@@ -56,10 +77,25 @@
   box-shadow: 0 0 40px rgba(255, 255, 255, 1);
 }
 
-.start-link {
-  text-decoration: none;
-  font-size: 1.2rem;
+/* Explore Button Style for Uniqueness */
+.explore-button {
+  background: transparent;
+  border: 2px solid #66fcf1;
   color: #66fcf1;
+}
+
+.explore-button:hover {
+  background: #66fcf1;
+  color: black;
+}
+
+/* Link Styling with Spacing Fix */
+.start-link {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #66fcf1;
+  margin-top: 20px;
+  display: block;
   transition: color 0.3s;
 }
 
@@ -67,25 +103,26 @@
   color: #c5c6c7;
 }
 
-/* Stats Section Styling */
+/* Stats Section Adjusted for Even Spacing */
 .hero-stats {
   display: flex;
-  gap: 40px;
+  justify-content: space-evenly;
+  gap: 25px;
   margin-top: 20px;
 }
 
 .hero-stats h2 {
-  font-size: 2.5rem;
+  font-size: 4rem;
   color: #66fcf1;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 .hero-stats p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #c5c6c7;
 }
 
-/* Right Side Image Styling */
+/* Right Side Image Unchanged */
 .hero-image img {
   max-width: 100%;
   border-radius: 20px;
