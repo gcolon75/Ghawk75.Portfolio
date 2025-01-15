@@ -1,26 +1,35 @@
+/* Header Styling */
 .header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .header ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .header li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  .header a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .header a:hover {
-    text-decoration: underline;
-  }
-  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid #66fcf1;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.8);
+  z-index: 1000;
+}
+
+/* Navigation Styling */
+.header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.header nav ul li {
+  margin: 0 20px;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: #66fcf1;
+  text-shadow: 0 0 15px rgba(102, 252, 241, 1);
+}

@@ -1,0 +1,95 @@
+/* Stack the Sections Instead of Flex Side by Side */
+.about-skill-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout for stacking */
+  gap: 80px; /* Added space between sections for separation */
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%; /* Fixed from 100vw to avoid overflow */
+}
+
+/* Clean Box Styling for Both Sections */
+.about-skill-tree {
+  flex: 1;
+  padding: 50px;
+  border-radius: 20px;
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.7); 
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  min-height: 600px;
+  width: 100%; 
+  max-width: 1200px; /* Center alignment with max width */
+  margin: auto;
+}
+
+/* About Me Paragraph Styling */
+.about-skill-tree p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #d1d1d1;
+  margin-bottom: 20px;
+  max-width: 80%;
+  margin: auto;
+}
+
+/* Skill Tree Container (Centered) */
+.skill-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+
+/* Center Planet Styling */
+.center-planet {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #66fcf1;
+  box-shadow: 0 0 40px rgba(102, 252, 241, 1);
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Surrounding Planets Styling */
+.orbit-planet {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #66fcf1;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #66fcf1;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.orbit-planet:hover {
+  box-shadow: 0 0 50px rgba(102, 252, 241, 1);
+  transform: scale(1.1);
+}
+
+/* Moved the Description Box Lower */
+.description-box {
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid #66fcf1;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 60px;  /* Lowered by increasing margin */
+  max-width: 80%;
+  margin: auto;
+}
