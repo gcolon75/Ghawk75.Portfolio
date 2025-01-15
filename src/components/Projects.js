@@ -12,17 +12,6 @@ function Projects() {
             title: "Spotify Redesign",
             description: "A complete redesign concept for Spotify's mobile app with a focus on user experience.",
             link: "https://docs.google.com/document/d/1tqb9SHftXjbO5D9aDpiCTBFTdf0qve3nVeCdvgrYjcw/edit?usp=sharing"
-        },
-        {
-            title: "TritonGo App",
-            description: "A campus-based social app encouraging in-person interaction and events at UCSD.",
-            link: "https://m5mendez.wixsite.com/triton-go-social"
-        },
-        {
-            title: "Galactic Adventure",
-            description: "An interactive game project in progress using React and Three.js.",
-            link: "#", // Replace with actual link once available
-            inProgress: true
         }
     ];
 
@@ -31,16 +20,12 @@ function Projects() {
             <h2>My Projects</h2>
             <div className="projects-container">
                 {projects.map((project, index) => (
-                    <div key={index} className={`project-card ${project.inProgress ? 'in-progress' : ''}`}>
+                    <div key={index} className="project-card">
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
-                        {project.link !== "#" ? (
-                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                                View Project
-                            </a>
-                        ) : (
-                            <span className="progress-badge">In Progress 🚀</span>
-                        )}
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                            View Project
+                        </a>
                     </div>
                 ))}
             </div>
