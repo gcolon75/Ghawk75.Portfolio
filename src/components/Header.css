@@ -5,39 +5,33 @@
   left: 0;
   width: 100%;
   padding: 20px;
-  backdrop-filter: blur(10px); 
-  background: rgba(0, 0, 0, 0.8); 
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Left-Aligned Logo Styling */
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #66fcf1;
-  text-shadow: 0 0 20px rgba(102, 252, 241, 1);
-  margin-left: 20px;
-}
-
-/* Centering Navigation Links */
-.nav-links {
-  display: flex;
-  justify-content: center;
-  flex: 1; /* Centers the nav links by expanding flex */
-  gap: 30px;
-}
-
-/* Styling for Navigation Links */
-.nav-links a {
+/* Consistent Button Styling for Accessibility */
+.header-button {
   font-size: 1.5rem;
   color: #66fcf1;
+  background: none;
+  border: none;
+  cursor: pointer;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.header-button:hover {
   color: white;
+}
+
+/* Centered Nav Links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 30px;
 }
