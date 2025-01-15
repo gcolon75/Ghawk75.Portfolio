@@ -25,6 +25,9 @@ function App() {
                 minHeight: '100vh',
             }}
         >
+            {/* ✅ Added Header with Blur Effect */}
+            <Header />
+
             {/* ✅ HERO Section */}
             <Hero />
 
@@ -33,7 +36,7 @@ function App() {
                 <Projects />
             </section>
 
-            {/* ✅ About & Skill Tree Section - NOW BELOW PROJECTS */}
+            {/* ✅ About & Skill Tree Section */}
             <section className="centered-section">
                 <AboutSkillTree />
             </section>

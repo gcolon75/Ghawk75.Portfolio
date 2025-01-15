@@ -1,16 +1,15 @@
 /* General Projects Section Styling */
 .projects-section {
   text-align: center;
-  padding: 100px 20px;
+  padding: 20px 20px;
   color: white;
-  max-width: 1400px; /* Ensuring enough space for a 2x2 grid */
+  max-width: 80%px; /* Ensuring enough space for a 2x2 grid */
   margin: auto;
   border-radius: 25px;
   background: rgba(0, 0, 0, 0.85);  
   border: 3px solid #66fcf1;
   box-shadow: 0 0 40px rgba(102, 252, 241, 0.8);
   backdrop-filter: blur(12px);
-  margin-bottom: 40px;
 }
 
 /* 2x2 Grid Layout for Project Cards */

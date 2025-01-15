@@ -1,35 +1,43 @@
-/* Header Styling */
+/* General Header Styling */
 .header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  padding: 20px 0;
-  background: rgba(0, 0, 0, 0.8);
-  border-bottom: 2px solid #66fcf1;
-  box-shadow: 0 0 20px rgba(102, 252, 241, 0.8);
+  padding: 20px;
+  backdrop-filter: blur(10px); 
+  background: rgba(0, 0, 0, 0.8); 
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Navigation Styling */
-.header nav ul {
-  list-style-type: none;
+/* Left-Aligned Logo Styling */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #66fcf1;
+  text-shadow: 0 0 20px rgba(102, 252, 241, 1);
+  margin-left: 20px;
+}
+
+/* Centering Navigation Links */
+.nav-links {
   display: flex;
   justify-content: center;
-  padding: 0;
+  flex: 1; /* Centers the nav links by expanding flex */
+  gap: 30px;
 }
 
-.header nav ul li {
-  margin: 0 20px;
-}
-
-.header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
-
-.header nav ul li a:hover {
+/* Styling for Navigation Links */
+.nav-links a {
+  font-size: 1.5rem;
   color: #66fcf1;
-  text-shadow: 0 0 15px rgba(102, 252, 241, 1);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
 }

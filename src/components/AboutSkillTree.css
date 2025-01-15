@@ -4,7 +4,7 @@
   grid-template-columns: 1fr 1fr; /* Two Equal Columns for About and Skill Tree */
   gap: 80px; /* Space Between Sections */
   padding: 50px;
-  max-width: 2000px;
+  max-width: 80%;
   margin: auto;
   align-items: center;
   box-sizing: border-box;
@@ -63,8 +63,8 @@
 /* Enlarged Skill Tree Container for More Space */
 .skill-container {
   position: relative;
-  width: 1000px; /* Increased Width */
-  height: 800px; /* Increased Height */
+  width: 80%px; /* Increased Width */
+  height: 80%; /* Increased Height */
   margin: auto;
   display: flex;
   justify-content: center;
