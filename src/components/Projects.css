@@ -1,8 +1,8 @@
-/* Styling for the Projects Section (Copied from About Section) */
+/* General Projects Section Styling */
 .projects-section {
   text-align: center;
   padding: 60px 20px;
-  color: #ffffff;
+  color: white;
   max-width: 800px;
   margin: auto;
   border-radius: 20px;
@@ -10,49 +10,44 @@
   border: 2px solid #66fcf1;
   box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
   backdrop-filter: blur(10px);
-  animation: fadeIn 1.5s ease-in-out;
-  margin-bottom: 150px; /* Consistent spacing below */
+  margin-bottom: 150px;
 }
 
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  max-width: 1400px;
-  margin: auto;
-}
-
+/* Project Cards */
 .project-card {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center; /* Centers the text */
-  max-width: 400px;
-  min-width: 300px;
-
-  /* Flexbox added to center content vertically and horizontally */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 300px; /* Fixed height to center content better */
+  text-align: center;
+  width: 300px;
+  margin: 20px;
 }
 
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #66fcf1;
+.project-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(102, 252, 241, 1);
 }
 
-.project-card p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #c5c6c7;
+/* In Progress Badge Styling */
+.project-card.in-progress {
+  border: 2px dashed #ffcc00;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
 }
 
+.progress-badge {
+  display: inline-block;
+  padding: 10px;
+  background: #ffcc00;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Project Link Styling */
 .project-link {
   display: inline-block;
   padding: 10px 15px;
