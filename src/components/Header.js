@@ -4,14 +4,13 @@ import './Header.css';
 function Header() {
     return (
         <header className="header">
-            {/* Left-Aligned Logo */}
-            <div className="logo">Ghawk75</div>
-
-            {/* Centered Navigation */}
+            <div className="logo">
+                <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Ghawk75</a>
+            </div>
             <nav className="nav-links">
-                <a href="#hero">Home</a>
+                <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</a>
                 <a href="#projects">Projects</a>
-                <a href="#skill-tree">Skill Tree</a>
+                <a href="#skilltree">Skill Tree</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
