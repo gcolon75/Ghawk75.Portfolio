@@ -12,20 +12,36 @@ function Projects() {
             title: "Spotify Redesign",
             description: "A complete redesign concept for Spotify's mobile app with a focus on user experience.",
             link: "https://docs.google.com/document/d/1tqb9SHftXjbO5D9aDpiCTBFTdf0qve3nVeCdvgrYjcw/edit?usp=sharing"
-        }
+        },
+        {
+            title: "TritonGo App",
+            description: "A campus-based social app encouraging in-person interaction and events at UCSD.",
+            link: "https://m5mendez.wixsite.com/triton-go-social"
+        },
+        {
+            title: "3 Kingdoms Game",
+            description: "An interactive game project inspired by fantasy worlds, currently in progress using React and Three.js.",
+            link: "#",
+            inProgress: true
+        },
     ];
 
     return (
-        <section className="projects-section">
+        <section id="projects" className="projects-section">
+            {/* Added the id="projects" here for smooth scrolling */}
             <h2>My Projects</h2>
             <div className="projects-container">
                 {projects.map((project, index) => (
-                    <div key={index} className="project-card">
+                    <div key={index} className={`project-card ${project.inProgress ? 'in-progress' : ''}`}>
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                            View Project
-                        </a>
+                        {project.link !== "#" ? (
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                                View Project
+                            </a>
+                        ) : (
+                            <span className="progress-badge">In Progress 🚀</span>
+                        )}
                     </div>
                 ))}
             </div>
