@@ -2,29 +2,50 @@ import React from 'react';
 import './Projects.css';
 
 function Projects() {
-  const projects = [
-    { title: "Spotify Redesign", description: "A modern redesign of Spotify’s UI.", link: "#" },
-    { title: "Game Development Prototype", description: "A Unity-based platformer game.", link: "#" },
-    { title: "TritonGo", description: "A campus-based social mobile game.", link: "#" },
-    { title: "Volleyball Mobile", description: "A mobile app for volleyball game scheduling.", link: "#" },
-    { title: "VR Health Screening", description: "A VR-based mental health screening system.", link: "#" },
-    { title: "Ghawk's Space Adventure", description: "An interactive web-based space game.", link: "#" }
-  ];
+    const projects = [
+        {
+            title: "Volleyball Mobile",
+            description: "A UX/UI design concept for a volleyball app aimed at La Jolla Shores.",
+            link: "https://docs.google.com/presentation/d/1lJ-Y6p10M3ivPvvfhBiTRQJaIojinK-lfXC_VAtoZPk/edit?usp=sharing"
+        },
+        {
+            title: "Spotify Redesign",
+            description: "A complete redesign concept for Spotify's mobile app with a focus on user experience.",
+            link: "https://docs.google.com/document/d/1tqb9SHftXjbO5D9aDpiCTBFTdf0qve3nVeCdvgrYjcw/edit?usp=sharing"
+        },
+        {
+            title: "TritonGo App",
+            description: "A campus-based social app encouraging in-person interaction and events at UCSD.",
+            link: "https://m5mendez.wixsite.com/triton-go-social"
+        },
+        {
+            title: "Galactic Adventure",
+            description: "An interactive game project in progress using React and Three.js.",
+            link: "#", // Replace with actual link once available
+            inProgress: true
+        }
+    ];
 
-  return (
-    <section className="projects">
-      <h2>My Projects</h2>
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} className="project-link">View Project</a>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+    return (
+        <section className="projects-section">
+            <h2>My Projects</h2>
+            <div className="projects-container">
+                {projects.map((project, index) => (
+                    <div key={index} className={`project-card ${project.inProgress ? 'in-progress' : ''}`}>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        {project.link !== "#" ? (
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                                View Project
+                            </a>
+                        ) : (
+                            <span className="progress-badge">In Progress 🚀</span>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
 }
 
 export default Projects;
