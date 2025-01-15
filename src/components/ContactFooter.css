@@ -1,11 +1,11 @@
 .contact-footer {
   text-align: center;
-  padding: 40px;
+  padding: 80px;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 20px;
   color: white;
   box-shadow: 0 0 50px rgba(102, 252, 241, 0.7); /* Added glow effect */
-  max-width: 100%; /* Centering element with reduced width for balance */
+  max-width: 90%; /* Centering element with reduced width for balance */
   margin: auto; /* Centers the entire footer */
   border: 2px solid #66fcf1; /* Subtle border for neon effect */
 }
