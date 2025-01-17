@@ -4,7 +4,8 @@ import 'aos/dist/aos.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
-import AboutSkillTree from './components/AboutSkillTree';
+import About from './components/About';
+import SkillTree from './components/SkillTree';
 import ContactFooter from './components/ContactFooter';
 import './App.css';
 import backgroundImage from './assets/background4.png';
@@ -15,7 +16,7 @@ function App() {
     }, []);
 
     return (
-        <div 
+        <div
             className="App"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
@@ -25,24 +26,20 @@ function App() {
                 minHeight: '100vh',
             }}
         >
-            {/* ✅ Added Header with Blur Effect */}
             <Header />
-
-            {/* ✅ HERO Section */}
             <Hero />
-
-            {/* ✅ Projects Section */}
             <section className="centered-section">
                 <Projects />
             </section>
-
-            {/* ✅ About & Skill Tree Section */}
             <section className="centered-section">
-                <AboutSkillTree />
+                <About />
             </section>
-
-            {/* ✅ Contact Footer Section */}
-            <ContactFooter />
+            <section className="centered-section">
+                <SkillTree />
+            </section>
+            <section className="centered-section">
+                <ContactFooter />
+            </section>
         </div>
     );
 }

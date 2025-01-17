@@ -1,10 +1,10 @@
-/* General Hero Section Styling (Scaled Down) */
+/* General Hero Section Styling */
 .hero {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
-  padding: 2.5%;  /* Reduced padding */
+  padding: 2.5%;
   max-width: 90%;
   margin: auto;
   gap: 2.5%;
@@ -12,11 +12,11 @@
   position: relative;
 }
 
-/* Circle for Text (Reduced Size) */
+/* Hero Circle (Ensures Content Fits Properly) */
 .hero-circle {
   position: relative;
-  width: 45vw;  /* Reduced Circle Size */
-  height: 45vw; 
+  width: clamp(280px, 50vw, 600px);
+  height: clamp(280px, 50vw, 600px);
   border-radius: 50%;
   border: 2px solid #66fcf1;
   box-shadow: 0 0 2.5vw rgba(102, 252, 241, 0.7);
@@ -28,51 +28,60 @@
   padding: 3%;
   box-sizing: border-box;
   text-align: center;
+  overflow: hidden;
 }
 
-/* Text Inside Circle (Scaled Down) */
-.hero-text {
-  text-align: center;
-  max-width: 80%; 
-  z-index: 2;
-  color: white;
-  font-size: 1.5vw;  /* Smaller Font */
-  line-height: 2vw;
-}
-
-/* Title Styling Adjustments (Smaller Font) */
+/* Title Inside Circle */
 .hero-title {
-  font-size: 3vw;  /* Reduced Title Size */
+  font-size: clamp(1.3rem, 2.2vw, 2.5rem);
   font-weight: bold;
-  line-height: 3vw;
+  line-height: 1.2;
   color: #66fcf1;
   text-shadow: 0 0 2vw rgba(102, 252, 241, 1);
-  margin-bottom: 3%;
+  margin-bottom: 2%;
 }
 
-/* Button Section Styling (Increased Space Between Buttons) */
+/* Text Inside Circle */
+.hero-text {
+  max-width: 85%;
+  z-index: 2;
+  color: white;
+  font-size: clamp(0.9rem, 1vw, 1.3rem);
+  line-height: clamp(1.1rem, 1.4vw, 1.6rem);
+  overflow-wrap: break-word;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+/* Button Section */
 .hero-buttons {
   display: flex;
-  flex-direction: column;  /* Stack the buttons vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;  /* Increased gap for more spacing */
-  margin-top: 5%;
+  gap: 8px;
+  margin-top: 2%;
 }
 
-/* Adjust individual button spacing for more control */
-.chat-button {
-  padding: 15px 35px;
-  font-size: 1.2rem;
-  border: none;
+/* Adjust Button Sizing */
+.chat-button, 
+.explore-button {
+  padding: clamp(8px, 1.8vw, 12px) clamp(15px, 3.5vw, 30px);
+  font-size: clamp(0.8rem, 1vw, 1rem);
   border-radius: 50px;
+  box-shadow: 0 0 15px rgba(102, 252, 241, 1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Contact Button */
+.chat-button {
   background: #66fcf1;
   color: black;
+  border: none;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 25px rgba(102, 252, 241, 1);
   transition: all 0.3s ease;
-  margin-bottom: 20px; /* Added space below the first button */
 }
 
 .chat-button:hover {
@@ -80,13 +89,11 @@
   box-shadow: 0 0 2vw rgba(255, 255, 255, 1);
 }
 
-/* Explore Button Styling (Scaled Down) */
+/* Explore Button */
 .explore-button {
   background: transparent;
   border: 2px solid #66fcf1;
   color: #66fcf1;
-  padding: 3% 3%;
-  font-size: 1.2vw;
 }
 
 .explore-button:hover {
@@ -94,28 +101,65 @@
   color: black;
 }
 
-/* Stats Section Adjusted for Even Spacing (Reduced Size) */
+/* Stats Section (Problems & Solutions Side by Side) */
 .hero-stats {
   display: flex;
-  justify-content: space-evenly;
-  gap: 2.5%;
+  justify-content: center;
+  gap: 5vw; /* Space between elements */
   margin-top: 3%;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
-.hero-stats h2 {
-  font-size: 2vw;  /* Smaller Font Size */
+/* Individual Stat Blocks */
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-stat h2 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
   color: #66fcf1;
-  margin-bottom: 1vw;
+  margin-bottom: 0.5vw;
 }
 
-.hero-stats p {
-  font-size: 1vw;
+.hero-stat p {
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
   color: #c5c6c7;
 }
 
-/* Right Side Image Adjusted (Kept Proportional) */
+/* Hero Image */
 .hero-image img {
   max-width: 100%;
   border-radius: 20px;
   box-shadow: 0 0 2vw rgba(102, 252, 241, 0.7);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .hero {
+    padding: 5%;
+  }
+
+  .hero-circle {
+    width: 95vw;
+    height: 95vw;
+  }
+
+  .hero-buttons {
+    gap: 5px;
+  }
+
+  .hero-text {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 3vw;
+  }
 }

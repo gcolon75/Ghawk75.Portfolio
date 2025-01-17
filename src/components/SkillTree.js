@@ -2,39 +2,53 @@ import React, { useState } from 'react';
 import './SkillTree.css';
 
 function SkillTree() {
-    const [selectedPlanet, setSelectedPlanet] = useState(null);
+    const [selectedPlanetIndex, setSelectedPlanetIndex] = useState(null);
 
     const planets = [
         { name: "Game", description: "Exploring gaming concepts and design." },
         { name: "Coding", description: "Expanding coding knowledge and skills." },
         { name: "UX", description: "Focusing on UX design principles and user experience." },
-        { name: "Design", description: "Creating visually engaging designs and prototypes." },
-        { name: "Development", description: "Building projects using development frameworks." }
+        { name: "Cognitive Science", description: "Creating visually engaging designs and prototypes." },
+        { name: "Development", description: "Building projects using development frameworks." },
+        { name: "Design", description: "Placeholder for AI concepts." },
+        { name: "Neuroscience", description: "Placeholder for animation techniques." },
+        { name: "Research", description: "Placeholder for virtual reality projects." },
+        { name: "Project Management", description: "Placeholder for web development projects." },
+        { name: "HCI", description: "Placeholder for mobile app development." },
     ];
 
     return (
-        <section className="skill-tree">
+        <div className="skill-tree-section">
             <h2>My Skill Tree</h2>
             <div className="skill-container">
-                {/* Center Planet */}
-                <div className="center-planet">Future</div>
+                {planets.map((planet, index) => (
+                    <React.Fragment key={index}>
+                        {/* Planet */}
+                        <div
+                            className={`orbit-planet orbit-${index} ${
+                                selectedPlanetIndex === index ? 'selected' : ''
+                            }`}
+                            onClick={() => setSelectedPlanetIndex(index)}
+                        >
+                            {planet.name}
+                        </div>
 
-                {/* Surrounding Planets (Static) */}
-                <div className="orbit-planet orbit-0" onClick={() => setSelectedPlanet(planets[0])}>Game</div>
-                <div className="orbit-planet orbit-1" onClick={() => setSelectedPlanet(planets[1])}>Coding</div>
-                <div className="orbit-planet orbit-2" onClick={() => setSelectedPlanet(planets[2])}>UX</div>
-                <div className="orbit-planet orbit-3" onClick={() => setSelectedPlanet(planets[3])}>Design</div>
-                <div className="orbit-planet orbit-4" onClick={() => setSelectedPlanet(planets[4])}>Development</div>
+                        {/* Connection Line */}
+                        {index < planets.length - 1 && (
+                            <div className={`connection-line line-${index}`}></div>
+                        )}
+                    </React.Fragment>
+                ))}
             </div>
 
-            {/* Selected Planet Description Box */}
-            {selectedPlanet && (
+            {/* Description Box */}
+            {selectedPlanetIndex !== null && (
                 <div className="description-box">
-                    <h3>{selectedPlanet.name}</h3>
-                    <p>{selectedPlanet.description}</p>
+                    <h3>{planets[selectedPlanetIndex].name}</h3>
+                    <p>{planets[selectedPlanetIndex].description}</p>
                 </div>
             )}
-        </section>
+        </div>
     );
 }
 

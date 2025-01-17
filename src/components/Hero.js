@@ -5,9 +5,9 @@ function Hero() {
     return (
         <section className="hero">
             <div className="hero-circle">
-                <h1 className="hero-title">Ghawk75</h1>
+                <h1 className="hero-title">Gabriel Colón</h1>
                 <p className="hero-text">
-                    Exploring creativity, design, and the infinite possibilities of the universe through Design.
+                    Exploring creativity, design, and the infinite possibilities of the universe through code and storytelling.
                 </p>
                 <div className="hero-buttons">
                     <a href="#contact" className="chat-button">Contact Me</a>
