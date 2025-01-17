@@ -28,7 +28,6 @@ function Projects() {
 
     return (
         <section id="projects" className="projects-section">
-            {/* Added the id="projects" here for smooth scrolling */}
             <h2>My Projects</h2>
             <div className="projects-container">
                 {projects.map((project, index) => (
@@ -40,7 +39,9 @@ function Projects() {
                                 View Project
                             </a>
                         ) : (
-                            <span className="progress-badge">In Progress 🚀</span>
+                            <span className="progress-badge">
+                                In Progress <span role="img" aria-label="rocket">🚀</span>
+                            </span>
                         )}
                     </div>
                 ))}
