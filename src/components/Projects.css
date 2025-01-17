@@ -1,39 +1,43 @@
 /* General Projects Section Styling */
 .projects-section {
   text-align: center;
-  padding: 20px 20px;
+  padding: clamp(15px, 3vw, 20px);
   color: white;
-  max-width: 80%px; /* Ensuring enough space for a 2x2 grid */
+  max-width: 80%;
   margin: auto;
   border-radius: 25px;
-  background: rgba(0, 0, 0, 0.85);  
+  background: rgba(0, 0, 0, 0.85);
   border: 3px solid #66fcf1;
   box-shadow: 0 0 40px rgba(102, 252, 241, 0.8);
   backdrop-filter: blur(12px);
+  overflow: hidden; /* Prevents boxes from expanding outside */
 }
 
-/* 2x2 Grid Layout for Project Cards */
+/* Responsive Grid for Projects */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 Columns for a 2x2 Layout */
-  gap: 50px;
+  grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Always 2x2 unless too small */
+  gap: clamp(20px, 3vw, 50px);
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: clamp(10px, 2vw, 20px);
+  max-width: 100%; /* Ensures the grid never expands past container */
+  overflow: hidden; /* Prevents project cards from pushing out */
 }
 
 /* Project Cards Styling */
 .project-card {
   background: rgba(0, 0, 0, 0.95);
-  padding: 40px;
+  padding: clamp(20px, 3vw, 40px);
   border-radius: 20px;
   border: 3px solid #66fcf1;
   box-shadow: 0 0 35px rgba(102, 252, 241, 0.9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  width: 100%; 
-  max-width: 500px; /* Keeping cards large but balanced */
+  width: 100%;
+  max-width: 430px; /* Slightly reduced max-width to fit better */
   margin: auto;
+  overflow: hidden; /* Ensures no overflow inside cards */
 }
 
 .project-card:hover {
@@ -47,32 +51,25 @@
   box-shadow: 0 0 40px rgba(255, 204, 0, 0.9);
 }
 
-.progress-badge {
-  display: inline-block;
-  padding: 12px;
-  background: #ffcc00;
-  color: black;
-  border-radius: 12px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 15px;
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .projects-section {
+    max-width: 95%;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Maintains 2x2 unless screen is too small */
+    gap: 20px;
+  }
+
+  .project-card {
+    max-width: 90%; /* Keep cards readable on small screens */
+  }
 }
 
-/* Project Link Styling */
-.project-link {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 1.2rem;
-  background-color: #66fcf1;
-  color: black;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
-}
-
-.project-link:hover {
-  background-color: #c5c6c7;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+/* Force 1x2 Layout if the screen is very narrow */
+@media (max-width: 480px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Forces a single column on very small screens */
+  }
 }

@@ -1,18 +1,18 @@
 .contact-footer {
   text-align: center;
-  padding: 80px;
+  padding: clamp(40px, 10vw, 80px); /* Responsive padding */
   background: rgba(0, 0, 0, 0.9);
   border-radius: 20px;
   color: white;
-  box-shadow: 0 0 50px rgba(102, 252, 241, 0.7); /* Added glow effect */
-  max-width: 90%; /* Centering element with reduced width for balance */
-  margin: auto; /* Centers the entire footer */
-  border: 2px solid #66fcf1; /* Subtle border for neon effect */
+  box-shadow: 0 0 50px rgba(102, 252, 241, 0.7);
+  max-width: 90%;
+  margin: auto;
+  border: 2px solid #66fcf1;
 }
 
 /* Title Styling with Glow Effect */
 .contact-footer h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   color: #66fcf1;
   text-shadow: 0 0 30px rgba(102, 252, 241, 1);
   margin-bottom: 20px;
@@ -30,24 +30,26 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
   color: #c5c6c7;
+  flex-wrap: wrap; /* Ensures it wraps on smaller screens */
 }
 
 .contact-icon {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
   color: #66fcf1;
 }
 
+/* Social Media Links */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: clamp(15px, 4vw, 25px); /* Dynamic spacing */
   margin-top: 20px;
 }
 
 .social-icon {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   color: #66fcf1;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -59,7 +61,7 @@
 
 .footer-details {
   margin-top: 30px;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1vw, 1rem);
   color: #c5c6c7;
 }
 
@@ -67,19 +69,36 @@
 .back-to-top {
   display: inline-block;
   margin-top: 20px;
-  padding: 15px 25px;
+  padding: clamp(10px, 3vw, 15px) clamp(15px, 5vw, 25px);
   background: #66fcf1;
   color: black;
   border: none;
   border-radius: 15px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.2rem;
-  box-shadow: 0 0 20px rgba(102, 252, 241, 0.9); /* Glowing effect added */
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.9);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .back-to-top:hover {
   background: #c5c6c7;
   color: black;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .contact-footer {
+    width: 95%;
+    padding: 50px; /* Slightly reduced padding for mobile */
+  }
+
+  .contact-item {
+    flex-direction: column; /* Stack items for better readability */
+    text-align: center;
+  }
+
+  .social-links {
+    flex-wrap: wrap; /* Allows social icons to wrap */
+  }
 }

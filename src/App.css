@@ -47,13 +47,11 @@ body, html {
   padding: 50px;
 }
 
-/* General Section Layout */
 .centered-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 50px 0; /* Add vertical spacing */
   width: 100%;
   box-sizing: border-box;
 }
-
