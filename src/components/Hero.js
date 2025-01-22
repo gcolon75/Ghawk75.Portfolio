@@ -13,15 +13,17 @@ function Hero() {
                     <a href="#contact" className="chat-button">Contact Me</a>
                     <a href="#projects" className="explore-button">Explore my Projects</a>
                 </div>
-                <div className="hero-stats">
-                    <div>
-                        <h2>100%</h2>
-                        <p>Committed to Problem Solving</p>
-                    </div>
-                    <div>
-                        <h2>∞</h2>
-                        <p>Problems to Solve</p>
-                    </div>
+            </div>
+            
+            {/* New Stats Circle */}
+            <div className="hero-stats-circle">
+                <div className="hero-stat">
+                    <h2>100%</h2>
+                    <p>Committed to Problem Solving</p>
+                </div>
+                <div className="hero-stat">
+                    <h2>∞</h2>
+                    <p>Problems to Solve</p>
                 </div>
             </div>
         </section>

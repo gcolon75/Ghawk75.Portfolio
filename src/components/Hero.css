@@ -1,22 +1,64 @@
-/* General Hero Section Styling */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
-  padding: 2.5%;
-  max-width: 90%;
-  margin: auto;
-  gap: 2.5%;
-  color: white;
-  position: relative;
+/* General Reset for Consistency */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Hero Circle (Ensures Content Fits Properly) */
+/* Hero Section Full Width */
+.hero {
+  grid-row: 1;
+  width: 100%;
+  height: auto;
+  min-height: 140vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7%;
+  gap: 2rem; /* Ensures spacing between elements */
+}
+
 .hero-circle {
+  width: clamp(230px, 50vw, 450px);
+  height: clamp(230px, 50vw, 450px);
+  border-radius: 50%;
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 2.5vw rgba(102, 252, 241, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 5%; /* Adjust padding to use % */
+  text-align: center;
   position: relative;
-  width: clamp(280px, 50vw, 600px);
-  height: clamp(280px, 50vw, 600px);
+  overflow: hidden;
+  right: clamp(10%, -10vw, -25%);
+  margin-top: clamp(-100%, -5vw, -100%);
+}
+
+.hero-title {
+  font-size: clamp(1.1rem, 3.5vw, 2.7rem); /* Slightly reduced */
+  font-weight: bold;
+  color: #66fcf1;
+  text-shadow: 0 0 2vw rgba(102, 252, 241, 1);
+  margin-bottom: 2.5%;
+}
+
+.hero-text {
+  font-size: clamp(0.85rem, 2.8vw, 1.6rem); /* Slightly smaller */
+  max-width: 85%;
+  line-height: 1.4;
+  text-align: center;
+  color: white;
+}
+
+
+/* Stats Circle */
+.hero-stats-circle {
+  width: clamp(150px, 30vw, 250px);
+  height: clamp(150px, 30vw, 250px);
   border-radius: 50%;
   border: 2px solid #66fcf1;
   box-shadow: 0 0 2.5vw rgba(102, 252, 241, 0.7);
@@ -26,55 +68,83 @@
   align-items: center;
   background: rgba(0, 0, 0, 0.9);
   padding: 3%;
-  box-sizing: border-box;
   text-align: center;
-  overflow: hidden;
+  position: absolute;
+  width: clamp(150px, 30vw, 250px);
+  height: clamp(150px, 30vw, 250px);
+  position: absolute;
+  right: clamp(35%, -10vw, -25%);
+  bottom: clamp(2%, 40vw, -30%); /* Moves it up higher */
 }
 
-/* Title Inside Circle */
-.hero-title {
-  font-size: clamp(1.3rem, 2.2vw, 2.5rem);
-  font-weight: bold;
-  line-height: 1.2;
-  color: #66fcf1;
-  text-shadow: 0 0 2vw rgba(102, 252, 241, 1);
-  margin-bottom: 2%;
-}
-
-/* Text Inside Circle */
-.hero-text {
-  max-width: 85%;
-  z-index: 2;
+/* Stats Section (Problems & Solutions Side by Side) */
+.hero-stats {
   color: white;
-  font-size: clamp(0.9rem, 1vw, 1.3rem);
-  line-height: clamp(1.1rem, 1.4vw, 1.6rem);
-  overflow-wrap: break-word;
+  display: flex;
+  justify-content: space-between;
+  width: clamp(50%, 70vw, 80%);
+  padding: 2.5%;
+  margin-top: 2%;
+  align-items: center;
   text-align: center;
-  margin-bottom: 5%;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: clamp(5%, 8vw, 10%);
 }
 
-/* Button Section */
-.hero-buttons {
+/* Individual Stat Blocks */
+.hero-stat {
+  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 8px;
-  margin-top: 2%;
+  justify-content: center;
 }
 
-/* Adjust Button Sizing */
-.chat-button, 
-.explore-button {
-  padding: clamp(8px, 1.8vw, 12px) clamp(15px, 3.5vw, 30px);
-  font-size: clamp(0.8rem, 1vw, 1rem);
+/* Fixes Text Spacing */
+.hero-stats-circle p {
+  margin: 0; /* Removes default margin */
+}
+
+.hero-stats-circle .stat-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem; /* Small gap below */
+}
+
+.hero-stats-circle .stat-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1rem; /* Adds bigger gap between the two sections */
+}
+
+.hero-stats-circle .stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem; /* Small gap below */
+}
+
+/* Buttons inside hero-circle */
+/* Buttons inside hero-circle */
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  margin-top: 5.5%; /* Minor reduction */
+  width: 80%; /* Keeps buttons aligned properly */
+  justify-content: center;
+}
+
+.hero-buttons a {
+  padding: clamp(7px, 0.9vw, 11px) clamp(14px, 1.8vw, 18px); /* Slightly smaller buttons */
+  font-size: clamp(0.85rem, 1.3vw, 1.3rem); /* Tiny reduction */
   border-radius: 50px;
-  box-shadow: 0 0 15px rgba(102, 252, 241, 1);
+  box-shadow: 0 0 12px rgba(102, 252, 241, 1);
   text-align: center;
   white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* Contact Button */
 .chat-button {
   background: #66fcf1;
   color: black;
@@ -89,11 +159,11 @@
   box-shadow: 0 0 2vw rgba(255, 255, 255, 1);
 }
 
-/* Explore Button */
 .explore-button {
   background: transparent;
   border: 2px solid #66fcf1;
   color: #66fcf1;
+  cursor: pointer;
 }
 
 .explore-button:hover {
@@ -101,65 +171,71 @@
   color: black;
 }
 
-/* Stats Section (Problems & Solutions Side by Side) */
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 5vw; /* Space between elements */
-  margin-top: 3%;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-}
-
-/* Individual Stat Blocks */
-.hero-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-stat h2 {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  color: #66fcf1;
-  margin-bottom: 0.5vw;
-}
-
-.hero-stat p {
-  font-size: clamp(0.9rem, 1vw, 1.2rem);
-  color: #c5c6c7;
-}
-
-/* Hero Image */
-.hero-image img {
-  max-width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 2vw rgba(102, 252, 241, 0.7);
-}
-
-/* Mobile Adjustments */
-@media (max-width: 600px) {
+/* Adjust Hero Layout for Mid-Sized Screens (Half-Screen Fix) */
+@media (max-width: 1024px) { 
   .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
     padding: 5%;
   }
 
   .hero-circle {
-    width: 95vw;
-    height: 95vw;
+    width: clamp(150px, max(30vw, 35%), 350px); /* Dynamic scaling */
+    height: clamp(150px, max(30vw, 35%), 350px);
+  }
+
+  .hero-stats-circle {
+    width: clamp(100px, max(20vw, 25%), 200px);
+    height: clamp(100px, max(20vw, 25%), 200px);
+    margin-top: 2%;
+    right: auto; /* Reset positioning */
+    bottom: auto;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6%;
+    gap: 4%;
+  }
+
+  .hero-circle {
+    width: clamp(120px, max(40vw, 45%), 300px);
+    height: clamp(120px, max(40vw, 45%), 300px);
   }
 
   .hero-buttons {
-    gap: 5px;
+    flex-direction: column;
+    gap: 5%;
   }
 
   .hero-text {
-    font-size: 0.9rem;
-    line-height: 1.3rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 90%;
   }
 
   .hero-stats {
     flex-direction: column;
-    gap: 3vw;
+    align-items: center;
+    padding: 0;
+    bottom: auto;
+    text-align: center;
+    width: 100%;
+    gap: 5%;
+  }
+
+  .hero-stats-circle {
+    width: clamp(80px, max(25vw, 30%), 180px);
+    height: clamp(80px, max(25vw, 30%), 180px);
+    margin-top: 3%;
   }
 }
