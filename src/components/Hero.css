@@ -72,7 +72,7 @@ body, html {
   text-align: center;
   position: absolute;
   position: absolute;
-  right: clamp(45%, -10vw, -25%);
+  right: clamp(35%, -10vw, -25%);
   bottom: clamp(2%, 40vw, -30%); /* Moves it up higher */
 }
 
