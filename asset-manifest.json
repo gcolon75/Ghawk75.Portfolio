@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Ghawk75.Portfolio/static/css/main.2d5b455e.chunk.css",
+    "main.css": "/Ghawk75.Portfolio/static/css/main.79e341b5.chunk.css",
     "main.js": "/Ghawk75.Portfolio/static/js/main.827c6809.chunk.js",
     "main.js.map": "/Ghawk75.Portfolio/static/js/main.827c6809.chunk.js.map",
     "runtime~main.js": "/Ghawk75.Portfolio/static/js/runtime~main.92eee0a4.js",
@@ -11,10 +11,10 @@
     "static/js/3.d2763252.chunk.js": "/Ghawk75.Portfolio/static/js/3.d2763252.chunk.js",
     "static/js/3.d2763252.chunk.js.map": "/Ghawk75.Portfolio/static/js/3.d2763252.chunk.js.map",
     "index.html": "/Ghawk75.Portfolio/index.html",
-    "precache-manifest.a5253187a945eaaddde2cf386a5bf89f.js": "/Ghawk75.Portfolio/precache-manifest.a5253187a945eaaddde2cf386a5bf89f.js",
+    "precache-manifest.60079207202c59f0ec205a55c4e2ad5d.js": "/Ghawk75.Portfolio/precache-manifest.60079207202c59f0ec205a55c4e2ad5d.js",
     "service-worker.js": "/Ghawk75.Portfolio/service-worker.js",
     "static/css/2.4707e12a.chunk.css.map": "/Ghawk75.Portfolio/static/css/2.4707e12a.chunk.css.map",
-    "static/css/main.2d5b455e.chunk.css.map": "/Ghawk75.Portfolio/static/css/main.2d5b455e.chunk.css.map",
+    "static/css/main.79e341b5.chunk.css.map": "/Ghawk75.Portfolio/static/css/main.79e341b5.chunk.css.map",
     "static/media/background4.png": "/Ghawk75.Portfolio/static/media/background4.9548de3a.png"
   }
 }
