@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactFooter.css';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 
 function ContactFooter() {
   const scrollToTop = () => {
@@ -26,11 +26,14 @@ function ContactFooter() {
       </div>
 
       <div className="social-links">
-        <a href="https://linkedin.com/in/gcolon75" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/gabriel-colon-3b4487253/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" />
         </a>
         <a href="https://github.com/gcolon75" target="_blank" rel="noopener noreferrer">
           <FaGithub className="social-icon" />
+        </a>
+        <a href="https://gcolon75.github.io/Ghawk75.Portfolio/" target="_blank" rel="noopener noreferrer">
+          <FaGlobe className="social-icon" title="Portfolio" />
         </a>
       </div>
 
