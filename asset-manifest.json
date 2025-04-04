@@ -1,21 +1,28 @@
 {
   "files": {
-    "main.css": "/Ghawk75.Portfolio/static/css/main.8068d1ec.css",
-    "main.js": "/Ghawk75.Portfolio/static/js/main.d47ac655.js",
+    "main.css": "/Ghawk75.Portfolio/static/css/main.19367dee.css",
+    "main.js": "/Ghawk75.Portfolio/static/js/main.8169b404.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
+    "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
+    "static/media/GoaleeDemo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeDemo.95e4b85185d1b526e225.mp4",
     "static/media/axle-slides.pdf": "/Ghawk75.Portfolio/static/media/axle-slides.cd20ab0212c89a3f33bf.pdf",
+    "static/media/Volleyball Mobile.pdf": "/Ghawk75.Portfolio/static/media/Volleyball Mobile.8d0a2a3679656ce88d45.pdf",
+    "static/media/GoaleePoster.jpg": "/Ghawk75.Portfolio/static/media/GoaleePoster.7ea86d93b66422e23417.jpg",
     "static/media/background4.png": "/Ghawk75.Portfolio/static/media/background4.fafa460dbf3925bc1ae1.png",
     "static/media/axle-becomeMechanic.JPG": "/Ghawk75.Portfolio/static/media/axle-becomeMechanic.80d60e7448d4d2065636.JPG",
+    "static/media/VolleyballMobileTitle.JPG": "/Ghawk75.Portfolio/static/media/VolleyballMobileTitle.e2b807f25abddc668811.JPG",
     "static/media/axle-about.JPG": "/Ghawk75.Portfolio/static/media/axle-about.2f74a6887b9555cca92d.JPG",
     "static/media/axle-homepage.JPG": "/Ghawk75.Portfolio/static/media/axle-homepage.ee36c3842db8d31efe81.JPG",
     "static/media/axleImage.JPG": "/Ghawk75.Portfolio/static/media/axleImage.ec94159a12cbf716a0f7.JPG",
+    "static/media/TritonGoTitle.JPG": "/Ghawk75.Portfolio/static/media/TritonGoTitle.4e88d7e0dec8de7ac84e.JPG",
+    "static/media/GoaleeHomescreen.JPG": "/Ghawk75.Portfolio/static/media/GoaleeHomescreen.893007f302b24bd89a47.JPG",
     "index.html": "/Ghawk75.Portfolio/index.html",
-    "main.8068d1ec.css.map": "/Ghawk75.Portfolio/static/css/main.8068d1ec.css.map",
-    "main.d47ac655.js.map": "/Ghawk75.Portfolio/static/js/main.d47ac655.js.map",
+    "main.19367dee.css.map": "/Ghawk75.Portfolio/static/css/main.19367dee.css.map",
+    "main.8169b404.js.map": "/Ghawk75.Portfolio/static/js/main.8169b404.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8068d1ec.css",
-    "static/js/main.d47ac655.js"
+    "static/css/main.19367dee.css",
+    "static/js/main.8169b404.js"
   ]
 }
