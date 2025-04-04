@@ -39,7 +39,7 @@ function ContactFooter() {
 
       {/* Working Back to Top Button */}
       <div className="footer-details">
-        <p>&copy; 2024 Ghawk75. All Rights Reserved.</p>
+        <p>&copy; 2025 Ghawk75. All Rights Reserved.</p>
         <button className="back-to-top" onClick={scrollToTop}>Back to Top</button>
       </div>
     </footer>

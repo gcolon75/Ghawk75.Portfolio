@@ -54,8 +54,8 @@ function App() {
           {/* Individual Project Pages */}
           <Route path="/projects/axle" element={<Project1Page />} />
           <Route path="/projects/goalee" element={<Project2Page />} />
-          <Route path="/projects/volleyball" element={<Project3Page />} />
-          <Route path="/projects/tritongoplus" element={<Project4Page />} />
+          <Route path="/projects/volleyball" element={<Project4Page />} />
+          <Route path="/projects/tritongoplus" element={<Project3Page />} />
 
           {/* Fallback Route */}
           <Route path="*" element={<h1 style={{ color: 'white', textAlign: 'center', padding: '4rem' }}>404 – Page Not Found</h1>} />

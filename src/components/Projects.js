@@ -14,15 +14,16 @@ function Projects() {
             description: "A campus-based social app encouraging in-person interaction and events at UCSD.",
             internalLink: "/projects/goalee"
         },
-        {
-            title: "Volleyball Mobile",
-            description: "A UX/UI design concept for a volleyball app aimed at La Jolla Shores.",
-            internalLink: "/projects/volleyball"
-        },
+        
         {
             title: "TritonGo App",
             description: "A campus-based social app encouraging in-person interaction and events at UCSD.",
             internalLink: "/projects/tritongoplus"
+        },
+        {
+            title: "Volleyball Mobile",
+            description: "A UX/UI design concept for a volleyball app aimed at La Jolla Shores.",
+            internalLink: "/projects/volleyball"
         },
         {
             title: "3 Kingdoms Game",
