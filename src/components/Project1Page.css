@@ -1,0 +1,283 @@
+/* ----------------------------------- */
+/* 🔷 Main Content Card (Project Info) */
+/* ----------------------------------- */
+.project-page {
+    color: white;
+    padding: 4vh 5vw;               /* ⬅️ Better scaling top/bottom + sides */
+    margin: 5vh auto 2vh auto;      /* ⬅️ Balanced margin, keeps it centered */
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    border: 2px solid #66fcf1;
+    box-shadow: 0 0 30px rgba(102, 252, 241, 0.7);
+    text-align: center;
+    max-width: 1200px;              /* ⬅️ Prevents it from stretching too wide */
+  }
+  
+  .project-page h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);  /* 🔽 smoother scaling */
+    font-weight: 700;
+    margin-bottom: 2vh;
+    text-shadow: 0 0 1.5rem rgba(102, 252, 241, 1);
+    color: #66fcf1;
+  }
+
+  .project-page p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: 1.2rem auto;
+    color: #e0e0e0;
+    text-align: center;
+  }
+
+  /* ------------------------------- */
+  /* 🔷 Skills & Contributions Pair */
+  /* ------------------------------- */
+  .skills-contributions-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0;
+    padding: 0 4vw;
+    box-sizing: border-box;
+  }
+  
+  .skills-contributions-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vw;
+    max-width: 1100px;
+    width: 100%;
+  }
+  
+  
+  .skills-section,
+  .contribution-section {
+    flex: 1;
+    min-width: 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    border: 2px solid #66fcf1;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.4);
+    text-align: left;
+    padding: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .skills-contributions-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-section,
+    .contribution-section {
+      width: 100%;
+      max-width: 600px;
+    }
+}
+  
+  /* ----------------------------------- */
+  /* 🔷 Standalone Gallery & PDF Cards   */
+  /* ----------------------------------- */
+  .gallery-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4vh 5vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pdf-wrapper {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  .gallery-section {
+    width: 100%;
+    padding: 4vh 5vw;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 1rem;
+    border: 2px solid #66fcf1;
+    box-shadow: 0 0 2rem rgba(102, 252, 241, 0.5);
+    text-align: center;
+  }
+  
+  .pdf-viewer-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 9%;
+    margin-top: -4%;
+    margin-bottom: 1%;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    border: 2px solid #66fcf1;
+    box-shadow: 0 0 30px rgba(102, 252, 241, 0.5);
+    text-align: center;
+  }
+  
+  /* ✅ Gallery Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding: 3vh 2vw;
+    box-sizing: border-box;
+  }
+
+ .gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 220px;
+}
+  
+.gallery-thumb {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 1rem rgba(102, 252, 241, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-thumb:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery-caption {
+    margin-top: 0.75rem;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  /* ✅ PDF Viewer */
+  .pdf-viewer-section iframe {
+    width: 100%;
+    height: 70vh; /* viewport height makes it flexible */
+    max-width: 100%;
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 2rem rgba(102, 252, 241, 0.5);
+    margin-top: 1.5rem;
+  }
+  
+  /* --------------------------- */
+  /* 🔷 Other Shared Styling     */
+  /* --------------------------- */
+  .project-img {
+    width: 100%;
+    max-width: 90vw; /* Scales better on mobile */
+    margin: 4vh auto 2vh auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(102, 252, 241, 0.5);
+    display: block;
+  }
+  
+  .view-link {
+    display: inline-block;
+    margin-top: 4vh;
+    padding: 1rem 2rem;
+    background-color: #66fcf1;
+    color: #000;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(102, 252, 241, 0.4);
+  }
+  
+  .view-link:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 4vh 0 2vh 0;
+  }
+  
+  .tag {
+    background-color: rgba(102, 252, 241, 0.15);
+    border: 1px solid #66fcf1;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #66fcf1;
+    box-shadow: 0 0 0.6rem rgba(102, 252, 241, 0.25);
+    transition: transform 0.3s ease;
+  }
+  
+  .tag:hover {
+    transform: scale(1.05);
+  }
+  
+  .skills-section h2,
+  .contribution-section h2,
+  .gallery-section h2,
+  .pdf-viewer-section h2 {
+    color: #66fcf1;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 0 30px rgba(102, 252, 241, 1);
+  }
+
+  .skills-section ul,
+  .contribution-section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .skills-section li,
+  .contribution-section li {
+    margin-bottom: 0.75rem;
+    color: #d1d1d1;
+  }
+  
+  .custom-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+  }
+  
+  .custom-feature-list li {
+    font-size: 1.05rem;
+    color: #d1d1d1;
+    display: block;
+    line-height: 1.6;
+  }
+  
+  .contact-footer {
+    max-width: 800px;         /* 👈 Limits width */
+    margin: 2rem auto;        /* 👈 Centers it and adds top/bottom spacing */
+    margin-top: -4%;;
+    padding: 2rem;            /* 👈 Controls inner spacing */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Optional: background if needed */
+    border: 2px solid #66fcf1;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(102, 252, 241, 0.3);
+  }
