@@ -3,7 +3,7 @@
 /* ----------------------------------- */
 .project-page {
     color: white;
-    margin-top: 120px !important; /* <-- force it */
+    margin: 120px auto 2vh auto; /* 👈 Top margin + horizontal center */
     margin-bottom: 2vh;
     padding: 4vh 5vw;
     background: rgba(0, 0, 0, 0.85);
