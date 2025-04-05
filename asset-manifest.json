@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Ghawk75.Portfolio/static/css/main.da07a91f.css",
+    "main.css": "/Ghawk75.Portfolio/static/css/main.74a11bfe.css",
     "main.js": "/Ghawk75.Portfolio/static/js/main.f3b68b4f.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
@@ -17,12 +17,12 @@
     "static/media/TritonGoTitle.JPG": "/Ghawk75.Portfolio/static/media/TritonGoTitle.4e88d7e0dec8de7ac84e.JPG",
     "static/media/GoaleeHomescreen.JPG": "/Ghawk75.Portfolio/static/media/GoaleeHomescreen.893007f302b24bd89a47.JPG",
     "index.html": "/Ghawk75.Portfolio/index.html",
-    "main.da07a91f.css.map": "/Ghawk75.Portfolio/static/css/main.da07a91f.css.map",
+    "main.74a11bfe.css.map": "/Ghawk75.Portfolio/static/css/main.74a11bfe.css.map",
     "main.f3b68b4f.js.map": "/Ghawk75.Portfolio/static/js/main.f3b68b4f.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da07a91f.css",
+    "static/css/main.74a11bfe.css",
     "static/js/main.f3b68b4f.js"
   ]
 }
