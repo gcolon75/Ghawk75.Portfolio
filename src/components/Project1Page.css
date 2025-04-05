@@ -2,16 +2,17 @@
 /* 🔷 Main Content Card (Project Info) */
 /* ----------------------------------- */
 .project-page {
-    color: white;
-    padding: 4vh 5vw;               /* ⬅️ Better scaling top/bottom + sides */
-    margin: 5vh auto 2vh auto;      /* ⬅️ Balanced margin, keeps it centered */
-    background: rgba(0, 0, 0, 0.85);
-    border-radius: 20px;
-    border: 2px solid #66fcf1;
-    box-shadow: 0 0 30px rgba(102, 252, 241, 0.7);
-    text-align: center;
-    max-width: 1200px;              /* ⬅️ Prevents it from stretching too wide */
-  }
+  color: white;
+  margin-top: 120px !important; /* <-- force it */
+  margin-bottom: 2vh;
+  padding: 4vh 5vw;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 20px;
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 30px rgba(102, 252, 241, 0.7);
+  text-align: center;
+  max-width: 1200px;
+}
   
   .project-page h1 {
     font-size: clamp(1.8rem, 4vw, 2.8rem);  /* 🔽 smoother scaling */

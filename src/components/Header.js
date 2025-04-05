@@ -15,9 +15,24 @@ function Header() {
 
   const handleHomeClick = () => {
     if (location.pathname !== '/') {
-      navigate('/'); // Go back to main page
+      navigate('/#hero'); // Go back to home and scroll to top
     } else {
-      scrollToSection('hero'); // Scroll to top on homepage
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+    }
+  };
+
+  const handleProjectsClick = () => {
+    if (location.pathname !== '/') {
+      navigate('/#projects');
+    } else {
+      scrollToSection('projects');
+    }
+  };
+
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -34,10 +49,10 @@ function Header() {
       </div>
 
       <nav className="nav-links">
-        <button onClick={handleHomeClick} className="header-button">Home</button>
-        <button onClick={() => scrollToSection('projects')} className="header-button">Projects</button>
-        <button onClick={() => scrollToSection('contact')} className="header-button">Contact</button>
-      </nav>
+  <button onClick={handleHomeClick} className="header-button">Home</button>
+  <button onClick={handleProjectsClick} className="header-button">Projects</button>
+  <button onClick={handleContactClick} className="header-button">Contact</button>
+</nav>
     </header>
   );
 }

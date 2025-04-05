@@ -15,8 +15,10 @@ function Project1Page() {
 
   // ✅ Scroll to top on component mount
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   }, []);
+
+<div className="project-page" style={{ border: '2px solid red' }}></div>
 
   return (
     <div className="App">

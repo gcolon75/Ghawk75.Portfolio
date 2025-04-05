@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Project3Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
@@ -6,6 +6,10 @@ import ContactFooter from './ContactFooter';
 import tritonGoTitle from '../assets/TritonGoTitle.JPG';
 
 function Project3Page() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
   return (
     <div className="App">
       <div className="content">

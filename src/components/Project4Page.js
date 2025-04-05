@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Project4Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
@@ -7,6 +7,10 @@ import volleyballImage from '../assets/VolleyballMobileTitle.JPG';
 import volleyballPDF from '../assets/Volleyball Mobile.pdf';
 
 function Project4Page() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
   return (
     <div className="App">
       <div className="content">

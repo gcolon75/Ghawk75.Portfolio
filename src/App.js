@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToHashSection from './components/ScrollToHashSection';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -38,18 +39,19 @@ function App() {
         <Routes>
           {/* Full Homepage Layout */}
           <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Hero />
-                <section className="centered-section"><Projects /></section>
-                <section className="centered-section"><About /></section>
-                <section className="centered-section"><SkillTree /></section>
-                <section className="centered-section"><ContactFooter /></section>
-              </>
-            }
-          />
+  path="/"
+  element={
+    <>
+      <ScrollToHashSection />  {/* 👈 Add this to enable scroll to hash */}
+      <Header />
+      <Hero />
+      <section id="projects" className="centered-section"><Projects /></section>
+      <section id="about" className="centered-section"><About /></section>
+      <section id="skilltree" className="centered-section"><SkillTree /></section>
+      <section id="contact" className="centered-section"><ContactFooter /></section>
+    </>
+  }
+/>
 
           {/* Individual Project Pages */}
           <Route path="/projects/axle" element={<Project1Page />} />

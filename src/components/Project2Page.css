@@ -3,9 +3,9 @@
 /* ----------------------------------- */
 .project-page {
     color: white;
+    margin-top: 120px !important; /* <-- force it */
+    margin-bottom: 2vh;
     padding: 4vh 5vw;
-    margin: 5vh auto 2vh auto;
-    margin-top: 7%;
     background: rgba(0, 0, 0, 0.85);
     border-radius: 20px;
     border: 2px solid #66fcf1;
