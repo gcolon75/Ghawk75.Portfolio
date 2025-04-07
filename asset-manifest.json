@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ghawk75.Portfolio/static/css/main.4a8bc95b.css",
-    "main.js": "/Ghawk75.Portfolio/static/js/main.cb32ccc4.js",
+    "main.js": "/Ghawk75.Portfolio/static/js/main.f7a421dc.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
     "static/media/GoaleeDemo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeDemo.95e4b85185d1b526e225.mp4",
@@ -18,11 +18,11 @@
     "static/media/GoaleeHomescreen.JPG": "/Ghawk75.Portfolio/static/media/GoaleeHomescreen.893007f302b24bd89a47.JPG",
     "index.html": "/Ghawk75.Portfolio/index.html",
     "main.4a8bc95b.css.map": "/Ghawk75.Portfolio/static/css/main.4a8bc95b.css.map",
-    "main.cb32ccc4.js.map": "/Ghawk75.Portfolio/static/js/main.cb32ccc4.js.map",
+    "main.f7a421dc.js.map": "/Ghawk75.Portfolio/static/js/main.f7a421dc.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a8bc95b.css",
-    "static/js/main.cb32ccc4.js"
+    "static/js/main.f7a421dc.js"
   ]
 }
