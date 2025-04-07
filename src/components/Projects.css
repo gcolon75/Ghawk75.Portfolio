@@ -12,6 +12,13 @@
   backdrop-filter: blur(12px);
 }
 
+.projects-section h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem); /* Scales between 1.8rem and 3rem */
+  color: #66fcf1;
+  text-shadow: 0 0 40px rgba(102, 252, 241, 1);
+  margin-bottom: 2%;
+}
+
 /* Responsive Grid for Projects */
 .projects-container {
   display: grid;

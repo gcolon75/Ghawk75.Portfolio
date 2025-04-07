@@ -29,11 +29,11 @@ function Project2Page() {
           </div>
 
           <p>
-            <strong>Goalee</strong> is a mobile application concept designed to promote student productivity and social connection by gamifying daily goals and encouraging in-person interaction. The app allows students to complete tasks, earn rewards, and collaborate with others across their campus community.
+            <strong>Goalee</strong> is a mobile application concept designed to promote student productivity and social connection by gamifying daily goals and encouraging in-person interaction. The app allows users to complete tasks, earn rewards, and collaborate with others across their community.
           </p>
 
           <p>
-            Our team designed Goalee as a solution to the common challenges of motivation and isolation in academic settings. With features like public goal boards, team quests, and social feeds, Goalee turns personal growth into a community-driven experience.
+            Our team designed Goalee as a solution to the common challenges of motivation and isolation in academic/early career settings. With features like public goal boards, team quests, and social feeds, Goalee turns personal growth into a community-driven experience.
           </p>
 
           <p>
@@ -78,9 +78,8 @@ function Project2Page() {
               <h2>My Role & Contributions</h2>
               <ul>
                 <li>Directed creative vision and core interaction flow</li>
+                <li>Worked as Co-team Leader and flex figma desinger</li>
                 <li>Helped build final Figma prototype with multiple screens</li>
-                <li>Created logo and visual branding assets</li>
-                <li>Wrote content for promotional materials</li>
                 <li>Presented pitch deck to stakeholders and faculty</li>
                 <li>Facilitated feedback loops during team critiques</li>
               </ul>

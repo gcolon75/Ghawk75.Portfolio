@@ -69,8 +69,7 @@ function Project3Page() {
             <section className="contribution-section">
               <h2>My Role & Contributions</h2>
               <ul>
-                <li>Led the design and Figma prototyping of the app</li>
-                <li>Created visual branding and logos</li>
+                <li>Led the design and Figma prototyping of the app for the team</li>
                 <li>Interviewed target users to inform app features</li>
                 <li>Built the client-facing website on Wix</li>
                 <li>Developed pitch materials and presented the concept</li>
