@@ -23,7 +23,8 @@ function Hero() {
         <div className="moon">
           <h2>100%</h2>
           <p>Committed to Problem Solving</p>
-          <span>∞ Problems to Solve</span>
+          <h2>∞</h2>
+          <span>Problems to Solve</span>
         </div>
       </div>
     </section>
