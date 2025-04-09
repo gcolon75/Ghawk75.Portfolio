@@ -27,9 +27,14 @@ function Projects() {
         },
         {
             title: "3 Kingdoms Game",
-            description: "An interactive game project inspired by fantasy worlds, currently in progress using React and Three.js.",
-            inProgress: true
-        },
+            description: "A fantasy strategy-RPG concept I designed and prototyped using Godot. Currently paused.",
+            internalLink: "/projects/3kingdoms"
+          },
+        {
+            title: "The Future of Humanity – Cognitive Science Article",
+            description: "My first deep philosophical analysis blending AI, ethics, and sci-fi themes.",
+            internalLink: "/projects/humanity"
+          }
     ];
 
     return (

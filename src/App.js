@@ -15,6 +15,8 @@ import Project1Page from './components/Project1Page';
 import Project2Page from './components/Project2Page';
 import Project3Page from './components/Project3Page';
 import Project4Page from './components/Project4Page';
+import Project5Page from './components/Project5Page';
+import Project6Page from './components/Project6Page';
 
 import './App.css';
 import backgroundImage from './assets/background4.png';
@@ -58,6 +60,8 @@ function App() {
           <Route path="/projects/goalee" element={<Project2Page />} />
           <Route path="/projects/volleyball" element={<Project4Page />} />
           <Route path="/projects/tritongoplus" element={<Project3Page />} />
+          <Route path="/projects/3Kingdoms" element={<Project5Page />} />
+          <Route path="/projects/humanity" element={<Project6Page />} />
 
           {/* Fallback Route */}
           <Route path="*" element={<h1 style={{ color: 'white', textAlign: 'center', padding: '4rem' }}>404 – Page Not Found</h1>} />
