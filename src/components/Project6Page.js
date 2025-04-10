@@ -3,8 +3,8 @@ import './Project6Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
 
-import articlePDF from '../assets/HumanityArticle.pdf'; // 🔁 Ensure this matches your actual file
-import articleCoverImage from '../assets/HumanityArticleTitle.webp'; // Optional: a stylized header image
+import articlePDF from '../assets/HumanityArticle.pdf';
+import articleCoverImage from '../assets/HumanityArticleTitle.webp';
 
 function Project6Page() {
   const pdfRef = useRef(null);
@@ -20,10 +20,8 @@ function Project6Page() {
           <Header />
 
           <img src={articleCoverImage} alt="The Future of Humanity Cover" className="project-img" />
-
           <h1>The Future of Humanity: My First Cognitive Science & Philosophy Article</h1>
-
-          <p className="article-date">🗓️ Written in April 2025</p>
+          <p className="project-status-paused">🧠 This was my first published deep-dive article — exploring AI, identity, and what it means to be human.</p>
 
           <p>
             This is my first deep-dive into writing about cognitive science, philosophy, and our technological future. 
@@ -59,7 +57,7 @@ function Project6Page() {
         </div>
 
         {/* 🔷 Skills & Contributions */}
-        <div className="skills-contributions-wrapper">
+        <div className="skills-contributions-wrapper section-spacing">
           <div className="skills-contributions-row">
             <section className="skills-section">
               <h2>Key Skills Applied</h2>
@@ -84,8 +82,8 @@ function Project6Page() {
           </div>
         </div>
 
-        {/* 🔷 PDF Viewer */}
-        <div className="pdf-wrapper">
+        {/* PDF Viewer */}
+        <div className="pdf-wrapper section-spacing">
           <section className="pdf-viewer-section" ref={pdfRef}>
             <h2>Read the Full Article</h2>
             <iframe
@@ -103,9 +101,34 @@ function Project6Page() {
             />
           </section>
         </div>
-      </div>
 
-      <ContactFooter />
+        {/* 📚 References Section */}
+        <div className="references-wrapper section-spacing">
+          <section className="references-section">
+            <h2>📚 References</h2>
+            <ul className="reference-list">
+              <li><strong>Bible</strong>, Genesis 11; Proverbs 16:18</li>
+              <li><em>The Matrix</em>, Wachowskis, Warner Bros. (1999)</li>
+              <li><em>Mass Effect</em> Series, BioWare (2007–2012)</li>
+              <li><em>Detroit: Become Human</em>, Quantic Dream (2018)</li>
+              <li><em>Cyberpunk 2077</em>, CD Projekt Red (2020)</li>
+              <li><em>Blade Runner</em>, Ridley Scott (1982)</li>
+              <li><em>Avengers: Age of Ultron</em>, Joss Whedon (2015)</li>
+              <li><em>I, Robot</em>, Alex Proyas (2004)</li>
+              <li><em>The Terminator</em> Series, James Cameron (1984–)</li>
+              <li><em>Halo</em> Series, Bungie / 343 Industries (2001–)</li>
+              <li>European Commission, AI Act (2021)</li>
+              <li>AI Now Institute Report (2018)</li>
+              <li>Buolamwini & Gebru, “Gender Shades” (2018)</li>
+              <li>New York Times, MIT Tech Review – AI Bias Coverage</li>
+              <li>NATO Emerging Disruptive Technologies Strategy (2022)</li>
+              <li>U.S. DoD Unmanned Systems Roadmap (2013)</li>
+            </ul>
+          </section>
+        </div>
+
+        <ContactFooter />
+      </div>
     </div>
   );
 }
