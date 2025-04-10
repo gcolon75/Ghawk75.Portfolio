@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ghawk75.Portfolio/static/css/main.a92628dd.css",
-    "main.js": "/Ghawk75.Portfolio/static/js/main.bb1b106f.js",
+    "main.css": "/Ghawk75.Portfolio/static/css/main.c907a7d9.css",
+    "main.js": "/Ghawk75.Portfolio/static/js/main.a941bad7.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
     "static/media/GoaleeDemo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeDemo.95e4b85185d1b526e225.mp4",
@@ -10,8 +10,8 @@
     "static/media/GoaleePoster.jpg": "/Ghawk75.Portfolio/static/media/GoaleePoster.7ea86d93b66422e23417.jpg",
     "static/media/3KingdomsTitleScreen.png": "/Ghawk75.Portfolio/static/media/3KingdomsTitleScreen.75b10fd4fb4007591ffb.png",
     "static/media/HumanityArticleTitle.webp": "/Ghawk75.Portfolio/static/media/HumanityArticleTitle.7cadf825a4561dd1858e.webp",
+    "static/media/HumanityArticle.pdf": "/Ghawk75.Portfolio/static/media/HumanityArticle.a4919e45cf32e6b10e93.pdf",
     "static/media/3KingdomsFullMap.JPG": "/Ghawk75.Portfolio/static/media/3KingdomsFullMap.ac362f754d01df9b3592.JPG",
-    "static/media/HumanityArticle.pdf": "/Ghawk75.Portfolio/static/media/HumanityArticle.8540a24fe6be426c7866.pdf",
     "static/media/3KingdomsMap.JPG": "/Ghawk75.Portfolio/static/media/3KingdomsMap.ecfc7c99c7877d39914f.JPG",
     "static/media/background4.png": "/Ghawk75.Portfolio/static/media/background4.fafa460dbf3925bc1ae1.png",
     "static/media/axle-becomeMechanic.JPG": "/Ghawk75.Portfolio/static/media/axle-becomeMechanic.80d60e7448d4d2065636.JPG",
@@ -22,12 +22,12 @@
     "static/media/TritonGoTitle.JPG": "/Ghawk75.Portfolio/static/media/TritonGoTitle.4e88d7e0dec8de7ac84e.JPG",
     "static/media/GoaleeHomescreen.JPG": "/Ghawk75.Portfolio/static/media/GoaleeHomescreen.893007f302b24bd89a47.JPG",
     "index.html": "/Ghawk75.Portfolio/index.html",
-    "main.a92628dd.css.map": "/Ghawk75.Portfolio/static/css/main.a92628dd.css.map",
-    "main.bb1b106f.js.map": "/Ghawk75.Portfolio/static/js/main.bb1b106f.js.map",
+    "main.c907a7d9.css.map": "/Ghawk75.Portfolio/static/css/main.c907a7d9.css.map",
+    "main.a941bad7.js.map": "/Ghawk75.Portfolio/static/js/main.a941bad7.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a92628dd.css",
-    "static/js/main.bb1b106f.js"
+    "static/css/main.c907a7d9.css",
+    "static/js/main.a941bad7.js"
   ]
 }
