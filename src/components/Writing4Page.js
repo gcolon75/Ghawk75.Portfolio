@@ -4,7 +4,7 @@ import Header from './Header';
 import ContactFooter from './ContactFooter';
 
 import cover from '../assets/whova.jpg';
-import docxFile from '../assets/Whova Competetive Analysis.docx'; // DOCX won't render inline
+import docxFile from '../assets/Whova Competetive Analysis.pdf'; // DOCX won't render inline
 
 function Writing4Page() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
