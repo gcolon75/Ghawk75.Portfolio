@@ -30,11 +30,6 @@ function Projects() {
             description: "A fantasy strategy-RPG concept I designed and prototyped using Godot. Currently paused.",
             internalLink: "/projects/3kingdoms"
           },
-        {
-            title: "The Future of Humanity – Cognitive Science Article",
-            description: "My first deep philosophical analysis blending AI, ethics, and sci-fi themes.",
-            internalLink: "/projects/humanity"
-          }
     ];
 
     return (

@@ -29,6 +29,14 @@ function Header() {
     }
   };
 
+  const handleWritingClick = () => {
+    if (location.pathname !== '/' && location.pathname !== '/#') {
+      navigate('/#writing');
+    } else {
+      scrollToSection('writing');
+    }
+  };
+
   const handleContactClick = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -51,6 +59,7 @@ function Header() {
       <nav className="nav-links">
   <button onClick={handleHomeClick} className="header-button">Home</button>
   <button onClick={handleProjectsClick} className="header-button">Projects</button>
+  <button onClick={handleWritingClick} className="header-button">Writing</button>
   <button onClick={handleContactClick} className="header-button">Contact</button>
 </nav>
     </header>

@@ -16,7 +16,12 @@ import Project2Page from './components/Project2Page';
 import Project3Page from './components/Project3Page';
 import Project4Page from './components/Project4Page';
 import Project5Page from './components/Project5Page';
-import Project6Page from './components/Project6Page';
+
+import Writing from './components/Writing';
+import Writing1Page from './components/Writing1Page';
+import Writing2Page from './components/Writing2Page';
+import Writing3Page from './components/Writing3Page';
+import Writing4Page from './components/Writing4Page';
 
 import './App.css';
 import backgroundImage from './assets/background4.png';
@@ -41,19 +46,31 @@ function App() {
         <Routes>
           {/* Full Homepage Layout */}
           <Route
-  path="/"
-  element={
-    <>
-      <ScrollToHashSection />  {/* 👈 Add this to enable scroll to hash */}
-      <Header />
-      <Hero />
-      <section id="projects" className="centered-section"><Projects /></section>
-      <section id="about" className="centered-section"><About /></section>
-      <section id="skilltree" className="centered-section"><SkillTree /></section>
-      <section id="contact" className="centered-section"><ContactFooter /></section>
-    </>
-  }
-/>
+            path="/"
+            element={
+              <>
+                <ScrollToHashSection />
+                <Header />
+                <Hero />
+                <section id="projects" className="centered-section">
+                  <Projects />
+                </section>
+                {/* NEW: Writing section mirrors Projects */}
+                <section id="writing" className="centered-section">
+                  <Writing />
+                </section>
+                <section id="about" className="centered-section">
+                  <About />
+                </section>
+                <section id="skilltree" className="centered-section">
+                  <SkillTree />
+                </section>
+                <section id="contact" className="centered-section">
+                  <ContactFooter />
+                </section>
+              </>
+            }
+          />
 
           {/* Individual Project Pages */}
           <Route path="/projects/axle" element={<Project1Page />} />
@@ -61,10 +78,22 @@ function App() {
           <Route path="/projects/volleyball" element={<Project4Page />} />
           <Route path="/projects/tritongoplus" element={<Project3Page />} />
           <Route path="/projects/3Kingdoms" element={<Project5Page />} />
-          <Route path="/projects/humanity" element={<Project6Page />} />
+
+          {/* Individual Writing Pages */}
+          <Route path="/writing/ai-and-gen-z" element={<Writing1Page />} />
+          <Route path="/writing/chatgpt-prompt-case-study" element={<Writing2Page />} />
+          <Route path="/writing/humanity-in-media" element={<Writing3Page />} />
+          <Route path="/writing/whova-competitive-analysis" element={<Writing4Page />} />
 
           {/* Fallback Route */}
-          <Route path="*" element={<h1 style={{ color: 'white', textAlign: 'center', padding: '4rem' }}>404 – Page Not Found</h1>} />
+          <Route
+            path="*"
+            element={
+              <h1 style={{ color: 'white', textAlign: 'center', padding: '4rem' }}>
+                404 – Page Not Found
+              </h1>
+            }
+          />
         </Routes>
       </div>
     </Router>
