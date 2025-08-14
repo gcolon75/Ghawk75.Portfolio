@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/Ghawk75.Portfolio/static/css/main.c907a7d9.css",
-    "main.js": "/Ghawk75.Portfolio/static/js/main.a941bad7.js",
+    "main.css": "/Ghawk75.Portfolio/static/css/main.7eb8b61f.css",
+    "main.js": "/Ghawk75.Portfolio/static/js/main.ac6c9b5b.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
     "static/media/GoaleeDemo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeDemo.95e4b85185d1b526e225.mp4",
     "static/media/axle-slides.pdf": "/Ghawk75.Portfolio/static/media/axle-slides.cd20ab0212c89a3f33bf.pdf",
     "static/media/Volleyball Mobile.pdf": "/Ghawk75.Portfolio/static/media/Volleyball Mobile.8d0a2a3679656ce88d45.pdf",
     "static/media/GoaleePoster.jpg": "/Ghawk75.Portfolio/static/media/GoaleePoster.7ea86d93b66422e23417.jpg",
+    "static/media/GenZ.jpg": "/Ghawk75.Portfolio/static/media/GenZ.640ae7ab283e1bb24ba3.jpg",
     "static/media/3KingdomsTitleScreen.png": "/Ghawk75.Portfolio/static/media/3KingdomsTitleScreen.75b10fd4fb4007591ffb.png",
+    "static/media/AI and Gen Z Final Draft.docx.pdf": "/Ghawk75.Portfolio/static/media/AI and Gen Z Final Draft.docx.8d6e646ff8131a5fdf42.pdf",
     "static/media/HumanityArticleTitle.webp": "/Ghawk75.Portfolio/static/media/HumanityArticleTitle.7cadf825a4561dd1858e.webp",
-    "static/media/HumanityArticle.pdf": "/Ghawk75.Portfolio/static/media/HumanityArticle.a4919e45cf32e6b10e93.pdf",
+    "static/media/ChatGPT Prompt CaseStudy.docx.pdf": "/Ghawk75.Portfolio/static/media/ChatGPT Prompt CaseStudy.docx.e8b4080af79192435170.pdf",
     "static/media/3KingdomsFullMap.JPG": "/Ghawk75.Portfolio/static/media/3KingdomsFullMap.ac362f754d01df9b3592.JPG",
     "static/media/3KingdomsMap.JPG": "/Ghawk75.Portfolio/static/media/3KingdomsMap.ecfc7c99c7877d39914f.JPG",
+    "static/media/Humanity in Media.pdf": "/Ghawk75.Portfolio/static/media/Humanity in Media.66ac9bd07e2baf4dac92.pdf",
     "static/media/background4.png": "/Ghawk75.Portfolio/static/media/background4.fafa460dbf3925bc1ae1.png",
     "static/media/axle-becomeMechanic.JPG": "/Ghawk75.Portfolio/static/media/axle-becomeMechanic.80d60e7448d4d2065636.JPG",
     "static/media/VolleyballMobileTitle.JPG": "/Ghawk75.Portfolio/static/media/VolleyballMobileTitle.e2b807f25abddc668811.JPG",
@@ -20,14 +23,17 @@
     "static/media/axle-homepage.JPG": "/Ghawk75.Portfolio/static/media/axle-homepage.ee36c3842db8d31efe81.JPG",
     "static/media/axleImage.JPG": "/Ghawk75.Portfolio/static/media/axleImage.ec94159a12cbf716a0f7.JPG",
     "static/media/TritonGoTitle.JPG": "/Ghawk75.Portfolio/static/media/TritonGoTitle.4e88d7e0dec8de7ac84e.JPG",
+    "static/media/whova.jpg": "/Ghawk75.Portfolio/static/media/whova.0aca90468805b8ed54c8.jpg",
     "static/media/GoaleeHomescreen.JPG": "/Ghawk75.Portfolio/static/media/GoaleeHomescreen.893007f302b24bd89a47.JPG",
+    "static/media/openAILogo.jpg": "/Ghawk75.Portfolio/static/media/openAILogo.2971546fde57f19accef.jpg",
+    "static/media/Whova Competetive Analysis.docx": "/Ghawk75.Portfolio/static/media/Whova Competetive Analysis.cabe509fd8e53ef2b49b.docx",
     "index.html": "/Ghawk75.Portfolio/index.html",
-    "main.c907a7d9.css.map": "/Ghawk75.Portfolio/static/css/main.c907a7d9.css.map",
-    "main.a941bad7.js.map": "/Ghawk75.Portfolio/static/js/main.a941bad7.js.map",
+    "main.7eb8b61f.css.map": "/Ghawk75.Portfolio/static/css/main.7eb8b61f.css.map",
+    "main.ac6c9b5b.js.map": "/Ghawk75.Portfolio/static/js/main.ac6c9b5b.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c907a7d9.css",
-    "static/js/main.a941bad7.js"
+    "static/css/main.7eb8b61f.css",
+    "static/js/main.ac6c9b5b.js"
   ]
 }
