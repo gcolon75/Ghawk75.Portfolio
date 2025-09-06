@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ghawk75.Portfolio/static/css/main.b15669cf.css",
-    "main.js": "/Ghawk75.Portfolio/static/js/main.fb2d364b.js",
+    "main.js": "/Ghawk75.Portfolio/static/js/main.090fe061.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
     "static/media/GoaleeDemo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeDemo.95e4b85185d1b526e225.mp4",
@@ -31,11 +31,11 @@
     "static/media/tower-of-greed-hero.jpg": "/Ghawk75.Portfolio/static/media/tower-of-greed-hero.31b44b77ab9080c874c7.jpg",
     "index.html": "/Ghawk75.Portfolio/index.html",
     "main.b15669cf.css.map": "/Ghawk75.Portfolio/static/css/main.b15669cf.css.map",
-    "main.fb2d364b.js.map": "/Ghawk75.Portfolio/static/js/main.fb2d364b.js.map",
+    "main.090fe061.js.map": "/Ghawk75.Portfolio/static/js/main.090fe061.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b15669cf.css",
-    "static/js/main.fb2d364b.js"
+    "static/js/main.090fe061.js"
   ]
 }
