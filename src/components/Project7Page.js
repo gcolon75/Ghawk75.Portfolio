@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Project7_TowerOfGreedPage.css';
+import './Project7Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
 

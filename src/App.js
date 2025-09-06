@@ -16,8 +16,8 @@ import Project2Page from './components/Project2Page';
 import Project3Page from './components/Project3Page';
 import Project4Page from './components/Project4Page';
 import Project5Page from './components/Project5Page';
-import Project6_AmadeusAgentPage from './components/Project8_AmadeusAgentPage';
-import Project7_TowerOfGreedPage from './components/Project7_TowerOfGreedPage';
+import Project6Page from './components/Project6Page';
+import Project7Page from './components/Project7Page';
 
 
 import Writing from './components/Writing';

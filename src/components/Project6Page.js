@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Project8_AmadeusAgentPage.css';
+import './Project6Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
 
