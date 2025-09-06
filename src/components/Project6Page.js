@@ -4,7 +4,7 @@ import Header from './Header';
 import ContactFooter from './ContactFooter';
 
 // 🔹 Replace with your assets
-import hero from '../assets/discord-agent-hero.jpg';
+import hero from '../assets/discord.png';
 
 function Project8_AmadeusAgentPage() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -19,7 +19,7 @@ function Project8_AmadeusAgentPage() {
           <img src={hero} alt="Amadeus Discord agent hero" className="project-img" />
 
           <p>
-            An always-on Windows desktop agent that watches stocks and video-game deals,
+            An always-on Windows desktop agent that watches stocks, allows scheduled alerts, and video-game deals,
             computes indicators, and posts <strong>briefs + alerts</strong> to Discord.
           </p>
 

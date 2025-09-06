@@ -8,7 +8,6 @@ function Projects() {
       title: "Tower of Greed — Risk • Reward • Cash Out",
       description: "Turn-based roguelike with a push-your-luck economy: climb higher for bigger multipliers, or cash out before you lose it all.",
       internalLink: "/projects/tower-of-greed",
-      inProgress: true // show the 🚀 badge if you like
     },
 
     /* ===================== */
@@ -16,7 +15,7 @@ function Projects() {
     /* ===================== */
     {
       title: "Amadeus — AI Agent for Discord",
-      description: "Always-on desktop agent that watches stocks and game deals, computes indicators, and posts briefs + alerts to Discord.",
+      description: "Always-on desktop agent that watches stocks and game deals, configures a schedule, computes indicators, and posts briefs + alerts to Discord.",
       internalLink: "/projects/amadeus"
       // inProgress: false // omit or set false to show "View Project"
     },
