@@ -224,4 +224,28 @@
   .project-img {
     max-width: 100%;
   }
+
+  /* Clear, positive “concept only” badge */
+.project-status-concept {
+  color: #9be8ff;
+  background: rgba(155, 232, 255, 0.08);
+  padding: 0.75rem 1.25rem;
+  border: 2px dashed #9be8ff;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 1rem auto 2rem auto;
+  box-shadow: 0 0 10px rgba(155, 232, 255, 0.25);
+}
+
+/* Small note under the intro */
+.note {
+  max-width: 850px;
+  margin: 0.5rem auto 1.5rem;
+  color: #cfe9f4;
+  opacity: 0.95;
+  font-size: 0.95rem;
+}
+
 }

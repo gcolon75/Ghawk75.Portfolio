@@ -16,6 +16,9 @@ import Project2Page from './components/Project2Page';
 import Project3Page from './components/Project3Page';
 import Project4Page from './components/Project4Page';
 import Project5Page from './components/Project5Page';
+import Project6_AmadeusAgentPage from './components/Project8_AmadeusAgentPage';
+import Project7_TowerOfGreedPage from './components/Project7_TowerOfGreedPage';
+
 
 import Writing from './components/Writing';
 import Writing1Page from './components/Writing1Page';
@@ -78,6 +81,8 @@ function App() {
           <Route path="/projects/volleyball" element={<Project4Page />} />
           <Route path="/projects/tritongoplus" element={<Project3Page />} />
           <Route path="/projects/3Kingdoms" element={<Project5Page />} />
+          <Route path="/projects/tower-of-greed" element={<Project7Page />} />
+          <Route path="/projects/amadeus" element={<Project6Page />} />
 
           {/* Individual Writing Pages */}
           <Route path="/writing/ai-and-gen-z" element={<Writing1Page />} />
