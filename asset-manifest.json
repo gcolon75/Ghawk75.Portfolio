@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ghawk75.Portfolio/static/css/main.b15669cf.css",
-    "main.js": "/Ghawk75.Portfolio/static/js/main.a7b57537.js",
+    "main.css": "/Ghawk75.Portfolio/static/css/main.6247a5fa.css",
+    "main.js": "/Ghawk75.Portfolio/static/js/main.f93b2bd7.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
     "static/media/GoaleeDemo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeDemo.95e4b85185d1b526e225.mp4",
@@ -9,6 +9,7 @@
     "static/media/Volleyball Mobile.pdf": "/Ghawk75.Portfolio/static/media/Volleyball Mobile.8d0a2a3679656ce88d45.pdf",
     "static/media/GoaleePoster.jpg": "/Ghawk75.Portfolio/static/media/GoaleePoster.7ea86d93b66422e23417.jpg",
     "static/media/GenZ.jpg": "/Ghawk75.Portfolio/static/media/GenZ.640ae7ab283e1bb24ba3.jpg",
+    "static/media/TowerOfGreedThumb.png": "/Ghawk75.Portfolio/static/media/TowerOfGreedThumb.ab94e36caaeee76d4987.png",
     "static/media/TowerOfGreedSlides.pdf": "/Ghawk75.Portfolio/static/media/TowerOfGreedSlides.96906a9acb7ffceda468.pdf",
     "static/media/discord.png": "/Ghawk75.Portfolio/static/media/discord.c316f19b4f1550374aa2.png",
     "static/media/3KingdomsTitleScreen.png": "/Ghawk75.Portfolio/static/media/3KingdomsTitleScreen.75b10fd4fb4007591ffb.png",
@@ -29,14 +30,13 @@
     "static/media/whova.jpg": "/Ghawk75.Portfolio/static/media/whova.0aca90468805b8ed54c8.jpg",
     "static/media/GoaleeHomescreen.JPG": "/Ghawk75.Portfolio/static/media/GoaleeHomescreen.893007f302b24bd89a47.JPG",
     "static/media/openAILogo.jpg": "/Ghawk75.Portfolio/static/media/openAILogo.2971546fde57f19accef.jpg",
-    "static/media/tower-of-greed-hero.jpg": "/Ghawk75.Portfolio/static/media/tower-of-greed-hero.31b44b77ab9080c874c7.jpg",
     "index.html": "/Ghawk75.Portfolio/index.html",
-    "main.b15669cf.css.map": "/Ghawk75.Portfolio/static/css/main.b15669cf.css.map",
-    "main.a7b57537.js.map": "/Ghawk75.Portfolio/static/js/main.a7b57537.js.map",
+    "main.6247a5fa.css.map": "/Ghawk75.Portfolio/static/css/main.6247a5fa.css.map",
+    "main.f93b2bd7.js.map": "/Ghawk75.Portfolio/static/js/main.f93b2bd7.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b15669cf.css",
-    "static/js/main.a7b57537.js"
+    "static/css/main.6247a5fa.css",
+    "static/js/main.f93b2bd7.js"
   ]
 }
