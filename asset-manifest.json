@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ghawk75.Portfolio/static/css/main.7eb8b61f.css",
-    "main.js": "/Ghawk75.Portfolio/static/js/main.73af5f07.js",
+    "main.css": "/Ghawk75.Portfolio/static/css/main.b15669cf.css",
+    "main.js": "/Ghawk75.Portfolio/static/js/main.fb2d364b.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
     "static/media/GoaleeDemo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeDemo.95e4b85185d1b526e225.mp4",
@@ -9,6 +9,7 @@
     "static/media/Volleyball Mobile.pdf": "/Ghawk75.Portfolio/static/media/Volleyball Mobile.8d0a2a3679656ce88d45.pdf",
     "static/media/GoaleePoster.jpg": "/Ghawk75.Portfolio/static/media/GoaleePoster.7ea86d93b66422e23417.jpg",
     "static/media/GenZ.jpg": "/Ghawk75.Portfolio/static/media/GenZ.640ae7ab283e1bb24ba3.jpg",
+    "static/media/TowerOfGreedSlides.pdf": "/Ghawk75.Portfolio/static/media/TowerOfGreedSlides.96906a9acb7ffceda468.pdf",
     "static/media/3KingdomsTitleScreen.png": "/Ghawk75.Portfolio/static/media/3KingdomsTitleScreen.75b10fd4fb4007591ffb.png",
     "static/media/AI and Gen Z Final Draft.docx.pdf": "/Ghawk75.Portfolio/static/media/AI and Gen Z Final Draft.docx.8d6e646ff8131a5fdf42.pdf",
     "static/media/HumanityArticleTitle.webp": "/Ghawk75.Portfolio/static/media/HumanityArticleTitle.7cadf825a4561dd1858e.webp",
@@ -27,13 +28,14 @@
     "static/media/whova.jpg": "/Ghawk75.Portfolio/static/media/whova.0aca90468805b8ed54c8.jpg",
     "static/media/GoaleeHomescreen.JPG": "/Ghawk75.Portfolio/static/media/GoaleeHomescreen.893007f302b24bd89a47.JPG",
     "static/media/openAILogo.jpg": "/Ghawk75.Portfolio/static/media/openAILogo.2971546fde57f19accef.jpg",
+    "static/media/tower-of-greed-hero.jpg": "/Ghawk75.Portfolio/static/media/tower-of-greed-hero.31b44b77ab9080c874c7.jpg",
     "index.html": "/Ghawk75.Portfolio/index.html",
-    "main.7eb8b61f.css.map": "/Ghawk75.Portfolio/static/css/main.7eb8b61f.css.map",
-    "main.73af5f07.js.map": "/Ghawk75.Portfolio/static/js/main.73af5f07.js.map",
+    "main.b15669cf.css.map": "/Ghawk75.Portfolio/static/css/main.b15669cf.css.map",
+    "main.fb2d364b.js.map": "/Ghawk75.Portfolio/static/js/main.fb2d364b.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7eb8b61f.css",
-    "static/js/main.73af5f07.js"
+    "static/css/main.b15669cf.css",
+    "static/js/main.fb2d364b.js"
   ]
 }
