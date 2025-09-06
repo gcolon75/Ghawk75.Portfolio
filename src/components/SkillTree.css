@@ -24,12 +24,8 @@
 
 /* 🌟 Title Glow Animation */
 @keyframes glowEffect {
-    from {
-        text-shadow: 0 0 20px rgba(102, 252, 241, 0.7);
-    }
-    to {
-        text-shadow: 0 0 40px rgba(102, 252, 241, 1), 0 0 80px rgba(102, 252, 241, 0.8);
-    }
+    from { text-shadow: 0 0 20px rgba(102, 252, 241, 0.7); }
+    to   { text-shadow: 0 0 40px rgba(102, 252, 241, 1), 0 0 80px rgba(102, 252, 241, 0.8); }
 }
 
 /* Skill Tree Container */
@@ -43,7 +39,7 @@
 /* Connection Lines - Now Responsive */
 .connection-line {
     position: absolute;
-    width: clamp(2px, 0.4vw, 4px); /* Responsive thickness */
+    width: clamp(2px, 0.4vw, 4px);
     background: #66fcf1;
     box-shadow: 0 0 10px rgba(102, 252, 241, 0.7), 0 0 20px rgba(102, 252, 241, 0.5);
     z-index: 0;
@@ -53,17 +49,10 @@
 
 /* ✨ Glowing Animation Restored */
 @keyframes glowPulse {
-    from {
-        box-shadow: 0 0 10px rgba(102, 252, 241, 0.5), 0 0 20px rgba(102, 252, 241, 0.3);
-    }
-    to {
-        box-shadow: 0 0 20px rgba(102, 252, 241, 0.8), 0 0 40px rgba(102, 252, 241, 0.5);
-    }
+    from { box-shadow: 0 0 10px rgba(102, 252, 241, 0.5), 0 0 20px rgba(102, 252, 241, 0.3); }
+    to   { box-shadow: 0 0 20px rgba(102, 252, 241, 0.8), 0 0 40px rgba(102, 252, 241, 0.5); }
 }
-
-.connection-line {
-    animation: glowPulse 2s infinite alternate;
-}
+.connection-line { animation: glowPulse 2s infinite alternate; }
 
 /* 🪐 Planets - Now Shrink Dynamically */
 .orbit-planet {
@@ -89,7 +78,6 @@
     transform: scale(1.1);
     box-shadow: 0 0 50px rgba(102, 252, 241, 1);
 }
-
 .orbit-planet.selected {
     background: #66fcf1;
     color: black;
@@ -99,7 +87,7 @@
 
 /* Description Box - Initially Hidden */
 .description-box {
-    display: none; /* Hidden until a planet is selected */
+    display: none;
     padding: clamp(10px, 3vw, 20px);
     border-radius: 20px;
     border: 2px solid #66fcf1;
@@ -108,23 +96,22 @@
     color: white;
     font-size: clamp(1rem, 1.2vw, 1.4rem);
     margin-top: 3%;
-    max-width: 70%; /* Prevents it from being too wide */
+    max-width: 70%;
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     position: relative;
     left: 50%;
-    transform: translateX(-50%) translateY(20px); /* Centers it */
+    transform: translateX(-50%) translateY(20px);
 }
 
 /* Show Description Box when a Planet is Selected */
 .skill-tree-section .description-box {
     display: block;
     opacity: 1;
-    transform: translateX(-50%) translateY(0); /* Centers it while appearing */
+    transform: translateX(-50%) translateY(0);
 }
-
 
 .description-box h3 {
     font-size: clamp(1.5rem, 2rem, 2.5rem);
@@ -132,14 +119,13 @@
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
-
 .description-box p {
     font-size: clamp(1rem, 1.2rem, 1.4rem);
     color: #d1d1d1;
     line-height: 1.5;
 }
 
-/* 🌍 Responsive Skill Tree Layout */
+/* 🌍 Responsive Skill Tree Layout (positions preserved exactly) */
 .orbit-0 { top: 40%; left: 10%; }
 .orbit-1 { top: 40%; left: 25%; }
 .orbit-2 { top: 40%; left: 40%; }
@@ -147,36 +133,23 @@
 .orbit-4 { top: 40%; left: 70%; }
 .orbit-5 { top: 40%; left: 85%; }
 .orbit-6 { top: 20%; left: 60%; }
-.orbit-7 { top: 5%; left: 69%; }
+.orbit-7 { top: 5%;  left: 69%; }
 .orbit-8 { top: 60%; left: 60%; }
 .orbit-9 { top: 75%; left: 69%; }
 
-/* 📏 **Responsive Connection Line Positions** */
-.line-0 {
-    top: 47.5%;
-    left: 10%;
-    width: clamp(60%, 75%, 85%);
-    height: clamp(2px, 0.4vw, 4px);
-}
+/* 📏 Responsive Connection Line Positions (unchanged) */
+.line-0 { top: 47.5%; left: 10%; width: clamp(60%, 75%, 85%); height: clamp(2px, 0.4vw, 4px); }
 .line-5 { top: 20%; left: 67.5%; width: clamp(45px, 2vw, 60px); height: clamp(2px, 0.4vw, 4px); transform: rotate(-45deg); }
 .line-6 { top: 37.5%; left: 60%; width: clamp(45px, 2vw, 60px); height: clamp(2px, 0.4vw, 4px); transform: rotate(-60deg); }
 .line-7 { top: 57.5%; left: 60%; width: clamp(45px, 2vw, 60px); height: clamp(2px, 0.4vw, 4px); transform: rotate(60deg); }
 .line-8 { top: 75%; left: 67.5%; width: clamp(45px, 2vw, 60px); height: clamp(2px, 0.4vw, 4px); transform: rotate(45deg); }
 
-/* 📱 **Mobile Adjustments** */
+/* 📱 Mobile Adjustments */
 @media (max-width: 600px) {
-    .skill-container {
-        height: auto;
-    }
+    .skill-container { height: auto; }
+    .orbit-planet { width: clamp(60px, 80px, 100px); height: clamp(60px, 80px, 100px); font-size: 0.8rem; }
 
-    .orbit-planet {
-        width: clamp(60px, 80px, 100px);
-        height: clamp(60px, 80px, 100px);
-        font-size: 0.8rem;
-    }
-
-    /* Adjust planet spacing */
-    .orbit-0 { top: 50%; left: 5%; }
+    .orbit-0 { top: 50%; left: 5%;  }
     .orbit-1 { top: 50%; left: 20%; }
     .orbit-2 { top: 55%; left: 35%; }
     .orbit-3 { top: 60%; left: 50%; }
@@ -187,19 +160,19 @@
     .orbit-8 { top: 70%; left: 50%; }
     .orbit-9 { top: 80%; left: 60%; }
 
-    /* Adjust description box */
-    .description-box {
-        max-width: 90%;
-        padding: 4%;
-        font-size: 0.9rem;
-    }
+    .description-box { max-width: 90%; padding: 4%; font-size: 0.9rem; }
 }
 
-/* Mobile Adjustments */
+/* Duplicate guard: keep mobile text tweaks */
 @media (max-width: 600px) {
     .description-box {
-        max-width: 90%; /* Expands slightly on small screens */
-        font-size: clamp(0.9rem, 1vw, 1.2rem); /* Adjusts text size */
+        max-width: 90%;
+        font-size: clamp(0.9rem, 1vw, 1.2rem);
         padding: clamp(8px, 2vw, 15px);
     }
 }
+
+/* ♿ Small a11y polish (no layout changes) */
+.orbit-planet:focus { outline: 2px dashed #66fcf1; outline-offset: 2px; }
+.description-box a { color: #66fcf1; text-decoration: underline dotted; }
+.description-box a:hover { text-decoration: underline; }
