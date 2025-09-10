@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'; // 🔥 Use React Router Link for inter
 function Projects() {
   const projects = [
     {
-      title: "Tower of Greed",
+      title: "Tower of Greed - Game",
       description: "Turn-based roguelike with a push-your-luck economy: climb higher for bigger multipliers, or cash out before you lose it all.",
       internalLink: "/projects/tower-of-greed",
     },
 
     {
-      title: "Project Valine",
+      title: "Project Valine - Website",
       description: "Where scripts meet performances and decision-makers find both. Concept stage; building the prototype.",
       internalLink: "/projects/valine"
     },
@@ -23,31 +23,35 @@ function Projects() {
     },
 
     {
+      title: "3 Kingdoms - Game",
+      description: "A fantasy strategy-RPG concept I designed and prototyped using Godot.",
+      internalLink: "/projects/3kingdoms"
+    },
+
+    {
       title: "axle: Mobile Mechanic App/Website Design",
       description: "A complete redesign concept for a mobile mechanic app with a focus on user experience.",
       internalLink: "/projects/axle"
     },
+
     {
       title: "Goalee: Startup Project Pitch",
       description: "A campus-based social app encouraging in-person interaction and events at UCSD.",
       internalLink: "/projects/goalee"
     },
+
     {
       title: "TritonGo App",
       description: "A campus-based social app encouraging in-person interaction and events at UCSD.",
       internalLink: "/projects/tritongoplus"
     },
+
     {
       title: "Volleyball Mobile",
       description: "A UX/UI design concept for a volleyball app aimed at La Jolla Shores.",
       internalLink: "/projects/volleyball"
     },
-    {
-      title: "3 Kingdoms Game",
-      description: "A fantasy strategy-RPG concept I designed and prototyped using Godot. Currently paused.",
-      internalLink: "/projects/3kingdoms"
-    },
-
+    
     /* ===================== */
     /* ➕ NEW: Project #6     */
     /* ===================== */

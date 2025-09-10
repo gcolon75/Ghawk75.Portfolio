@@ -120,7 +120,7 @@
 /* keep your existing width constraints to stay inside the bubble */
 .project-card{
   width: 90%;
-  max-width: 400px;
+  max-width: 600px;
   margin: auto;
   height: 100%;
   display: flex;                   /* stack title / text / button */

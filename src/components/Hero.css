@@ -98,13 +98,13 @@
 }
 
 .moon p {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   margin-bottom: 0.3rem;
 }
 
 .moon span {
-  font-size: 0.7rem;
-  color: #ccc;
+  font-size: 0.8rem;
+  color: #ffffff;
 }
 
 /* Responsive tweaks */
