@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ghawk75.Portfolio/static/css/main.5538add2.css",
-    "main.js": "/Ghawk75.Portfolio/static/js/main.4e731d9d.js",
+    "main.css": "/Ghawk75.Portfolio/static/css/main.6b46b3f7.css",
+    "main.js": "/Ghawk75.Portfolio/static/js/main.1f9132e5.js",
     "static/js/488.21a3b654.chunk.js": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/GoaleeVideo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeVideo.ad7da6c49c9f878ce05f.mp4",
     "static/media/GoaleeDemo.mp4": "/Ghawk75.Portfolio/static/media/GoaleeDemo.95e4b85185d1b526e225.mp4",
@@ -32,12 +32,12 @@
     "static/media/GoaleeHomescreen.JPG": "/Ghawk75.Portfolio/static/media/GoaleeHomescreen.893007f302b24bd89a47.JPG",
     "static/media/openAILogo.jpg": "/Ghawk75.Portfolio/static/media/openAILogo.2971546fde57f19accef.jpg",
     "index.html": "/Ghawk75.Portfolio/index.html",
-    "main.5538add2.css.map": "/Ghawk75.Portfolio/static/css/main.5538add2.css.map",
-    "main.4e731d9d.js.map": "/Ghawk75.Portfolio/static/js/main.4e731d9d.js.map",
+    "main.6b46b3f7.css.map": "/Ghawk75.Portfolio/static/css/main.6b46b3f7.css.map",
+    "main.1f9132e5.js.map": "/Ghawk75.Portfolio/static/js/main.1f9132e5.js.map",
     "488.21a3b654.chunk.js.map": "/Ghawk75.Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5538add2.css",
-    "static/js/main.4e731d9d.js"
+    "static/css/main.6b46b3f7.css",
+    "static/js/main.1f9132e5.js"
   ]
 }
