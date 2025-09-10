@@ -1,0 +1,84 @@
+/* ===========================
+   Project 8 — project valine
+   Clean, non-overlapping CSS
+   =========================== */
+
+/* Status */
+.status-banner{
+  margin:1rem 0 1.25rem; padding:.85rem 1rem;
+  border:1px solid #3b8b5c; background:rgba(29,185,84,.12);
+  color:#d9ffe8; border-radius:10px; display:flex; align-items:center; gap:.6rem; font-size:.95rem;
+}
+.status-dot{ width:10px; height:10px; border-radius:50%; background:#1db954; box-shadow:0 0 10px #1db954; }
+
+/* Hero + tagline */
+.hero-wrap h1{ margin:.25rem 0 .5rem; }
+.tagline{ margin:0 0 1rem; opacity:.9; }
+.hero-media{ position:relative; }
+.project-page .project-img{ width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+.wip-watermark{
+  position:absolute; inset:0; display:grid; place-items:center;
+  color:rgba(255,255,255,.08); text-shadow:0 0 30px rgba(0,0,0,.6);
+  font-weight:800; letter-spacing:.2em; user-select:none; pointer-events:none;
+  font-size: clamp(1.5rem, 6vw, 4rem);
+}
+
+/* Pill rows — unified and centered */
+.project-page .meta-chips,
+.project-page .tech-tags{
+  display:flex; flex-wrap:wrap; gap:.6rem;
+  justify-content:center; align-items:center; margin:.9rem 0;
+}
+.project-page .meta-chips .chip,
+.project-page .tech-tags .tag{
+  display:inline-flex; align-items:center;
+  padding:.5rem .9rem; border-radius:999px;
+  border:1px solid #66fcf1;
+  background:rgba(102,252,241,.12);
+  color:#e9f1ff; font-size:.9rem; font-weight:500;
+  box-shadow:0 0 .6rem rgba(102,252,241,.25);
+  transition:transform .2s ease;
+}
+.project-page .meta-chips .chip:hover,
+.project-page .tech-tags .tag:hover{ transform:scale(1.05); }
+
+/* Progress */
+.progress-block{ margin:1rem 0; }
+.progress-track{ width:100%; height:10px; border-radius:999px; background:rgba(255,255,255,.08); overflow:hidden; }
+.progress-fill{ height:100%; background:linear-gradient(90deg,#66fcf1,#1db954); box-shadow:0 0 12px rgba(102,252,241,.6); transition:width .6s ease; }
+.progress-label{ margin-top:.35rem; font-size:.9rem; opacity:.8; }
+.inline-links{ margin-bottom:1rem; }
+.back-link{ color:#66fcf1; text-decoration:underline dotted; }
+.back-link:hover{ text-decoration:underline; }
+
+/* Section cards */
+.pv-section{
+  position: relative; z-index: 2;           /* above decorative bg */
+  max-width:1200px; margin:1.5rem auto; padding:2rem;
+  background:rgba(0,0,0,.85);
+  border-radius:20px; border:2px solid #66fcf1;
+  box-shadow:0 0 30px rgba(102,252,241,.5);
+  color:#e9f1ff;                             /* readable text */
+}
+.pv-section h2{ color:#66fcf1; margin:.25rem 0 .5rem; }
+.pv-section p,
+.pv-section li{ color:#e0e8f5; line-height:1.6; }
+.pv-section ul{ margin:.5rem 0 0 1.25rem; }
+.pv-section li{ margin:.35rem 0; }
+
+/* Two-column yardstick list */
+.pv-section .grid-2{
+  display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:.5rem;
+}
+
+/* Checklist */
+.checklist ul li{ list-style:none; }
+.checklist ul li::before{ content:"□ "; margin-right:.25rem; color:#9acbff; }
+.one-liner{ margin-top:.75rem; opacity:.9; }
+
+/* Responsive */
+@media (max-width:720px){
+  .status-banner{ font-size:.9rem; }
+  .wip-watermark{ font-size:clamp(1.3rem,10vw,3rem); }
+}

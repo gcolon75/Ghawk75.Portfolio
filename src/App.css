@@ -1,5 +1,9 @@
+/* =========================
+   Global App Styles (clean)
+   ========================= */
+
 /* General Reset for Consistency */
-body, html, #root {
+html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -48,11 +52,128 @@ body, html, #root {
   padding: 50px;
 }
 
+/* Generic centered section helper */
 .centered-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0; /* Add vertical spacing */
+  padding: 50px 0;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* =========================
+   Design Tokens
+   ========================= */
+:root {
+  --teal: #66fcf1;
+  --dark: #0b0f14;
+  --link: #e9f1ff;           /* soft white for normal inline links */
+  --link-hover: var(--teal);
+}
+
+/* =========================
+   Inline link defaults
+   (non-button anchors)
+   ========================= */
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--teal) 70%, transparent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+  text-decoration-color: currentColor;
+  outline: none;
+}
+
+/* Do NOT override button-like links on visited */
+a:visited:not(.project-link):not(.hero-btn):not(.btn-pill):not(.btn) {
+  color: var(--link);
+}
+
+/* =========================
+   Shared Button Styles
+   Applies to:
+     - .project-link (project cards)
+     - .hero-btn (hero CTA)
+     - .btn, .btn-pill (optional shared classes)
+   ========================= */
+
+/* Base pill/button */
+a.project-link,
+a.hero-btn,
+.project-link,
+.hero-btn,
+.btn,
+.btn-pill {
+  display: inline-block;
+  padding: .5rem .9rem;
+  border-radius: 10px;
+  border: 1px solid var(--teal);
+  background: var(--teal);
+  color: var(--dark);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(102, 252, 241, .25);
+  transition: background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+/* Keep readable text even after visit */
+a.project-link:link,
+a.project-link:visited,
+a.hero-btn:link,
+a.hero-btn:visited,
+.btn:link,
+.btn:visited,
+.btn-pill:link,
+.btn-pill:visited {
+  color: var(--dark);
+}
+
+/* Hover / keyboard focus: white background with black text */
+a.project-link:hover,
+a.project-link:focus-visible,
+a.hero-btn:hover,
+a.hero-btn:focus-visible,
+.btn:hover,
+.btn:focus-visible,
+.btn-pill:hover,
+.btn-pill:focus-visible {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--dark);
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 0 16px rgba(255, 255, 255, .25);
+}
+
+/* Optional: disabled state helper */
+.btn[aria-disabled="true"],
+.btn-pill[aria-disabled="true"] {
+  opacity: .6;
+  pointer-events: none;
+}
+
+/* =========================
+   Accessibility helpers
+   ========================= */
+:focus-visible {
+  outline: 2px dashed var(--teal);
+  outline-offset: 2px;
+}
+
+/* =========================
+   Responsive helpers
+   ========================= */
+@media (max-width: 768px) {
+  .about-skill-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+    margin-top: 80px;
+  }
 }

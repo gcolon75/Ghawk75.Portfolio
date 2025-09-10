@@ -78,3 +78,45 @@
   .skills-contributions-row{flex-direction:column;align-items:center}
   .skills-section,.contribution-section{width:100%;max-width:600px}
 }
+
+/* Writing "Read" pill button */
+.writing-link{
+  display: inline-block;
+  padding: .5rem .9rem;
+  border-radius: 10px;
+  border: 1px solid #66fcf1;   /* teal border */
+  background: #66fcf1;         /* teal fill */
+  color: #0b0f14;              /* dark text on teal */
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(102,252,241,.25);
+  transition: all .2s ease;
+}
+.writing-link:hover,
+.writing-link:focus-visible{
+  background: transparent;     /* hollow on hover/focus */
+  color: #66fcf1;
+  text-decoration: none;
+  outline: none;
+}
+
+/* If another rule wins, bump specificity a bit */
+.writings-section .writing-card .writing-link{
+  /* duplicate the same rules here if needed */
+}
+
+/* Force pill text color for all states */
+.writing-link,
+.writing-link:link,
+.writing-link:visited {
+  color: #0b0f14; /* dark text on teal */
+}
+
+/* Hover/keyboard focus stays outline + teal text */
+.writing-link:hover,
+.writing-link:focus-visible{
+  background: transparent;
+  color: #66fcf1;
+  text-decoration: none;
+  outline: none;
+}

@@ -18,6 +18,7 @@ import Project4Page from './components/Project4Page';
 import Project5Page from './components/Project5Page';
 import Project6Page from './components/Project6Page';
 import Project7Page from './components/Project7Page';
+import Project8Page from './components/Project8Page';
 
 
 import Writing from './components/Writing';
@@ -83,6 +84,7 @@ function App() {
           <Route path="/projects/3Kingdoms" element={<Project5Page />} />
           <Route path="/projects/tower-of-greed" element={<Project7Page />} />
           <Route path="/projects/amadeus" element={<Project6Page />} />
+          <Route path="/projects/valine" element={<Project8Page />} />
 
           {/* Individual Writing Pages */}
           <Route path="/writing/ai-and-gen-z" element={<Writing1Page />} />

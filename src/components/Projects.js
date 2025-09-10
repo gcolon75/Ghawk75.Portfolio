@@ -11,6 +11,12 @@ function Projects() {
     },
 
     {
+      title: "Project Valine",
+      description: "Where scripts meet performances and decision-makers find both. Concept stage; building the prototype.",
+      internalLink: "/projects/valine"
+    },
+
+    {
       title: "Amadeus — AI Agent for Discord",
       description: "Always-on desktop agent that watches stocks and game deals, configures a schedule, computes indicators, and posts briefs + alerts to Discord.",
       internalLink: "/projects/amadeus"
