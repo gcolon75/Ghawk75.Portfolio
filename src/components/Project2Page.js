@@ -94,6 +94,7 @@ function Project2Page() {
             <iframe
               src="https://docs.google.com/presentation/d/e/2PACX-1vSpL_voyYopV9thl57oDpDqboJKtujCbfX-xHwc6N22XR5Hq-h22LNQcZAjyhI_Ig/pubembed?start=false&loop=true&delayms=3000"
               title="Goalee Slide Deck"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"
               allowFullScreen
             />
           </section>
@@ -128,6 +129,7 @@ function Project2Page() {
             <iframe
               src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0oSbEK83wyRDNdhnA1izE_SfPZ7WBdF9VnMTOYrTYtxLF8TB-LT6h-BGTSN1Erw/pubhtml?widget=true&amp;headers=false"
               title="Goalee Budget Sheet"
+              sandbox="allow-scripts allow-same-origin allow-popups"
             />
           </section>
         </div>

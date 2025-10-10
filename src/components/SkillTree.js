@@ -91,17 +91,43 @@ Bias to ship, iterate, and measure outcomes.`
       </div>
 
       {/* Description Box */}
-      {selectedPlanetIndex !== null && (
-        <div className="description-box" aria-live="polite">
-          <h3>{planets[selectedPlanetIndex].name}</h3>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: planets[selectedPlanetIndex].description
-                .replace(/\n/g, '<br/>')
-            }}
-          />
-        </div>
-      )}
+      {selectedPlanetIndex !== null && (() => {
+        const planet = planets[selectedPlanetIndex];
+        const description = planet.description;
+        
+        // Parse description to extract links safely
+        const renderDescription = () => {
+          // Split by link tags
+          const parts = description.split(/(<a[^>]*>.*?<\/a>)/g);
+          
+          return parts.map((part, idx) => {
+            // Check if this part is a link
+            const linkMatch = part.match(/<a href="([^"]*)"[^>]*>(.*?)<\/a>/);
+            if (linkMatch) {
+              const [, url, text] = linkMatch;
+              return (
+                <a key={idx} href={url} target="_blank" rel="noopener noreferrer">
+                  {text}
+                </a>
+              );
+            }
+            // Otherwise, render text with line breaks
+            return part.split('\n').map((line, lineIdx) => (
+              <React.Fragment key={`${idx}-${lineIdx}`}>
+                {line}
+                {lineIdx < part.split('\n').length - 1 && <br />}
+              </React.Fragment>
+            ));
+          });
+        };
+
+        return (
+          <div className="description-box" aria-live="polite">
+            <h3>{planet.name}</h3>
+            <p>{renderDescription()}</p>
+          </div>
+        );
+      })()}
     </div>
   );
 }

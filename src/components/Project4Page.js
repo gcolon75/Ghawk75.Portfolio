@@ -95,6 +95,7 @@ function Project4Page() {
             <iframe
               src={volleyballPDF}
               title="Volleyball Mobile PDF"
+              sandbox="allow-scripts allow-same-origin"
               allowFullScreen
             />
           </section>
@@ -107,6 +108,7 @@ function Project4Page() {
             <iframe
               src="https://docs.google.com/presentation/d/e/2PACX-1vSKczbb8O26gGEGw4KXQJJlBLcJesmnOB-IbEbO5-cP4WCaD3uOhLjhoXa6BPDrvg/pubembed?start=false&loop=false&delayms=3000"
               title="Volleyball Mobile Slide Deck"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"
               allowFullScreen
               frameBorder="0"
             />

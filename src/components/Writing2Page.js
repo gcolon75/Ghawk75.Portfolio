@@ -53,7 +53,7 @@ function Writing2Page() {
         <div className="pdf-wrapper">
           <section className="pdf-viewer-section">
             <h2>PDF</h2>
-            <iframe src={pdfFile} title="Prompt Case Study (PDF)" allowFullScreen />
+            <iframe src={pdfFile} title="Prompt Case Study (PDF)" sandbox="allow-scripts allow-same-origin" allowFullScreen />
             <a className="view-link" href={pdfFile} download style={{marginTop:'1rem'}}>Download PDF</a>
           </section>
         </div>

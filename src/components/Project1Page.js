@@ -137,6 +137,7 @@ function Project1Page() {
             <iframe
               src={axleSlidesPDF}
               title="Axle Project Slides"
+              sandbox="allow-scripts allow-same-origin"
               allowFullScreen
               width="100%"
               height="700px"

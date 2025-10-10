@@ -61,6 +61,7 @@ function Writing1Page() {
             <iframe
               src={pdfFile}
               title="AI and Gen Z (PDF)"
+              sandbox="allow-scripts allow-same-origin"
               allowFullScreen
             />
             <a className="view-link" href={pdfFile} download style={{marginTop:'1rem'}}>Download PDF</a>

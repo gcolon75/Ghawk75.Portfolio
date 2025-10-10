@@ -89,6 +89,7 @@ function Project3Page() {
               width="100%"
               height="600"
               style={{ border: 'none', borderRadius: '12px' }}
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
               allowFullScreen
             />
           </section>
@@ -104,6 +105,7 @@ function Project3Page() {
               frameBorder="0"
               width="100%"
               height="569"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"
               allowFullScreen
               mozAllowFullScreen
               webkitAllowFullScreen

@@ -136,7 +136,7 @@ function Project7_TowerOfGreedPage() {
         <div className="pdf-wrapper">
           <section className="pdf-viewer-section">
             <h2>Pitch Deck</h2>
-            <iframe src={slidesPDF} title="Tower of Greed — Slide Deck" allowFullScreen />
+            <iframe src={slidesPDF} title="Tower of Greed — Slide Deck" sandbox="allow-scripts allow-same-origin" allowFullScreen />
             <a className="view-link" href={slidesPDF} download style={{ marginTop: '1rem' }}>
               Download PDF
             </a>
