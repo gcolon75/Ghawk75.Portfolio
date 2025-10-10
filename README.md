@@ -22,6 +22,17 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 Deploys the built app to GitHub Pages.
 
+## AI Orchestrator
+
+This portfolio includes documentation for the **Project Valine AI Orchestrator**, which has been consolidated into the [ghawk75-ai-agent](https://github.com/gcolon75/ghawk75-ai-agent) repository.
+
+For full details about the orchestrator, including:
+- Deployment and integration guides
+- Canonical endpoints and configuration
+- Verification checklist
+
+See **[docs/ORCHESTRATOR.md](docs/ORCHESTRATOR.md)**.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
