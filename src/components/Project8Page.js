@@ -91,6 +91,17 @@ function Project8_ProjectValinePage() {
         </section>
 
         <section className="pv-section compact">
+          <h2>AI Orchestrator</h2>
+          <p>
+            Project Valine uses an AI orchestrator for GitHub and Discord integrations. The orchestrator
+            has been consolidated into the <a href="https://github.com/gcolon75/ghawk75-ai-agent" target="_blank" rel="noreferrer">ghawk75-ai-agent</a> repository.
+          </p>
+          <p>
+            For orchestrator documentation, deployment guides, and integration details, see <a href="https://github.com/gcolon75/Ghawk75.Portfolio/blob/main/docs/ORCHESTRATOR.md" target="_blank" rel="noreferrer">ORCHESTRATOR.md</a>.
+          </p>
+        </section>
+
+        <section className="pv-section compact">
           <h2>Notes</h2>
           <p>
             Detailed strategy, metrics, and internal docs are private. This page will stay
