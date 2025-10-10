@@ -2,47 +2,50 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "main", "copilot/**" ]
+    branches: [ "main", "master", "trunk" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "master", "trunk" ]
   schedule:
-    - cron: '30 1 * * 1'
+    - cron: "31 1 * * 5"
 
 jobs:
   analyze:
-    name: Analyze
+    name: "CodeQL / Analyze (${{ matrix.language }})"
     runs-on: ubuntu-latest
     permissions:
       actions: read
       contents: read
       security-events: write
-
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'python' ]
-        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby', 'typescript' ]
-        # Use only 'java' to analyze code written in Java, Kotlin or both
-        # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
-        # Python scanning included for consistency with Project-Valine orchestrator requirements
-
+        language: [ "javascript", "python" ]
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: ${{ matrix.language }}
-        queries: security-extended
-        # If you wish to specify custom queries, you can do so here or in a config file.
-        # By default, queries listed here will override any specified in a config file.
-        # Prefix the list here with "+" to use these queries and those in the config file.
+      # Disable autobuild; not needed for JS/Python and often causes failures.
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v3
+      # If you add compiled languages later, conditionally enable autobuild:
+      # - if: ${{ contains('java cpp csharp go', matrix.language) }}
+      #   uses: github/codeql-action/autobuild@v4
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
-      with:
-        category: "/language:${{matrix.language}}"
+      # Optional dependency install for Python if desired:
+      # - if: ${{ matrix.language == 'python' }}
+      #   uses: actions/setup-python@v6
+      #   with:
+      #     python-version: "3.11"
+      # - if: ${{ matrix.language == 'python' }}
+      #   run: |
+      #     python -m pip install --upgrade pip
+      #     pip install -r requirements.txt
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: "/language:${{ matrix.language }}"
