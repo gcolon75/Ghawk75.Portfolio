@@ -28,7 +28,6 @@ You can expect:
 ## Security Scanning
 
 This repository uses:
-- **CodeQL**: Automated security scanning for JavaScript code
 - **Dependabot**: Automated dependency updates and security alerts
 - **npm audit**: Regular dependency vulnerability checks
 
