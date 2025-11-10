@@ -27,7 +27,7 @@ function Project8_ProjectValinePage() {
           {/* Hero + tagline */}
           <div className="hero-wrap">
             <h1>project valine</h1>
-            <p className="tagline"><em>Social-native talent discovery for film, TV, and theatre.</em></p>
+            <p className="tagline"><em>A modern platform connecting creative professionals.</em></p>
 
             <div className="hero-media">
               <img src={hero} alt="project valine concept" className="project-img" />
@@ -66,27 +66,27 @@ function Project8_ProjectValinePage() {
         <section className="pv-section compact">
           <h2>Summary</h2>
           <p>
-            We’re building a place where creative work is <strong>shown like social</strong> and
-            <strong> discovered like search</strong>. Early focus is on actors and writers in Southern CA,
-            with simple profiles, short clips, and basic discovery.
+            Building a platform that combines <strong>social-style presentation</strong> with
+            <strong> search-driven discovery</strong>. Currently developing core features
+            with a limited test group.
           </p>
         </section>
 
         <section className="pv-section compact">
           <h2>What We’re Building (Public Scope)</h2>
           <ul className="tight">
-            <li>Feed + profile concepts with short clip posts.</li>
-            <li>Lightweight search & filters (role, location, skills).</li>
-            <li>Private prototype of “script ↔ scene” linking (high level only here).</li>
+            <li>Profile system with media showcase capabilities.</li>
+            <li>Advanced search and filtering functionality.</li>
+            <li>Innovative content matching features (details under development).</li>
           </ul>
         </section>
 
         <section className="pv-section compact">
           <h2>Current Focus</h2>
           <ul className="tight">
-            <li>Clickable Figma prototype of core flows.</li>
-            <li>Invite-only test cohort (very small, private).</li>
-            <li>Safety & trust v1 (verification, reporting, captions).</li>
+            <li>Interactive prototypes of key user flows.</li>
+            <li>Private testing with select early users.</li>
+            <li>Core trust and safety infrastructure.</li>
           </ul>
         </section>
 
