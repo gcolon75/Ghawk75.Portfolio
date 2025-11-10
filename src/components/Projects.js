@@ -12,7 +12,7 @@ function Projects() {
 
     {
       title: "Project Valine - Website",
-      description: "Where scripts meet performances and decision-makers find both. Concept stage; building the prototype.",
+      description: "A professional networking platform with innovative discovery features. In early development with private testing.",
       internalLink: "/projects/valine"
     },
 
