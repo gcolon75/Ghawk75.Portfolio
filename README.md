@@ -4,6 +4,17 @@ My website for showcasing my projects and skills.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Architecture
+
+This portfolio uses a centralized data structure for maintainability and consistency:
+
+- **`src/data/projects.json`**: Single source of truth for all project data
+- **`src/components/ProjectCard.js`**: Reusable project card component
+- **`src/components/SEO.js`**: SEO and structured data helper
+- **Problem → Approach → Result pattern**: Every project follows this storytelling structure
+
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for detailed information on adding new projects.
+
 ## Available Scripts
 
 In the project directory, you can run:
