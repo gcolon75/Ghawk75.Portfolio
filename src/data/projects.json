@@ -1,0 +1,383 @@
+{
+  "projects": [
+    {
+      "id": "tower-of-greed",
+      "title": "Tower of Greed",
+      "year": 2025,
+      "type": "game",
+      "phase": "Concept / Design",
+      "progress": 0.20,
+      "lastUpdated": "November 10, 2025",
+      "summary": "A dice-driven roguelike RPG where every turn balances risk and payoff. Build your dice, manage resources, and climb using smart sequencing over raw RNG.",
+      "tagline": "A dice-driven roguelike RPG where every turn balances risk and payoff.",
+      "problem": "Most roguelikes rely heavily on RNG, leaving players feeling powerless. There's a gap for games that reward smart sequencing and tactical dice-building over pure luck.",
+      "approach": "Designed a customizable Attack Die system (D4/D6/D8) with attunement capacity and shard upgrades, paired with unique Subclass Dice (Blood, Grit, Edge) that enable resource-gated burst abilities.",
+      "result": "Created a concept that emphasizes tactical dice-building, subclass identity, and meaningful progression through smart sequencing rather than random chance.",
+      "role": "Game Designer, Systems Designer",
+      "whatISpecificallyDid": [
+        "Designed core dice mechanics and progression systems",
+        "Created subclass resource systems (Blood, Grit, Edge)",
+        "Developed turn-based combat loop balancing setup vs. burst timing",
+        "Authored comprehensive concept documentation"
+      ],
+      "techStack": ["Game Design", "Systems Design", "Roguelike", "Dice Systems"],
+      "tags": {
+        "disciplines": ["Game Design", "Systems Design"],
+        "genres": ["Roguelike", "RPG"],
+        "specialties": ["Dice Systems", "Resource Management"]
+      },
+      "internalLink": "/projects/tower-of-greed",
+      "externalLinks": [],
+      "assets": [
+        {
+          "type": "image",
+          "path": "../assets/tower-of-greed-hero.jpg",
+          "alt": "Tower of Greed concept"
+        },
+        {
+          "type": "document",
+          "path": "/assets/tower-of-greed/towerofgreedconcept.txt",
+          "title": "Concept summary (TXT)",
+          "download": true
+        },
+        {
+          "type": "document",
+          "path": "/assets/tower-of-greed/Tower-of-Greed-Concept-v1.00.pdf",
+          "title": "Download concept (PDF)",
+          "download": true
+        }
+      ],
+      "privacyFlags": ["concept-only", "no-metrics"],
+      "featured": true
+    },
+    {
+      "id": "project-valine",
+      "title": "Project Valine",
+      "year": 2025,
+      "type": "website",
+      "phase": "Concept / Pre-MVP",
+      "progress": 0.15,
+      "lastUpdated": "September 10, 2025",
+      "summary": "A professional networking platform with innovative discovery features. In early development with private testing.",
+      "tagline": "A modern platform connecting creative professionals.",
+      "problem": "Traditional networking platforms struggle with authentic connection and meaningful discovery of creative talent.",
+      "approach": "Building a platform that combines social-style presentation with search-driven discovery, focusing on profile systems, advanced filtering, and innovative content matching.",
+      "result": "Currently developing core features with a limited test group to validate the concept and refine user experience.",
+      "role": "Platform Designer, Developer",
+      "whatISpecificallyDid": [
+        "Designed profile system with media showcase capabilities",
+        "Developed advanced search and filtering functionality",
+        "Created innovative content matching features",
+        "Coordinating private testing with early users"
+      ],
+      "techStack": ["Web Development", "Platform Design", "User Experience"],
+      "tags": {
+        "disciplines": ["Web Development", "UX Design"],
+        "technologies": ["React", "Platform Architecture"],
+        "specialties": ["Discovery Systems", "Social Features"]
+      },
+      "internalLink": "/projects/valine",
+      "externalLinks": [],
+      "assets": [
+        {
+          "type": "image",
+          "path": "../assets/project-valine-hero.png",
+          "alt": "project valine concept"
+        }
+      ],
+      "privacyFlags": ["in-development", "private-testing", "no-metrics"],
+      "featured": true
+    },
+    {
+      "id": "amadeus",
+      "title": "Amadeus — AI Agent for Discord",
+      "year": 2024,
+      "type": "tool",
+      "summary": "Always-on desktop agent that watches stocks and game deals, configures a schedule, computes indicators, and posts briefs + alerts to Discord.",
+      "problem": "Tracking market movements and gaming deals requires constant manual checking across multiple platforms, creating alert fatigue and missed opportunities.",
+      "approach": "Developed an always-on Windows desktop agent that polls watchlists, computes technical indicators (SMA20/50, RSI14), tracks options, and monitors game deals with intelligent alert hygiene (cooldowns, quiet hours, deduplication).",
+      "result": "Created a reliable automation system that reduces alert noise while capturing important moves, with scheduled briefs at 7:30 AM and 10:00 PM PT delivered to Discord.",
+      "role": "Developer, Systems Designer",
+      "whatISpecificallyDid": [
+        "Designed agent architecture and Discord posting flows",
+        "Implemented market pipelines, indicators, and paper-trade hooks",
+        "Wrote daily brief generator and quiet-hours/cooldown logic",
+        "Packaged run-on-logon automation and environment bootstrap"
+      ],
+      "techStack": ["Python 3.11", "Discord", "Polygon.io", "Automation", "Data"],
+      "tags": {
+        "languages": ["Python"],
+        "technologies": ["Discord API", "Polygon.io", "Windows Task Scheduler"],
+        "disciplines": ["Automation", "Data Engineering"],
+        "specialties": ["Market Data", "Alert Systems"]
+      },
+      "internalLink": "/projects/amadeus",
+      "externalLinks": [
+        {
+          "url": "https://github.com/gcolon75/ghawk75-ai-agent",
+          "title": "GitHub Repository",
+          "type": "github"
+        }
+      ],
+      "assets": [
+        {
+          "type": "image",
+          "path": "../assets/discord.png",
+          "alt": "Amadeus Discord agent hero"
+        }
+      ],
+      "privacyFlags": ["public-repo"],
+      "featured": false
+    },
+    {
+      "id": "3kingdoms",
+      "title": "3 Kingdoms",
+      "year": 2023,
+      "type": "game",
+      "summary": "A fantasy strategy-RPG concept I designed and prototyped using Godot.",
+      "tagline": "A turn-based strategy RPG exploring narrative, world-building, and systems design.",
+      "problem": "Modern RPGs often lack meaningful player agency and deep narrative consequences that reshape alliances and outcomes.",
+      "approach": "Authored a comprehensive game design concept exploring player agency through diplomacy/deception/escalation, class identity (Warrior/Mage/Rogue), and systems like planetary weapons, alignment, and kingdom buffs.",
+      "result": "Created detailed design documentation including lore, mechanics, encounter structure, and class fantasies inspired by classics like Pokémon and Zelda with mature themes.",
+      "role": "Game Designer, Narrative Designer",
+      "whatISpecificallyDid": [
+        "Authored complete world-building and narrative arc",
+        "Designed class system with planetary influences",
+        "Created combat mechanics with tactical depth",
+        "Developed alignment and faction systems",
+        "Designed progression through towers and sigil doors"
+      ],
+      "techStack": ["Game Design Concept", "Narrative Design", "World-Building", "Systems Design", "Paper Prototype"],
+      "tags": {
+        "disciplines": ["Game Design", "Narrative Design", "Systems Design"],
+        "genres": ["Strategy RPG", "Turn-Based"],
+        "specialties": ["World-Building", "Player Agency", "Class Systems"]
+      },
+      "internalLink": "/projects/3kingdoms",
+      "externalLinks": [],
+      "assets": [
+        {
+          "type": "image",
+          "path": "../assets/3KingdomsTitleScreen.png",
+          "alt": "3 Kingdoms title art"
+        },
+        {
+          "type": "image",
+          "path": "../assets/3KingdomsMap.JPG",
+          "alt": "3 Kingdoms map"
+        },
+        {
+          "type": "image",
+          "path": "../assets/3KingdomsFullMap.JPG",
+          "alt": "3 Kingdoms full map"
+        }
+      ],
+      "privacyFlags": ["concept-only"],
+      "featured": false
+    },
+    {
+      "id": "axle",
+      "title": "axle: Mobile Mechanic App/Website Design",
+      "year": 2023,
+      "type": "design",
+      "summary": "A complete redesign concept for a mobile mechanic app with a focus on user experience.",
+      "tagline": "Connecting car owners with certified mechanics for on-demand vehicle repair.",
+      "problem": "Car owners face inconvenience with traditional repair shops (waiting rooms, towing), while mechanics need flexible business growth without physical shops.",
+      "approach": "Led comprehensive user research and design process, creating mobile-first platform with real-time tracking, AI diagnostics, transparent pricing, and dual interfaces for customers and mechanics.",
+      "result": "Delivered complete desktop and mobile interfaces with user flows, high-fidelity mockups, and design system maintaining consistent visual identity across the platform.",
+      "role": "UX Designer, User Researcher, Project Manager",
+      "whatISpecificallyDid": [
+        "Led and conducted comprehensive user research interviews",
+        "Designed primarily for desktop platforms with responsive considerations",
+        "Created high-fidelity mockups with detailed annotations",
+        "Prepared and delivered polished design presentations for stakeholders",
+        "Developed user flows and interactive prototypes",
+        "Maintained consistent design system and visual identity across pages"
+      ],
+      "techStack": ["UX Design", "Figma", "User Research", "Project Management", "Market Research", "Google Slides"],
+      "tags": {
+        "disciplines": ["UX Design", "User Research", "Project Management"],
+        "tools": ["Figma", "Google Slides"],
+        "specialties": ["Mobile-First Design", "User Flows", "Design Systems"]
+      },
+      "internalLink": "/projects/axle",
+      "externalLinks": [],
+      "assets": [
+        {
+          "type": "image",
+          "path": "../assets/axleImage.JPG",
+          "alt": "axle demo"
+        },
+        {
+          "type": "image",
+          "path": "../assets/axle-homepage.JPG",
+          "alt": "Axle Homepage Design"
+        },
+        {
+          "type": "image",
+          "path": "../assets/axle-about.JPG",
+          "alt": "About Page"
+        },
+        {
+          "type": "image",
+          "path": "../assets/axle-becomeMechanic.JPG",
+          "alt": "Become a Mechanic Flow"
+        },
+        {
+          "type": "document",
+          "path": "../assets/axle-slides.pdf",
+          "title": "Axle Project Slides",
+          "type": "pdf"
+        }
+      ],
+      "privacyFlags": ["client-project"],
+      "featured": true
+    },
+    {
+      "id": "goalee",
+      "title": "Goalee: Startup Project Pitch",
+      "year": 2022,
+      "type": "design",
+      "summary": "A campus-based social app encouraging in-person interaction and events at UCSD.",
+      "tagline": "Leveling Up Together — One Goal at a Time",
+      "problem": "Students face challenges with motivation and isolation in academic settings, lacking tools that promote both individual accountability and community connection.",
+      "approach": "Designed a mobile app that gamifies daily goals and encourages in-person interaction through goal tracking, team quests, challenge boards, and social feeds, turning personal growth into a community-driven experience.",
+      "result": "Created complete Figma prototype demonstrating onboarding flow, dashboard interface, and team-based interaction system, with pitch deck and budget model presented to stakeholders.",
+      "role": "Co-Team Leader, UX Designer, Creative Director",
+      "whatISpecificallyDid": [
+        "Directed creative vision and core interaction flow",
+        "Worked as Co-team Leader and flex Figma designer",
+        "Helped build final Figma prototype with multiple screens",
+        "Presented pitch deck to stakeholders and faculty",
+        "Facilitated feedback loops during team critiques"
+      ],
+      "techStack": ["Figma", "UX Design", "Human-Centered Design", "Research", "Pitch Presentation"],
+      "tags": {
+        "disciplines": ["UX Design", "Human-Centered Design", "Research"],
+        "tools": ["Figma"],
+        "specialties": ["Gamification", "Social Apps", "Team Collaboration"]
+      },
+      "internalLink": "/projects/goalee",
+      "externalLinks": [
+        {
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vSpL_voyYopV9thl57oDpDqboJKtujCbfX-xHwc6N22XR5Hq-h22LNQcZAjyhI_Ig/pubembed?start=false&loop=true&delayms=3000",
+          "title": "Slide Deck",
+          "type": "slides"
+        },
+        {
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0oSbEK83wyRDNdhnA1izE_SfPZ7WBdF9VnMTOYrTYtxLF8TB-LT6h-BGTSN1Erw/pubhtml?widget=true&headers=false",
+          "title": "Budget & Growth Model",
+          "type": "spreadsheet"
+        }
+      ],
+      "assets": [
+        {
+          "type": "image",
+          "path": "../assets/GoaleeHomescreen.JPG",
+          "alt": "Goalee Homescreen"
+        },
+        {
+          "type": "image",
+          "path": "../assets/GoaleePoster.jpg",
+          "alt": "Goalee Poster"
+        },
+        {
+          "type": "video",
+          "path": "../assets/GoaleeVideo.mp4",
+          "title": "Project Overview Video"
+        },
+        {
+          "type": "video",
+          "path": "../assets/GoaleeDemo.mp4",
+          "title": "Live App Walkthrough"
+        }
+      ],
+      "privacyFlags": ["academic-project"],
+      "featured": true
+    },
+    {
+      "id": "tritongoplus",
+      "title": "TritonGo App",
+      "year": 2022,
+      "type": "design",
+      "summary": "A campus-based social app encouraging in-person interaction and events at UCSD.",
+      "tagline": "Making Real Life a Campus Quest",
+      "problem": "Students struggle to find in-person social connections and engaging campus activities in a convenient, gamified way.",
+      "approach": "Built a social campus app that gamifies goal tracking with location-based team gameplay, daily missions, event discovery, and battle mechanics for colleges and dungeons, using Figma prototype deployed as Wix website.",
+      "result": "Created complete app concept with team-based quests, map interaction, and UCSD-exclusive features, successfully pitched to client with working demo site.",
+      "role": "UI Designer, Brand Designer, Lead Designer",
+      "whatISpecificallyDid": [
+        "Led the design and Figma prototyping of the app for the team",
+        "Interviewed target users to inform app features",
+        "Built the client-facing website on Wix",
+        "Developed pitch materials and presented the concept",
+        "Collaborated on storyline, structure, and in-app quest mechanics"
+      ],
+      "techStack": ["UX Design", "Wix", "Figma", "Teamwork", "Pitch Presentation"],
+      "tags": {
+        "disciplines": ["UX Design", "Brand Design"],
+        "tools": ["Figma", "Wix"],
+        "specialties": ["Gamification", "Location-Based", "Social Apps"]
+      },
+      "internalLink": "/projects/tritongoplus",
+      "externalLinks": [
+        {
+          "url": "https://ucsdtritongo.wixsite.com/tritongoplus",
+          "title": "TritonGo Wix Website",
+          "type": "website"
+        }
+      ],
+      "assets": [
+        {
+          "type": "image",
+          "path": "../assets/TritonGoTitle.JPG",
+          "alt": "TritonGo Title"
+        }
+      ],
+      "privacyFlags": ["academic-project"],
+      "featured": false
+    },
+    {
+      "id": "volleyball",
+      "title": "Volleyball Mobile",
+      "year": 2022,
+      "type": "design",
+      "summary": "A UX/UI design concept for a volleyball app aimed at La Jolla Shores.",
+      "tagline": "A better way to find your next volleyball squad.",
+      "problem": "New and casual beach volleyball players at La Jolla Shores felt excluded from established groups, lacking tools to connect with players of similar skill levels.",
+      "approach": "Designed a mobile-first app with challenge court queue system, skill-based filtering, social flags to signal openness to play, GPS-based court locations, and personalized profiles to break down social barriers.",
+      "result": "Created intuitive Figma prototype with low-friction onboarding and strong beach community feel, validated through peer feedback and iteration on layout, visuals, and flow.",
+      "role": "UX Designer, User Researcher",
+      "whatISpecificallyDid": [
+        "Conducted field research and user interviews at La Jolla Shores",
+        "Designed complete mobile user flows in Figma",
+        "Created wireframes, mockups, and interactive prototypes",
+        "Developed inclusive design solutions for skill-level matching",
+        "Presented design rationale and research findings"
+      ],
+      "techStack": ["UX Design", "Figma", "Mobile-First", "Social Research", "User Interviews"],
+      "tags": {
+        "disciplines": ["UX Design", "User Research"],
+        "tools": ["Figma"],
+        "specialties": ["Mobile-First Design", "Social Apps", "Community Building"]
+      },
+      "internalLink": "/projects/volleyball",
+      "externalLinks": [],
+      "assets": [
+        {
+          "type": "image",
+          "path": "../assets/VolleyballMobileTitle.JPG",
+          "alt": "Volleyball Mobile Title Screen"
+        },
+        {
+          "type": "document",
+          "path": "../assets/Volleyball Mobile.pdf",
+          "title": "Volleyball Mobile PDF",
+          "type": "pdf"
+        }
+      ],
+      "privacyFlags": ["academic-project"],
+      "featured": false
+    }
+  ]
+}
