@@ -93,83 +93,13 @@
 /* Responsive Grid for Projects */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Allows boxes to shrink dynamically */
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: clamp(15px, 3vw, 40px);
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   padding: clamp(10px, 2vw, 20px);
-  max-width: 100%; /* Prevents expanding beyond section */
-}
-
-/* Project Cards Styling */
-.project-card {
-  background: rgba(0, 0, 0, 0.95);
-  padding: clamp(15px, 2vw, 30px);
-  border-radius: 20px;
-  border: 3px solid #66fcf1;
-  box-shadow: 0 0 35px rgba(102, 252, 241, 0.9);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  width: 90%;
-  max-width: 400px;
-  margin: auto;
-  position: relative;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 50px rgba(102, 252, 241, 1);
-}
-
-/* Featured projects get extra styling */
-.project-card.featured::before {
-  content: '⭐';
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
-  z-index: 1;
-}
-
-/* In Progress Badge Styling */
-.project-card.in-progress {
-  border: 3px dashed #ffcc00;
-  box-shadow: 0 0 40px rgba(255, 204, 0, 0.9);
-}
-
-.project-status {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-/* Tech tags in cards */
-.project-card .tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin: 1rem 0;
-  min-height: 2rem;
-}
-
-.project-card .tech-tags .tag {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.6rem;
-  background: rgba(102, 252, 241, 0.1);
-  border: 1px solid #66fcf1;
-  border-radius: 12px;
-  color: #66fcf1;
-  white-space: nowrap;
-}
-
-.project-card .tech-tags .more-tags {
-  background: rgba(255, 204, 0, 0.1);
-  border-color: #ffcc00;
-  color: #ffcc00;
-  font-weight: bold;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Mobile Adjustments */
@@ -179,98 +109,27 @@
   }
 
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Allows more flexible wrapping */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: clamp(10px, 2vw, 20px);
   }
-
-  .project-card {
-    max-width: 80%; /* Ensures cards shrink more effectively */
+  
+  .filter-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .filter-select {
+    width: 100%;
   }
 }
 
 /* Single Column Layout for Narrow Screens */
 @media (max-width: 480px) {
   .projects-container {
-    grid-template-columns: 1fr; /* Ensures single column for small screens */
+    grid-template-columns: 1fr;
   }
-
-  .project-card {
-    width: 100%;
-    max-width: 95%; /* Ensures the card fills screen width properly */
-  }
-}
-
-/* Projects.css */
-
-/* View Project pill button */
-.project-link{
-  display:inline-block;
-  padding:.5rem .9rem;
-  border-radius:10px;
-  border:1px solid #66fcf1;   /* teal border */
-  background:#66fcf1;         /* teal fill */
-  color:#0b0f14;              /* dark text on teal */
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 0 12px rgba(102,252,241,.25);
-  transition: all .2s ease;
-}
-.project-link:hover,
-.project-link:focus-visible{
-  background:transparent;     /* hollow on hover */
-  color:#66fcf1;
-  text-decoration:none;
-  outline: none;
-}
-
-/* (Optional) If something else overrides it, bump specificity */
-.projects-section .project-card .project-link{ /* same rules as above */ }
-
-/* === Uniform card sizing without overflow === */
-.projects-container{
-  /* keep your 2-col layout, but prevent spill */
-  width: 100%;
-  box-sizing: border-box;
-  align-items: stretch;            /* each item fills its track height */
-}
-
-/* keep your existing width constraints to stay inside the bubble */
-.project-card{
-  width: 90%;
-  max-width: 600px;
-  margin: auto;
-  height: 100%;
-  display: flex;                   /* stack title / text / button */
-  flex-direction: column;
-  justify-content: flex-start;
-  box-sizing: border-box;
-}
-
-/* Clamp text so cards line up even when descriptions vary */
-.project-card h3{
-  line-height: 1.25;
-  min-height: 2.5em;               /* ~2 lines */
-  display: flex; align-items: center; justify-content: center;
-}
-
-.project-card p{
-  display: -webkit-box;
-  -webkit-line-clamp: 3;           /* show up to 3 lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 3.6em;               /* reserve space = 3 lines */
-}
-
-/* Button sits consistently */
-.project-card .project-link{
-  margin-top: 1rem;
-  align-self: center;
-}
-
-:root{
-  --cards-min: 500px;   /* width of each card before it wraps */
-  --cards-gap: 28px;    /* space between cards */
-  --card-pad: 22px;     /* inner padding */
-  --desc-lines: 3;      /* lines of description visible */
-  --section-max: 1200px;/* max width of the whole grid bubble */
 }

@@ -1,4 +1,73 @@
 /* ----------------------------------- */
+/* 🔷 Project Overview Section */
+/* ----------------------------------- */
+.tagline {
+  font-size: 1.2rem;
+  color: #66fcf1;
+  font-style: italic;
+  margin: 1rem auto 2rem;
+}
+
+.project-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  text-align: left;
+}
+
+.overview-section {
+  background: rgba(102, 252, 241, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(102, 252, 241, 0.3);
+}
+
+.overview-section h2 {
+  font-size: 1.3rem;
+  color: #66fcf1;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+.overview-section p {
+  text-align: left;
+  margin: 0;
+}
+
+/* ----------------------------------- */
+/* 🔷 Skill Categories */
+/* ----------------------------------- */
+.skill-categories {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skill-category h4 {
+  color: #66fcf1;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-category ul li {
+  background: rgba(102, 252, 241, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(102, 252, 241, 0.3);
+  font-size: 0.9rem;
+}
+
+/* ----------------------------------- */
 /* 🔷 Main Content Card (Project Info) */
 /* ----------------------------------- */
 .project-page {

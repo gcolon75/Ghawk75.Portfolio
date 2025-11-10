@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
-import { Link } from 'react-router-dom';
 import projectData from '../data/projects.json';
+import ProjectCard from './ProjectCard';
 
 function Projects() {
   const [filter, setFilter] = useState({ type: 'all', tech: 'all' });
@@ -71,38 +71,7 @@ function Projects() {
 
       <div className="projects-container">
         {filteredProjects.map((project) => (
-          <div 
-            key={project.id} 
-            className={`project-card ${project.phase ? 'in-progress' : ''} ${project.featured ? 'featured' : ''}`}
-          >
-            <h3>{project.title}</h3>
-            <p>{project.summary}</p>
-            
-            {/* Tech Stack Tags */}
-            <div className="tech-tags">
-              {project.techStack.slice(0, 4).map((tech, idx) => (
-                <span key={idx} className="tag">{tech}</span>
-              ))}
-              {project.techStack.length > 4 && (
-                <span className="tag more-tags">+{project.techStack.length - 4}</span>
-              )}
-            </div>
-
-            {project.phase ? (
-              <div className="project-status">
-                <span className="progress-badge">
-                  {project.phase} <span role="img" aria-label="rocket">🚀</span>
-                </span>
-                <Link to={project.internalLink} className="project-link">
-                  View Details
-                </Link>
-              </div>
-            ) : (
-              <Link to={project.internalLink} className="project-link">
-                View Project
-              </Link>
-            )}
-          </div>
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
       

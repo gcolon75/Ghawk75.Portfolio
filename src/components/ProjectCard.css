@@ -1,0 +1,176 @@
+/* ProjectCard Component Styles */
+
+.project-card {
+  background: rgba(0, 0, 0, 0.95);
+  padding: clamp(15px, 2vw, 30px);
+  border-radius: 20px;
+  border: 3px solid #66fcf1;
+  box-shadow: 0 0 35px rgba(102, 252, 241, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(102, 252, 241, 1);
+}
+
+/* Featured badge */
+.project-card .featured-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  z-index: 1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* In-progress projects */
+.project-card.in-progress {
+  border: 3px dashed #ffcc00;
+  box-shadow: 0 0 40px rgba(255, 204, 0, 0.9);
+}
+
+/* Card title */
+.project-card h3 {
+  font-size: 1.3rem;
+  color: #66fcf1;
+  margin: 0.5rem 0;
+  line-height: 1.25;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+/* Year badge */
+.project-card .project-year {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #999;
+  background: rgba(102, 252, 241, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+/* Summary text */
+.project-card .project-summary {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+  margin: 1rem 0;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 4.5em;
+}
+
+/* Tech tags */
+.project-card .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+  min-height: 2rem;
+}
+
+.project-card .tech-tags .tag {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(102, 252, 241, 0.1);
+  border: 1px solid #66fcf1;
+  border-radius: 12px;
+  color: #66fcf1;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.project-card .tech-tags .tag:hover {
+  background: rgba(102, 252, 241, 0.2);
+  transform: scale(1.05);
+}
+
+.project-card .tech-tags .more-tags {
+  background: rgba(255, 204, 0, 0.1);
+  border-color: #ffcc00;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* Status and link */
+.project-card .project-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.project-card .progress-badge {
+  font-size: 0.85rem;
+  color: #ffcc00;
+  background: rgba(255, 204, 0, 0.1);
+  border: 1px solid #ffcc00;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Compact mode */
+.project-card.compact {
+  min-height: 240px;
+  max-width: 320px;
+}
+
+.project-card.compact h3 {
+  font-size: 1.1rem;
+  min-height: 2em;
+}
+
+.project-card.compact .project-summary {
+  font-size: 0.9rem;
+  -webkit-line-clamp: 2;
+  min-height: 3em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 90%;
+    min-height: 280px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .project-card .tech-tags .tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%;
+    max-width: 95%;
+  }
+}
