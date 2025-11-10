@@ -101,6 +101,23 @@
 .devlog li { color: #e0e8f5; }
 .devlog time { font-feature-settings: "tnum"; opacity: .75; margin-right: .5rem; }
 
+/* Content sections (matching Project8Page privacy-safe approach) */
+.pv-section{
+  position: relative; z-index: 2;
+  max-width:1200px; margin:1.5rem auto; padding:2rem;
+  background:rgba(0,0,0,.85);
+  border-radius:20px; border:2px solid #66fcf1;
+  box-shadow:0 0 30px rgba(102,252,241,.5);
+  color:#e9f1ff;
+}
+.pv-section h2{ color:#66fcf1; margin:.25rem 0 .5rem; }
+.pv-section p,
+.pv-section li{ color:#e0e8f5; line-height:1.6; }
+.pv-section ul{ margin:.5rem 0 0 1.25rem; }
+.pv-section li{ margin:.35rem 0; }
+.pv-section.compact{ padding:1.5rem; }
+ul.tight li{ margin:.25rem 0; }
+
 /* PDF */
 .pdf-wrapper { margin: 1.5rem 0 2.5rem; display: flex; justify-content: center; }
 .pdf-viewer-section iframe{

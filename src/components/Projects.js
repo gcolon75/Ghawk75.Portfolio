@@ -6,7 +6,7 @@ function Projects() {
   const projects = [
     {
       title: "Tower of Greed - Game",
-      description: "Turn-based roguelike with a push-your-luck economy: climb higher for bigger multipliers, or cash out before you lose it all.",
+      description: "A dice-driven roguelike RPG where every turn balances risk and payoff. Build your dice, manage resources, and climb using smart sequencing over raw RNG.",
       internalLink: "/projects/tower-of-greed",
     },
 

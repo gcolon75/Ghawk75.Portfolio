@@ -1,0 +1,51 @@
+TOWER OF GREED - CONCEPT SUMMARY
+=================================
+
+Tower of Greed is a dice-driven roguelike RPG where every turn balances risk and payoff. Players craft a customizable Attack Die, manage a resource-gated Subclass Die, and climb a perilous tower using smart sequencing over raw RNG.
+
+CORE PILLARS
+------------
+
+1. CUSTOMIZABLE ATTACK DIE
+   - Choose your die type: D4, D6, or D8
+   - Each die has unique attunement capacity
+   - Upgrade with Dice Shards throughout your run
+   - Balance damage potential vs. consistency
+
+2. SUBCLASS DIE SYSTEM
+   - Unique resource systems per subclass:
+     * Blood - Life force manipulation
+     * Grit - Endurance and resilience
+     * Edge - Precision and timing
+   - Used strategically every 3-4 turns
+   - Defines your playstyle and combat approach
+
+3. TACTICAL TURN-BASED COMBAT
+   - Setup vs. burst timing decisions
+   - Resource management is key
+   - Smart sequencing beats pure luck
+   - Every roll matters
+
+4. PROGRESSION SYSTEMS
+   - Dice Shards: Permanent upgrades to your Attack Die
+   - Ascension: Subclass-specific scaling and enhancements
+   - Meta-progression between runs
+   - Unlockable subclasses and abilities
+
+DESIGN PHILOSOPHY
+-----------------
+
+Tower of Greed emphasizes tactical dice-building over random chance. Players must:
+- Plan their Attack Die configuration for optimal damage ranges
+- Manage subclass resources for clutch moments
+- Balance immediate power vs. long-term scaling
+- Make meaningful choices about when to push higher vs. consolidate gains
+
+The tower itself presents escalating challenges that reward preparation and adaptation, not just lucky rolls.
+
+CONCEPT STATUS
+--------------
+
+This concept was created on 2025-11-10. The game is in early design phase, focusing on core systems and balance before expanding features.
+
+For more detailed information, see the full concept PDF.
