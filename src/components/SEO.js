@@ -154,7 +154,9 @@ export const getProjectStructuredData = (project) => {
   if (project.assets && project.assets.length > 0) {
     const imageAsset = project.assets.find(a => a.type === 'image');
     if (imageAsset) {
-      baseData.image = `https://gcolon75.github.io/Ghawk75.Portfolio${imageAsset.path.replace('..', '')}`;
+      // Convert relative path to absolute URL - remove all '../' occurrences
+      const imagePath = imageAsset.path.replace(/\.\.\//g, '/');
+      baseData.image = `https://gcolon75.github.io/Ghawk75.Portfolio${imagePath}`;
     }
   }
 

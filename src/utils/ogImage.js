@@ -19,8 +19,8 @@ export function getProjectOGImage(project) {
   if (project.assets && project.assets.length > 0) {
     const imageAsset = project.assets.find(a => a.type === 'image');
     if (imageAsset) {
-      // Convert relative path to absolute URL
-      const imagePath = imageAsset.path.replace('..', '');
+      // Convert relative path to absolute URL - remove all '../' occurrences
+      const imagePath = imageAsset.path.replace(/\.\.\//g, '/');
       return `${SITE_URL}${imagePath}`;
     }
   }
