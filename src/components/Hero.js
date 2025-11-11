@@ -1,10 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import SEO, { getPersonStructuredData } from './SEO';
+import planetsData from '../data/hero.planets.json';
 
 function Hero() {
   const personData = getPersonStructuredData();
+  const navigate = useNavigate();
+  const [orbitsPaused, setOrbitsPaused] = useState(false);
+  const [activePlanet, setActivePlanet] = useState(null);
+
+  // Load orbit pause state from localStorage
+  useEffect(() => {
+    const savedState = localStorage.getItem('orbits-paused');
+    if (savedState === 'true') {
+      setOrbitsPaused(true);
+    }
+  }, []);
+
+  // Save orbit pause state to localStorage
+  const toggleOrbits = () => {
+    const newState = !orbitsPaused;
+    setOrbitsPaused(newState);
+    localStorage.setItem('orbits-paused', newState.toString());
+  };
+
+  // Handle planet click - navigate to projects with filter
+  const handlePlanetClick = (planet) => {
+    const tagQuery = planet.tagFilter.join(',');
+    navigate(`/#projects?tags=${encodeURIComponent(tagQuery)}`);
+  };
+
+  // Handle planet keyboard interaction
+  const handlePlanetKeyPress = (e, planet) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handlePlanetClick(planet);
+    } else if (e.key === 'Escape') {
+      setActivePlanet(null);
+    }
+  };
 
   return (
     <>
@@ -17,26 +52,58 @@ function Hero() {
       
       <section className="hero-container">
         <div className="hero-inner">
-          {/* 🌍 Planet */}
-          <div className="planet">
+          {/* Central Star - Name */}
+          <div className="hero-star">
             <h1>Gabriel Colón</h1>
-            <p>
-              Exploring creativity, design, and the infinite possibilities of the
-              universe through code and storytelling.
+            <p className="hero-tagline">
+              Systems Designer & Game Designer
             </p>
-            <div className="hero-buttons">
-              <a href="#contact" className="hero-btn">Contact Me</a>
-              <Link to="#projects" className="hero-btn">Explore my Projects</Link>
-            </div>
           </div>
 
-          {/* 🌕 Moon */}
-          <div className="moon">
-            <h2>100%</h2>
-            <p>Committed to Problem Solving</p>
-            <h2>∞</h2>
-            <span>Problems to Solve</span>
+          {/* Orbital System */}
+          <div className={`orbital-system ${orbitsPaused ? 'paused' : ''}`} aria-label="Focus areas">
+            {planetsData.planets.map((planet, index) => (
+              <div 
+                key={planet.id}
+                className="orbit-container"
+                style={{
+                  '--orbit-radius': `${planet.radius}px`,
+                  '--orbit-duration': `${planet.orbitDuration}s`,
+                  '--orbit-delay': `${index * -5}s`
+                }}
+              >
+                <button
+                  className="orbit-planet"
+                  style={{ '--planet-color': planet.color }}
+                  onClick={() => handlePlanetClick(planet)}
+                  onKeyDown={(e) => handlePlanetKeyPress(e, planet)}
+                  onFocus={() => setActivePlanet(planet.id)}
+                  onBlur={() => setActivePlanet(null)}
+                  onMouseEnter={() => setActivePlanet(planet.id)}
+                  onMouseLeave={() => setActivePlanet(null)}
+                  aria-label={planet.ariaLabel}
+                  aria-expanded={activePlanet === planet.id}
+                >
+                  <span className="planet-label">{planet.label}</span>
+                  {activePlanet === planet.id && (
+                    <span className="planet-tooltip" role="tooltip">
+                      Click to view {planet.label} projects
+                    </span>
+                  )}
+                </button>
+              </div>
+            ))}
           </div>
+
+          {/* Orbit Control Toggle */}
+          <button
+            className="orbit-toggle"
+            onClick={toggleOrbits}
+            aria-label={orbitsPaused ? 'Resume orbits animation' : 'Pause orbits animation'}
+            aria-pressed={orbitsPaused}
+          >
+            {orbitsPaused ? '▶ Resume' : '⏸ Pause'} Orbits
+          </button>
         </div>
       </section>
     </>
