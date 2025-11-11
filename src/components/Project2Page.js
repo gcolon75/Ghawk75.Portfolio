@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import './Project2Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
+import projectData from '../data/projects.json';
 
 import goaleeImage from '../assets/GoaleeHomescreen.JPG';
 import goaleePoster from '../assets/GoaleePoster.jpg';
@@ -15,6 +17,8 @@ function Project2Page() {
     window.scrollTo(0, 0);
   }, []);
 
+  const project = projectData.projects.find(p => p.id === 'goalee');
+
   return (
     <div className="App">
       <div className="content">
@@ -22,6 +26,13 @@ function Project2Page() {
           <Header />
 
           <h1>Goalee: Campus Social Productivity App</h1>
+
+          <ProjectMeta
+            role={project?.role}
+            skills={project?.tags?.disciplines}
+            concepts={project?.tags?.specialties}
+            tools={project?.tags?.tools}
+          />
 
           <div className="top-images-row">
             <img src={goaleeImage} alt="Goalee Homescreen" />

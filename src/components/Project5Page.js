@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import './Project5Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
+import projectData from '../data/projects.json';
 
 import titleImage from '../assets/3KingdomsTitleScreen.png';
 import mapImage from '../assets/3KingdomsMap.JPG';
@@ -12,6 +14,8 @@ function Project5Page() {
     window.scrollTo(0, 0);
   }, []);
 
+  const project = projectData.projects.find(p => p.id === '3kingdoms');
+
   return (
     <div className="App">
       <div className="content">
@@ -20,6 +24,14 @@ function Project5Page() {
 
           <img src={titleImage} alt="3 Kingdoms title art" className="project-img" />
           <h1>3 Kingdoms — Game Design Concept</h1>
+
+          <ProjectMeta
+            role={project?.role}
+            skills={project?.tags?.disciplines}
+            concepts={project?.tags?.specialties}
+            tools={project?.tags?.tools}
+          />
+
           <p className="project-status-concept">🎨 Design concept only — no prototype or code was built</p>
 
           <p>

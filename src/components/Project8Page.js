@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './Project8Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
+import projectData from '../data/projects.json';
 import hero from '../assets/project-valine-hero.png';
 
 function Project8_ProjectValinePage() {
@@ -11,6 +13,8 @@ function Project8_ProjectValinePage() {
   const PHASE = 'Concept / Pre-MVP';
   const LAST_UPDATED = 'September 10, 2025';
   const PROGRESS = 0.15; // 15% — tweak anytime
+
+  const project = projectData.projects.find(p => p.id === 'project-valine');
 
   return (
     <div className="App">
@@ -28,6 +32,13 @@ function Project8_ProjectValinePage() {
           <div className="hero-wrap">
             <h1>project valine</h1>
             <p className="tagline"><em>A modern platform connecting creative professionals.</em></p>
+
+            <ProjectMeta
+              role={project?.role}
+              skills={project?.tags?.disciplines}
+              concepts={project?.tags?.specialties}
+              tools={project?.tags?.technologies}
+            />
 
             <div className="hero-media">
               <img src={hero} alt="project valine concept" className="project-img" />

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './WritingPage.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
 
 import cover from '../assets/whova.jpg';
 import docxFile from '../assets/Whova Competetive Analysis.pdf'; // DOCX won't render inline
@@ -16,17 +17,20 @@ function Writing4Page() {
           <Header />
 
           <h1>Whova: Competitive Analysis</h1>
+
+          <ProjectMeta
+            role="Product Analyst"
+            skills={['Competitive Analysis', 'Market Research', 'Product Strategy']}
+            concepts={['SaaS Positioning', 'Event Technology', 'Feature Comparison']}
+            tools={['Research Methods', 'Analysis Frameworks']}
+          />
+
           <img src={cover} alt="Whova Competitive Analysis cover" className="whova.jpg" />
 
           <p>
             Positioning snapshot vs. vFairs, EventX, Eventtia, and Airmeet — gaps, pricing posture, and product bets
             that win planners.
           </p>
-
-          <div className="tech-tags">
-            <span className="tag">Competitive Analysis</span><span className="tag">SaaS</span>
-            <span className="tag">Events</span>
-          </div>
         </div>
 
         <div className="skills-contributions-wrapper">
