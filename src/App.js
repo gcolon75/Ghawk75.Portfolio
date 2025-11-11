@@ -27,6 +27,9 @@ import Writing2Page from './components/Writing2Page';
 import Writing3Page from './components/Writing3Page';
 import Writing4Page from './components/Writing4Page';
 
+import AboutPage from './components/AboutPage';
+import HireMePage from './components/HireMePage';
+
 import './App.css';
 import backgroundImage from './assets/background4.png';
 
@@ -98,6 +101,10 @@ function App() {
           <Route path="/writing/chatgpt-prompt-case-study" element={<Writing2Page />} />
           <Route path="/writing/humanity-in-media" element={<Writing3Page />} />
           <Route path="/writing/whova-competitive-analysis" element={<Writing4Page />} />
+
+          {/* About and Hire Me Pages */}
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/hire-me" element={<HireMePage />} />
 
           {/* Fallback Route */}
           <Route
