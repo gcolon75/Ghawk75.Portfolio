@@ -1,34 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Hero.css';
 import SEO, { getPersonStructuredData } from './SEO';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Hero() {
   const personData = getPersonStructuredData();
-  const [orbitsPaused, setOrbitsPaused] = useState(false);
-
-  // Respect prefers-reduced-motion
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mediaQuery.matches) {
-      setOrbitsPaused(true);
-    }
-    
-    // Load orbit pause state from localStorage if not reduced motion
-    if (!mediaQuery.matches) {
-      const savedState = localStorage.getItem('orbits-paused');
-      if (savedState === 'true') {
-        setOrbitsPaused(true);
-      }
-    }
-  }, []);
-
-  // Save orbit pause state to localStorage
-  const toggleOrbits = () => {
-    const newState = !orbitsPaused;
-    setOrbitsPaused(newState);
-    localStorage.setItem('orbits-paused', newState.toString());
-  };
 
   return (
     <>
@@ -67,16 +43,6 @@ function Hero() {
               <FaGithub />
             </a>
           </div>
-
-          {/* Orbit Control Toggle */}
-          <button
-            className="orbit-toggle"
-            onClick={toggleOrbits}
-            aria-label={orbitsPaused ? 'Resume orbits animation' : 'Pause orbits animation'}
-            aria-pressed={orbitsPaused}
-          >
-            {orbitsPaused ? '▶' : '⏸'} Pause Orbits
-          </button>
         </div>
       </section>
     </>
