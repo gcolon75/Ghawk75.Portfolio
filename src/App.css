@@ -15,6 +15,8 @@ html, body, #root {
   display: grid;
   grid-template-rows: auto auto auto auto;
   gap: 20px;
+  background: linear-gradient(135deg, var(--bg) 0%, #0d1117 50%, var(--bg) 100%);
+  min-height: 100vh;
 }
 
 /* Hero Section Full Width */
@@ -31,18 +33,6 @@ html, body, #root {
   display: grid;
   place-items: center;
   padding: 50px;
-}
-
-/* CSS Grid for About & Skill Tree Side by Side */
-.about-skill-grid {
-  grid-row: 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  padding: 50px;
-  max-width: 1200px;
-  margin: auto;
-  margin-top: 120px;
 }
 
 /* Contact Section Full Width */
@@ -63,36 +53,26 @@ html, body, #root {
 }
 
 /* =========================
-   Design Tokens
-   ========================= */
-:root {
-  --teal: #66fcf1;
-  --dark: #0b0f14;
-  --link: #e9f1ff;           /* soft white for normal inline links */
-  --link-hover: var(--teal);
-}
-
-/* =========================
    Inline link defaults
    (non-button anchors)
    ========================= */
 a {
-  color: var(--link);
+  color: var(--text);
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--teal) 70%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
 }
 a:hover,
 a:focus-visible {
-  color: var(--link-hover);
+  color: var(--accent);
   text-decoration-color: currentColor;
   outline: none;
 }
 
 /* Do NOT override button-like links on visited */
 a:visited:not(.project-link):not(.hero-btn):not(.btn-pill):not(.btn) {
-  color: var(--link);
+  color: var(--text);
 }
 
 /* =========================
@@ -113,12 +93,12 @@ a.hero-btn,
   display: inline-block;
   padding: .5rem .9rem;
   border-radius: 10px;
-  border: 1px solid var(--teal);
-  background: var(--teal);
-  color: var(--dark);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg);
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 0 12px rgba(102, 252, 241, .25);
+  box-shadow: 0 0 8px rgba(53, 240, 224, .2);
   transition: background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
@@ -131,7 +111,7 @@ a.hero-btn:visited,
 .btn:visited,
 .btn-pill:link,
 .btn-pill:visited {
-  color: var(--dark);
+  color: var(--bg);
 }
 
 /* Hover / keyboard focus: white background with black text */
@@ -143,12 +123,12 @@ a.hero-btn:focus-visible,
 .btn:focus-visible,
 .btn-pill:hover,
 .btn-pill:focus-visible {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: var(--dark);
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
   text-decoration: none;
   outline: none;
-  box-shadow: 0 0 16px rgba(255, 255, 255, .25);
+  box-shadow: 0 0 12px rgba(232, 243, 242, .3);
 }
 
 /* Optional: disabled state helper */
@@ -166,8 +146,8 @@ a.hero-btn:focus-visible,
   position: absolute;
   top: -100px;
   left: 0;
-  background: var(--teal);
-  color: var(--dark);
+  background: var(--accent);
+  color: var(--bg);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   font-weight: bold;
@@ -177,12 +157,12 @@ a.hero-btn:focus-visible,
 
 .skip-to-content:focus {
   top: 0;
-  outline: 3px solid #fff;
+  outline: 3px solid var(--text);
   outline-offset: 2px;
 }
 
 :focus-visible {
-  outline: 2px dashed var(--teal);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -190,10 +170,7 @@ a.hero-btn:focus-visible,
    Responsive helpers
    ========================= */
 @media (max-width: 768px) {
-  .about-skill-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 30px;
-    margin-top: 80px;
+  .centered-section {
+    padding: 30px 0;
   }
 }

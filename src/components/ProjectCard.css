@@ -1,26 +1,24 @@
 /* ProjectCard Component Styles */
 
 .project-card {
-  background: rgba(0, 0, 0, 0.95);
-  padding: clamp(15px, 2vw, 30px);
-  border-radius: 20px;
-  border: 3px solid #66fcf1;
-  box-shadow: 0 0 35px rgba(102, 252, 241, 0.9);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--surface);
+  padding: clamp(15px, 2vw, 25px);
+  border-radius: 12px;
+  border: 1px solid rgba(53, 240, 224, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   text-align: center;
-  width: 90%;
-  max-width: 400px;
-  margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 320px;
+  min-height: 300px;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 50px rgba(102, 252, 241, 1);
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(53, 240, 224, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Featured badge */
@@ -28,65 +26,57 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   z-index: 1;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
 }
 
 /* In-progress projects */
 .project-card.in-progress {
-  border: 3px dashed #ffcc00;
-  box-shadow: 0 0 40px rgba(255, 204, 0, 0.9);
+  border: 1px solid rgba(255, 204, 0, 0.4);
 }
 
 /* Card title */
 .project-card h3 {
-  font-size: 1.3rem;
-  color: #66fcf1;
+  font-size: 1.25rem;
+  color: var(--accent);
   margin: 0.5rem 0;
-  line-height: 1.25;
-  min-height: 2.5em;
+  line-height: 1.3;
+  min-height: 2.6em;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
 }
 
 /* Year badge */
 .project-card .project-year {
   display: inline-block;
-  font-size: 0.85rem;
-  color: #999;
-  background: rgba(102, 252, 241, 0.1);
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: rgba(53, 240, 224, 0.08);
   padding: 0.2rem 0.6rem;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-bottom: 0.5rem;
 }
 
 /* Summary text */
 .project-card .project-summary {
   font-size: 0.95rem;
-  color: #e0e0e0;
-  line-height: 1.5;
+  color: var(--text);
+  line-height: 1.6;
   margin: 1rem 0;
   flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 4.5em;
+  min-height: 4.8em;
 }
 
 /* Impact Evidence */
 .project-impact {
-  background: rgba(102, 252, 241, 0.05);
-  border: 1px solid rgba(102, 252, 241, 0.3);
-  border-radius: 10px;
+  background: rgba(53, 240, 224, 0.05);
+  border: 1px solid rgba(53, 240, 224, 0.2);
+  border-radius: 8px;
   padding: 0.75rem;
   margin: 1rem 0;
   text-align: left;
@@ -94,22 +84,22 @@
 
 .impact-statement {
   font-size: 0.9rem;
-  color: #c5c6c7;
+  color: var(--muted);
   line-height: 1.5;
   margin-bottom: 0.5rem;
 }
 
 .impact-statement strong {
-  color: #66fcf1;
+  color: var(--accent);
   font-weight: 600;
 }
 
 .impact-how-toggle {
-  background: rgba(102, 252, 241, 0.1);
-  border: 1px solid rgba(102, 252, 241, 0.5);
-  color: #66fcf1;
+  background: rgba(53, 240, 224, 0.1);
+  border: 1px solid rgba(53, 240, 224, 0.3);
+  color: var(--accent);
   padding: 0.4rem 0.8rem;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -121,33 +111,23 @@
 
 .impact-how-toggle:hover,
 .impact-how-toggle:focus {
-  background: rgba(102, 252, 241, 0.2);
-  transform: translateX(2px);
-  outline: 2px solid #66fcf1;
+  background: rgba(53, 240, 224, 0.15);
+}
+
+.impact-how-toggle:focus-visible {
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
 .impact-how {
   margin-top: 0.75rem;
   padding: 0.75rem;
-  background: rgba(0, 0, 0, 0.5);
-  border-left: 3px solid #66fcf1;
-  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 2px solid var(--accent);
+  border-radius: 4px;
   font-size: 0.85rem;
-  color: #e0e0e0;
+  color: var(--text);
   line-height: 1.6;
-  animation: slideDown 0.2s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 200px;
-  }
 }
 
 /* Tech tags */
@@ -162,25 +142,23 @@
 
 .project-card .tech-tags .tag {
   font-size: 0.75rem;
-  padding: 0.3rem 0.6rem;
-  background: rgba(102, 252, 241, 0.1);
-  border: 1px solid #66fcf1;
-  border-radius: 12px;
-  color: #66fcf1;
+  padding: 0.25rem 0.5rem;
+  background: rgba(53, 240, 224, 0.08);
+  border: 1px solid rgba(53, 240, 224, 0.3);
+  border-radius: 10px;
+  color: var(--accent);
   white-space: nowrap;
   transition: all 0.2s ease;
 }
 
 .project-card .tech-tags .tag:hover {
-  background: rgba(102, 252, 241, 0.2);
-  transform: scale(1.05);
+  background: rgba(53, 240, 224, 0.12);
 }
 
 .project-card .tech-tags .more-tags {
-  background: rgba(255, 204, 0, 0.1);
-  border-color: #ffcc00;
+  background: rgba(255, 204, 0, 0.08);
+  border-color: rgba(255, 204, 0, 0.4);
   color: #ffcc00;
-  font-weight: bold;
 }
 
 /* Status and link */
@@ -195,17 +173,16 @@
 .project-card .progress-badge {
   font-size: 0.85rem;
   color: #ffcc00;
-  background: rgba(255, 204, 0, 0.1);
-  border: 1px solid #ffcc00;
+  background: rgba(255, 204, 0, 0.08);
+  border: 1px solid rgba(255, 204, 0, 0.4);
   padding: 0.4rem 0.8rem;
-  border-radius: 12px;
+  border-radius: 10px;
   font-weight: 600;
 }
 
 /* Compact mode */
 .project-card.compact {
   min-height: 240px;
-  max-width: 320px;
 }
 
 .project-card.compact h3 {
@@ -222,7 +199,6 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .project-card {
-    max-width: 90%;
     min-height: 280px;
   }
   
@@ -246,7 +222,6 @@
 
 @media (max-width: 480px) {
   .project-card {
-    width: 100%;
-    max-width: 95%;
+    padding: clamp(12px, 2vw, 20px);
   }
 }
