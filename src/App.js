@@ -37,6 +37,11 @@ function App() {
 
   return (
     <Router>
+      {/* Skip to main content link for keyboard users */}
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
+      
       <div
         className="App"
         style={{
@@ -56,22 +61,24 @@ function App() {
                 <ScrollToHashSection />
                 <Header />
                 <Hero />
-                <section id="projects" className="centered-section">
-                  <Projects />
-                </section>
-                {/* NEW: Writing section mirrors Projects */}
-                <section id="writing" className="centered-section">
-                  <Writing />
-                </section>
-                <section id="about" className="centered-section">
-                  <About />
-                </section>
-                <section id="skilltree" className="centered-section">
-                  <SkillTree />
-                </section>
-                <section id="contact" className="centered-section">
-                  <ContactFooter />
-                </section>
+                <main id="main-content">
+                  <section id="projects" className="centered-section">
+                    <Projects />
+                  </section>
+                  {/* NEW: Writing section mirrors Projects */}
+                  <section id="writing" className="centered-section">
+                    <Writing />
+                  </section>
+                  <section id="about" className="centered-section">
+                    <About />
+                  </section>
+                  <section id="skilltree" className="centered-section">
+                    <SkillTree />
+                  </section>
+                  <section id="contact" className="centered-section">
+                    <ContactFooter />
+                  </section>
+                </main>
               </>
             }
           />
