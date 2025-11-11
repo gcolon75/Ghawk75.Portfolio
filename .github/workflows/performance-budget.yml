@@ -1,0 +1,67 @@
+name: Performance Budget Check
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  size-limit:
+    name: Check Bundle Size
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production bundle
+        run: npm run build
+        env:
+          CI: false
+
+      - name: Check bundle size against limits
+        run: |
+          npm run size
+        continue-on-error: true
+
+      - name: Report bundle sizes
+        run: |
+          echo "## Bundle Size Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### JavaScript Bundles" >> $GITHUB_STEP_SUMMARY
+          ls -lh build/static/js/*.js | awk '{print "- " $9 ": " $5}' >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### CSS Bundles" >> $GITHUB_STEP_SUMMARY
+          ls -lh build/static/css/*.css | awk '{print "- " $9 ": " $5}' >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Gzipped Sizes" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          gzip -c build/static/js/main.*.js | wc -c | awk '{print "Main JS (gzip): " $1/1024 " KB"}' >> $GITHUB_STEP_SUMMARY
+          gzip -c build/static/css/main.*.css | wc -c | awk '{print "Main CSS (gzip): " $1/1024 " KB"}' >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+
+      - name: Check size increase warning
+        run: |
+          CURRENT_SIZE=$(gzip -c build/static/js/main.*.js | wc -c)
+          LIMIT_BYTES=$((120 * 1024))
+          if [ $CURRENT_SIZE -gt $LIMIT_BYTES ]; then
+            echo "⚠️ Warning: JS bundle exceeds 120 KB (gzipped)"
+            echo "Current size: $(($CURRENT_SIZE / 1024)) KB"
+          else
+            echo "✅ Bundle size within limits"
+          fi
