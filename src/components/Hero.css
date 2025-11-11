@@ -67,36 +67,6 @@
   outline-offset: 4px;
 }
 
-/* Orbit Control Toggle */
-.orbit-toggle {
-  background: rgba(16, 22, 26, 0.8);
-  color: var(--muted);
-  border: 1px solid rgba(53, 240, 224, 0.3);
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-top: 1rem;
-}
-
-.orbit-toggle:hover,
-.orbit-toggle:focus {
-  background: rgba(53, 240, 224, 0.1);
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.orbit-toggle:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-.orbit-toggle[aria-pressed="true"] {
-  background: rgba(53, 240, 224, 0.15);
-  color: var(--accent);
-}
-
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .hero-content h1 {
@@ -130,11 +100,6 @@
     width: 50px;
     height: 50px;
     font-size: 1.3rem;
-  }
-
-  .orbit-toggle {
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
   }
 }
 

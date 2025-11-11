@@ -1,8 +1,8 @@
 /**
- * QA Validation Tests for Space Hero + Employer Conversion Features
+ * QA Validation Tests for Clean Neon Portfolio Features
  * 
  * This test suite validates all requirements from the QA checklist:
- * - Space hero with accessible planets
+ * - Hero section with clean neon design
  * - Impact statements on featured projects
  * - Privacy language
  * - Data-driven components
@@ -11,46 +11,44 @@
 
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import ProjectCard from '../components/ProjectCard';
 import QuickStats from '../components/QuickStats';
 import SkillMatrix from '../components/SkillMatrix';
 import SEO, { getPersonStructuredData, getProjectStructuredData } from '../components/SEO';
 import projectsData from '../data/projects.json';
-import planetsData from '../data/hero.planets.json';
 
-// Helper to render components with Router
+// Helper to render components with Router and HelmetProvider
 const renderWithRouter = (component) => {
-  return render(<BrowserRouter>{component}</BrowserRouter>);
+  return render(
+    <HelmetProvider>
+      <BrowserRouter>{component}</BrowserRouter>
+    </HelmetProvider>
+  );
 };
 
-describe('QA Validation: Space Hero Features', () => {
-  test('Hero planets are tabbable buttons with ARIA labels', () => {
+describe('QA Validation: Hero Features', () => {
+  test('Hero displays name and title', () => {
     renderWithRouter(<Hero />);
     
-    planetsData.planets.forEach(planet => {
-      const planetButton = screen.getByLabelText(planet.ariaLabel);
-      expect(planetButton).toBeInTheDocument();
-      expect(planetButton.tagName).toBe('BUTTON');
-      expect(planetButton).toHaveAttribute('aria-label', planet.ariaLabel);
-    });
+    const heading = screen.getByRole('heading', { name: /Gabriel Colón/i });
+    expect(heading).toBeInTheDocument();
+    
+    const subtitle = screen.getByText(/Systems Designer & Game Designer/i);
+    expect(subtitle).toBeInTheDocument();
   });
 
-  test('Hero has pause/resume orbit control', () => {
+  test('Hero has social media links', () => {
     renderWithRouter(<Hero />);
     
-    const pauseButton = screen.getByRole('button', { name: /pause orbits animation/i });
-    expect(pauseButton).toBeInTheDocument();
-    expect(pauseButton).toHaveAttribute('aria-pressed');
-  });
-
-  test('All planets have proper aria-expanded attribute', () => {
-    renderWithRouter(<Hero />);
+    const linkedinLink = screen.getByLabelText(/LinkedIn Profile/i);
+    expect(linkedinLink).toBeInTheDocument();
+    expect(linkedinLink).toHaveAttribute('href');
     
-    planetsData.planets.forEach(planet => {
-      const planetButton = screen.getByLabelText(planet.ariaLabel);
-      expect(planetButton).toHaveAttribute('aria-expanded');
-    });
+    const githubLink = screen.getByLabelText(/GitHub Profile/i);
+    expect(githubLink).toBeInTheDocument();
+    expect(githubLink).toHaveAttribute('href');
   });
 });
 
@@ -162,11 +160,13 @@ describe('QA Validation: SEO and Structured Data', () => {
   test('OG image functionality exists', () => {
     const project = projectsData.projects[0];
     const { container } = render(
-      <SEO 
-        title="Test" 
-        description="Test desc" 
-        project={project}
-      />
+      <HelmetProvider>
+        <SEO 
+          title="Test" 
+          description="Test desc" 
+          project={project}
+        />
+      </HelmetProvider>
     );
     
     // Helmet renders to document head, check it was called
@@ -175,12 +175,14 @@ describe('QA Validation: SEO and Structured Data', () => {
 });
 
 describe('QA Validation: Accessibility', () => {
-  test('Hero planets use semantic button elements', () => {
+  test('Hero social links have proper ARIA labels', () => {
     renderWithRouter(<Hero />);
     
-    const buttons = screen.getAllByRole('button');
-    // Should have planet buttons + pause button
-    expect(buttons.length).toBeGreaterThan(planetsData.planets.length);
+    const linkedinLink = screen.getByLabelText(/LinkedIn Profile/i);
+    expect(linkedinLink).toHaveAttribute('aria-label');
+    
+    const githubLink = screen.getByLabelText(/GitHub Profile/i);
+    expect(githubLink).toHaveAttribute('aria-label');
   });
 
   test('ProjectCard uses semantic article element', () => {
