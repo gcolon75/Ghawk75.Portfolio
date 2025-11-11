@@ -4,13 +4,15 @@ Quick reference for validating the Space Hero + Employer Conversion features.
 
 ## Automated Tests ✅ COMPLETE
 
-- [x] **Build:** Successful (96.1 kB JS, 10.62 kB CSS)
-- [x] **Tests:** 17/17 passing
+- [x] **Build:** Successful (96.68 kB JS, 10.69 kB CSS)
+- [x] **Tests:** 34/34 passing (17 existing + 17 new impact statements tests)
 - [x] **Security:** CodeQL - 0 alerts
 - [x] **Hero Planets:** Tabbable, ARIA labels, tooltips
 - [x] **Impact Statements:** 3+ projects with "How?" notes
+- [x] **QuickStats Values:** Systems projects (2), Flagship artifacts (3), A11y status, Structured data
+- [x] **QuickStats Collapsible:** Toggle button with proper ARIA attributes
 - [x] **Privacy Flags:** All projects
-- [x] **Data-Driven:** QuickStats & SkillMatrix
+- [x] **Data-Driven:** QuickStats & SkillMatrix compute from projects.json
 - [x] **SEO:** JSON-LD Person + Project schemas
 - [x] **Education:** UCSD in About & Person schema
 - [x] **OG Images:** Project-specific support
@@ -51,7 +53,16 @@ Quick reference for validating the Space Hero + Employer Conversion features.
 - [ ] Check planet tooltips appear on hover
 - [ ] Verify impact "How?" sections expand/collapse smoothly
 - [ ] Check all 3+ featured projects show impact statements
-- [ ] Verify QuickStats shows computed values
+- [ ] **Verify QuickStats displays correct computed values:**
+  - [ ] Systems Projects: 2
+  - [ ] Flagship Artifacts: 3
+  - [ ] Accessibility: A11y: CI enforced
+  - [ ] Structured Data: Enabled
+- [ ] **Verify QuickStats toggle button:**
+  - [ ] Click toggle to collapse stats grid
+  - [ ] Verify aria-expanded changes from true to false
+  - [ ] Click toggle to expand stats grid
+  - [ ] Verify stats remain collapsed/expanded as expected
 - [ ] Verify SkillMatrix shows project counts per skill
 
 ### Cross-Browser Testing
@@ -81,29 +92,32 @@ Quick reference for validating the Space Hero + Employer Conversion features.
 # Run all tests
 npm test -- --watchAll=false
 
+# Run specific QA tests
+npm test -- src/validation/qa-validation.test.js --watchAll=false
+
+# Run impact statements tests
+npm test -- src/validation/impact-statements.test.js --watchAll=false
+
 # Build and check size
 npm run build
 
 # Serve locally
 npx serve -s build
-
-# Run specific QA tests
-npm test -- src/validation/qa-validation.test.js --watchAll=false
 ```
 
 ## Expected Results
 
 ### Test Output
 ```
-Test Suites: 2 passed, 2 total
-Tests:       17 passed, 17 total
+Test Suites: 3 passed, 3 total
+Tests:       34 passed, 34 total
 ```
 
 ### Build Output
 ```
 File sizes after gzip:
-  96.1 kB   build/static/js/main.e7e5d6ec.js
-  10.62 kB  build/static/css/main.3a246681.css
+  96.68 kB  build/static/js/main.e1cfaba8.js
+  10.69 kB  build/static/css/main.202d276a.css
 ```
 
 ### Featured Projects with Impact
