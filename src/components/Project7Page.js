@@ -27,8 +27,8 @@ function Project7_TowerOfGreedPage() {
           title="Tower of Greed - Dice-Driven Roguelike RPG"
           description="A dice-driven roguelike RPG where every turn balances risk and payoff. Build your dice, manage resources, and climb using smart sequencing over raw RNG."
           url="/projects/tower-of-greed"
-          image="/assets/tower-of-greed-hero.jpg"
           structuredData={structuredData}
+          project={project}
         />
       )}
       

@@ -1,0 +1,22 @@
+{
+  "defaults": {
+    "timeout": 10000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+    },
+    "standard": "WCAG2AA",
+    "runners": ["axe"],
+    "level": "error",
+    "threshold": 0,
+    "hideElements": "iframe"
+  },
+  "urls": [
+    "http://localhost:8080/",
+    "http://localhost:8080/#/about",
+    "http://localhost:8080/#/hire-me",
+    "http://localhost:8080/#/projects/tower-of-greed",
+    "http://localhost:8080/#/projects/axle",
+    "http://localhost:8080/#/projects/goalee",
+    "http://localhost:8080/#/projects/volleyball"
+  ]
+}

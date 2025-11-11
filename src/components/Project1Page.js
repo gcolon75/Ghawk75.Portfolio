@@ -34,8 +34,8 @@ function Project1Page() {
           title="Axle - Mobile Mechanic App Design"
           description="A complete redesign concept for a mobile mechanic app with a focus on user experience, connecting car owners with certified mechanics."
           url="/projects/axle"
-          image="/assets/axleImage.JPG"
           structuredData={structuredData}
+          project={project}
         />
       )}
       

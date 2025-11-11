@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { getProjectOGImage, getDefaultOGImage } from '../utils/ogImage';
 
 /**
  * SEO component for adding structured data and meta tags
@@ -11,11 +12,21 @@ const SEO = ({
   type = 'website', 
   image,
   url,
-  structuredData 
+  structuredData,
+  project
 }) => {
   const siteUrl = 'https://gcolon75.github.io/Ghawk75.Portfolio';
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImage = image ? `${siteUrl}${image}` : `${siteUrl}/logo512.png`;
+  
+  // Use project-specific OG image if project is provided, otherwise use provided image or default
+  let fullImage;
+  if (project) {
+    fullImage = getProjectOGImage(project);
+  } else if (image) {
+    fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+  } else {
+    fullImage = getDefaultOGImage();
+  }
 
   return (
     <Helmet>
@@ -30,6 +41,8 @@ const SEO = ({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={fullImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
