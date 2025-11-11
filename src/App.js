@@ -26,7 +26,6 @@ import Writing3Page from './components/Writing3Page';
 import Writing4Page from './components/Writing4Page';
 
 import './App.css';
-import backgroundImage from './assets/background4.png';
 
 function App() {
   useEffect(() => {
@@ -40,16 +39,7 @@ function App() {
         Skip to main content
       </a>
       
-      <div
-        className="App"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-          minHeight: '100vh',
-        }}
-      >
+      <div className="App">
         <Routes>
           {/* Full Homepage Layout */}
           <Route
