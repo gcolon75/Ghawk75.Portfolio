@@ -75,7 +75,10 @@
 }
 
 /* Pause orbits via toggle or reduced motion preference */
-.orbital-system.paused .orbit-container,
+.orbital-system.paused .orbit-container {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .orbit-container {
     animation-play-state: paused;
