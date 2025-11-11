@@ -9,7 +9,8 @@ import Hero from './components/Hero';
 import QuickStats from './components/QuickStats';
 import Projects from './components/Projects';
 import About from './components/About';
-import SkillTree from './components/SkillTree';
+import SkillMatrix from './components/SkillMatrix';
+import Testimonials from './components/Testimonials';
 import ValueThemes from './components/ValueThemes';
 import ContactFooter from './components/ContactFooter';
 
@@ -80,8 +81,11 @@ function App() {
                   <section id="about" className="centered-section">
                     <About />
                   </section>
-                  <section id="skilltree" className="centered-section">
-                    <SkillTree />
+                  <section id="skill-matrix" className="centered-section">
+                    <SkillMatrix />
+                  </section>
+                  <section id="testimonials" className="centered-section">
+                    <Testimonials />
                   </section>
                   <section id="value-themes" className="centered-section">
                     <ValueThemes />
