@@ -1,0 +1,40 @@
+{
+  "planets": [
+    {
+      "id": "systems",
+      "label": "Systems",
+      "tagFilter": ["Systems Design", "Game Design"],
+      "radius": 150,
+      "color": "#66fcf1",
+      "orbitDuration": 20,
+      "ariaLabel": "Systems Design - Filter projects by systems and game design"
+    },
+    {
+      "id": "mechanics",
+      "label": "Mechanics",
+      "tagFilter": ["Game Mechanics", "Roguelike"],
+      "radius": 200,
+      "color": "#45a29e",
+      "orbitDuration": 25,
+      "ariaLabel": "Game Mechanics - Filter projects by game mechanics and roguelike design"
+    },
+    {
+      "id": "performance",
+      "label": "Performance",
+      "tagFilter": ["Performance Optimization", "Automation"],
+      "radius": 180,
+      "color": "#c5c6c7",
+      "orbitDuration": 22,
+      "ariaLabel": "Performance - Filter projects by performance optimization and automation"
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility",
+      "tagFilter": ["Accessibility", "UX Design", "User Research"],
+      "radius": 220,
+      "color": "#0b0c10",
+      "orbitDuration": 28,
+      "ariaLabel": "Accessibility - Filter projects by accessibility and user experience design"
+    }
+  ]
+}

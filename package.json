@@ -22,8 +22,23 @@
     "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "size": "size-limit"
   },
+  "size-limit": [
+    {
+      "name": "Main JS bundle",
+      "path": "build/static/js/*.js",
+      "limit": "120 kB",
+      "gzip": true
+    },
+    {
+      "name": "Main CSS bundle",
+      "path": "build/static/css/*.css",
+      "limit": "15 kB",
+      "gzip": true
+    }
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -44,6 +59,11 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.3.0"
+    "@size-limit/preset-app": "^11.2.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "gh-pages": "^6.3.0",
+    "size-limit": "^11.2.0"
   }
 }

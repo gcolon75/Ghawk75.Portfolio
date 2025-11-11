@@ -85,7 +85,19 @@ export const getPersonStructuredData = () => ({
     "Figma",
     "Performance Optimization",
     "Accessibility",
-    "Game Mechanics"
+    "Game Mechanics",
+    "Roguelike Design",
+    "Dice Systems",
+    "Resource Management",
+    "User Research",
+    "User Experience",
+    "Platform Architecture",
+    "Discovery Systems",
+    "Design Systems",
+    "Mobile-First Design",
+    "Human-Computer Interaction",
+    "Cognitive Science",
+    "Data-Driven Design"
   ],
   "alumniOf": {
     "@type": "CollegeOrUniversity",

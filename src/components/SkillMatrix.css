@@ -1,0 +1,186 @@
+.skill-matrix-container {
+  max-width: 80%;
+  margin: 2rem auto;
+  padding: clamp(20px, 3vw, 40px);
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #66fcf1;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(102, 252, 241, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.skill-matrix-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #66fcf1;
+  text-shadow: 0 0 20px rgba(102, 252, 241, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.skill-matrix-subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #c5c6c7;
+  margin-bottom: 2rem;
+}
+
+.skill-matrix-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-matrix-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(102, 252, 241, 0.1);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #66fcf1;
+  font-size: 0.9rem;
+}
+
+.skill-name-header {
+  text-align: left;
+}
+
+.skill-level-header {
+  text-align: center;
+}
+
+.skill-matrix-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(102, 252, 241, 0.03);
+  border: 1px solid rgba(102, 252, 241, 0.2);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.skill-matrix-row:hover {
+  background: rgba(102, 252, 241, 0.08);
+  border-color: rgba(102, 252, 241, 0.4);
+  transform: translateX(4px);
+}
+
+.skill-name {
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.skill-project-count {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 400;
+}
+
+.skill-level {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.skill-level.active {
+  color: #66fcf1;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+.skill-matrix-legend {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 1px solid rgba(102, 252, 241, 0.3);
+}
+
+.legend-item {
+  font-size: 0.85rem;
+  color: #c5c6c7;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.legend-item strong {
+  color: #66fcf1;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-matrix-container {
+    max-width: 95%;
+    padding: clamp(15px, 2vw, 25px);
+  }
+  
+  .skill-matrix-header,
+  .skill-matrix-row {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .skill-name {
+    font-size: 0.9rem;
+  }
+  
+  .skill-project-count {
+    font-size: 0.7rem;
+  }
+  
+  .skill-level {
+    font-size: 1rem;
+  }
+  
+  .legend-item {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-matrix-header,
+  .skill-matrix-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .skill-matrix-header {
+    display: none;
+  }
+  
+  .skill-matrix-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .skill-name {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-level {
+    display: none;
+  }
+  
+  .skill-matrix-row::after {
+    content: 'Exposure ✓ • Applied ✓ • Architect ✓';
+    font-size: 0.8rem;
+    color: #66fcf1;
+  }
+}

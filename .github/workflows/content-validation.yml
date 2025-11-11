@@ -1,0 +1,100 @@
+name: Content Validation & Link Checking
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  link-validation:
+    name: Dead Link & Content Validation
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          CI: false
+
+      - name: Serve site for link checking
+        run: |
+          npx serve -s build -l 8080 &
+          sleep 5
+          curl http://localhost:8080 || exit 1
+
+      - name: Install lychee
+        run: |
+          wget https://github.com/lycheeverse/lychee/releases/download/v0.15.1/lychee-v0.15.1-x86_64-unknown-linux-gnu.tar.gz
+          tar -xzf lychee-v0.15.1-x86_64-unknown-linux-gnu.tar.gz
+          chmod +x lychee
+          sudo mv lychee /usr/local/bin/
+
+      - name: Create lychee config
+        run: |
+          cat > lychee.toml << EOF
+          exclude = [
+            "^https://github.com.*/settings",
+            "^https://twitter.com/intent",
+            "^https://linkedin.com/shareArticle"
+          ]
+          max_redirects = 10
+          max_retries = 3
+          EOF
+
+      - name: Run lychee link checker on built site
+        run: |
+          lychee --config lychee.toml \
+            --accept 200,204,206,301,302,307,308,403,429,999 \
+            --exclude-mail \
+            --verbose \
+            build/**/*.html \
+            build/**/*.js \
+            src/data/projects.json \
+            public/index.html || echo "⚠️ Some links may be broken. Review output above."
+        continue-on-error: true
+
+      - name: Check for missing alt text in images
+        run: |
+          echo "Checking for images without alt text in projects.json..."
+          if grep -r '"type": "image"' src/data/projects.json | grep -v '"alt"'; then
+            echo "❌ Found images without alt text!"
+            exit 1
+          else
+            echo "✅ All images have alt text"
+          fi
+
+      - name: Validate projects.json structure
+        run: |
+          echo "Validating projects.json structure..."
+          node -e "
+            const data = require('./src/data/projects.json');
+            const required = ['id', 'title', 'year', 'type', 'summary', 'problem', 'approach', 'result'];
+            let errors = [];
+            data.projects.forEach((p, i) => {
+              required.forEach(field => {
+                if (!p[field]) errors.push(\`Project \${i}: Missing \${field}\`);
+              });
+            });
+            if (errors.length) {
+              console.error('❌ Validation errors:', errors);
+              process.exit(1);
+            }
+            console.log('✅ All projects have required fields');
+          "

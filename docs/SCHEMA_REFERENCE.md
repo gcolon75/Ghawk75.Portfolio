@@ -32,6 +32,38 @@ Quick reference for adding or editing projects in `src/data/projects.json`.
 | `progress` | number | Completion percentage (0-1, e.g., 0.20 = 20%) |
 | `lastUpdated` | string | Last update date for in-progress projects |
 | `tagline` | string | Short compelling tagline for detail page |
+| `impact` | object | Impact statement with "how" explanation (see Impact Evidence section) |
+
+## Impact Evidence (New in Space Theme Update)
+
+For featured projects, add impact evidence to showcase your work's value:
+
+```json
+{
+  "impact": {
+    "statement": "Enhanced player agency through systematic design patterns that reduce RNG frustration while maintaining strategic depth.",
+    "how": "Applied resource-gating mechanics and turn-based sequencing inspired by deck-building roguelikes, ensuring player choices create meaningful decision trees rather than random outcomes."
+  }
+}
+```
+
+### Guidelines for Impact Statements
+
+**Privacy-Safe Language:**
+- Use directional phrasing: "improved", "enhanced", "increased", "reduced"
+- Focus on methodology: "through systematic design", "via progressive disclosure"
+- Use qualitative results: "enhanced clarity", "reduced cognitive load"
+- Avoid proprietary metrics: No specific numbers from client work
+
+**Good Examples:**
+- "Enhanced player agency through systematic design patterns..."
+- "Improved discovery UX through structured filtering patterns..."
+- "Increased UX clarity through systematic user research..."
+
+**Avoid:**
+- "Increased sales by 50%" (proprietary metric)
+- "Reduced bugs by 30%" (internal metric)
+- Generic claims without methodology
 
 ## Tags Object Structure
 
@@ -151,6 +183,7 @@ Before adding a new project:
 - [ ] Images exist in `src/assets/`
 - [ ] Internal link matches route in App.js
 - [ ] Featured: only 3-4 projects should be featured
+- [ ] If adding impact evidence, use privacy-safe language
 
 ## Example: Complete Project Entry
 
@@ -172,6 +205,10 @@ Before adding a new project:
     "Conducted user testing with 20+ participants",
     "Optimized database queries reducing load time by 60%"
   ],
+  "impact": {
+    "statement": "Improved community discovery through structured geo-matching and interest-based filtering that reduced friction in connection flows.",
+    "how": "Implemented location-based search with progressive disclosure of community details, using geospatial indexing and fuzzy interest matching to surface relevant groups within user-defined radius."
+  },
   "techStack": ["React", "Node.js", "PostgreSQL", "Mapbox", "Figma"],
   "tags": {
     "languages": ["JavaScript", "SQL"],
