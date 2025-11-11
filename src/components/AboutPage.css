@@ -1,0 +1,125 @@
+.about-page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  color: #fff;
+}
+
+.positioning-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.positioning-summary {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.principles-section,
+.exploring-section {
+  margin-top: 3rem;
+}
+
+.principles-section h2,
+.exploring-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 0.5rem;
+}
+
+.principles-list {
+  list-style: none;
+  padding: 0;
+}
+
+.principles-list li {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.principles-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-size: 1.2rem;
+}
+
+.exploring-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+.inline-links {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid #4CAF50;
+}
+
+.back-link:hover,
+.back-link:focus {
+  background: rgba(76, 175, 80, 0.3);
+  transform: translateX(-4px);
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .positioning-section h1 {
+    font-size: 2rem;
+  }
+
+  .positioning-summary {
+    font-size: 1.1rem;
+  }
+
+  .principles-section h2,
+  .exploring-section h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .back-link {
+    transition: none;
+  }
+
+  .back-link:hover,
+  .back-link:focus {
+    transform: none;
+  }
+}

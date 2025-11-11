@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { getProjectOGImage, getDefaultOGImage } from '../utils/ogImage';
 
 /**
  * SEO component for adding structured data and meta tags
@@ -11,11 +12,21 @@ const SEO = ({
   type = 'website', 
   image,
   url,
-  structuredData 
+  structuredData,
+  project
 }) => {
   const siteUrl = 'https://gcolon75.github.io/Ghawk75.Portfolio';
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImage = image ? `${siteUrl}${image}` : `${siteUrl}/logo512.png`;
+  
+  // Use project-specific OG image if project is provided, otherwise use provided image or default
+  let fullImage;
+  if (project) {
+    fullImage = getProjectOGImage(project);
+  } else if (image) {
+    fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+  } else {
+    fullImage = getDefaultOGImage();
+  }
 
   return (
     <Helmet>
@@ -30,6 +41,8 @@ const SEO = ({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={fullImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -55,7 +68,13 @@ export const getPersonStructuredData = () => ({
   "@type": "Person",
   "name": "Gabriel Colon",
   "url": "https://gcolon75.github.io/Ghawk75.Portfolio",
-  "jobTitle": "Game Designer, UX Designer, Developer",
+  "jobTitle": "Systems Designer, Game Designer, UX Designer",
+  "image": "https://gcolon75.github.io/Ghawk75.Portfolio/logo512.png",
+  "sameAs": [
+    "https://github.com/gcolon75",
+    "https://www.linkedin.com/in/gabrielcolon75/"
+  ],
+  "email": "gcolon@ucsd.edu",
   "knowsAbout": [
     "Game Design",
     "Systems Design",
@@ -63,25 +82,85 @@ export const getPersonStructuredData = () => ({
     "UI Design",
     "React",
     "Python",
-    "Figma"
-  ]
+    "Figma",
+    "Performance Optimization",
+    "Accessibility",
+    "Game Mechanics"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of California, San Diego"
+  }
 });
 
 /**
  * Generate CreativeWork structured data for a project
  */
-export const getProjectStructuredData = (project) => ({
-  "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  "name": project.title,
-  "description": project.summary,
-  "creator": {
-    "@type": "Person",
-    "name": "Gabriel Colon"
-  },
-  "dateCreated": project.year ? `${project.year}-01-01` : undefined,
-  "keywords": project.techStack.join(', '),
-  "url": `https://gcolon75.github.io/Ghawk75.Portfolio${project.internalLink}`
-});
+export const getProjectStructuredData = (project) => {
+  // Determine appropriate type based on project type
+  let schemaType = "CreativeWork";
+  if (project.type === "game") {
+    schemaType = "VideoGame";
+  } else if (project.type === "tool" || project.techStack?.some(tech => 
+    tech.toLowerCase().includes('python') || tech.toLowerCase().includes('react'))) {
+    schemaType = "SoftwareApplication";
+  } else if (project.type === "design") {
+    schemaType = "CreativeWork";
+  }
+
+  const baseData = {
+    "@context": "https://schema.org",
+    "@type": schemaType,
+    "name": project.title,
+    "description": project.summary,
+    "creator": {
+      "@type": "Person",
+      "name": "Gabriel Colon"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gabriel Colon"
+    },
+    "url": `https://gcolon75.github.io/Ghawk75.Portfolio${project.internalLink}`,
+    "inLanguage": "en-US"
+  };
+
+  // Add optional fields if available
+  if (project.year) {
+    baseData.datePublished = `${project.year}-01-01`;
+    baseData.dateCreated = `${project.year}-01-01`;
+  }
+
+  if (project.techStack && project.techStack.length > 0) {
+    baseData.keywords = project.techStack.join(', ');
+  }
+
+  // Add tags as keywords
+  if (project.tags) {
+    const allTags = [];
+    if (project.tags.disciplines) allTags.push(...project.tags.disciplines);
+    if (project.tags.technologies) allTags.push(...project.tags.technologies);
+    if (project.tags.specialties) allTags.push(...project.tags.specialties);
+    if (project.tags.genres) allTags.push(...project.tags.genres);
+    if (allTags.length > 0) {
+      baseData.about = allTags.map(tag => ({
+        "@type": "Thing",
+        "name": tag
+      }));
+    }
+  }
+
+  // Add image if available
+  if (project.assets && project.assets.length > 0) {
+    const imageAsset = project.assets.find(a => a.type === 'image');
+    if (imageAsset) {
+      // Convert relative path to absolute URL - remove all '../' occurrences
+      const imagePath = imageAsset.path.replace(/\.\.\//g, '/');
+      baseData.image = `https://gcolon75.github.io/Ghawk75.Portfolio${imagePath}`;
+    }
+  }
+
+  return baseData;
+};
 
 export default SEO;

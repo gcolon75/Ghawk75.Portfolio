@@ -1,0 +1,297 @@
+.hire-me-page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hire-me-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  color: #fff;
+}
+
+/* Header Section */
+.hire-header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hire-header-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hire-tagline {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Value Section */
+.value-section {
+  margin-top: 3rem;
+}
+
+.value-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 0.5rem;
+}
+
+.value-themes {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.value-theme-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #4CAF50;
+  transition: all 0.3s ease;
+}
+
+.value-theme-card:hover,
+.value-theme-card:focus-within {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
+}
+
+.value-theme-card h3 {
+  color: #4CAF50;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.value-theme-card p {
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.theme-projects {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+.project-link {
+  color: #81C784;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover,
+.project-link:focus {
+  color: #4CAF50;
+  text-decoration: underline;
+}
+
+/* CTA Section */
+.cta-section {
+  margin-top: 4rem;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4CAF50;
+  text-align: center;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cta-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-card:hover,
+.cta-card:focus-within {
+  border-color: #4CAF50;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cta-card h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.cta-card p {
+  color: #b0b0b0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.cta-note {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-button.primary {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.cta-button.primary:hover,
+.cta-button.primary:focus {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.cta-button.secondary:hover,
+.cta-button.secondary:focus {
+  background: rgba(76, 175, 80, 0.1);
+  transform: translateY(-2px);
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+/* Contact Links Section */
+.contact-links-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.contact-links-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #4CAF50;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid #4CAF50;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  background: rgba(76, 175, 80, 0.2);
+  transform: translateY(-2px);
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+.link-icon {
+  font-size: 1.2rem;
+}
+
+/* Back Link */
+.inline-links {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid #4CAF50;
+}
+
+.back-link:hover,
+.back-link:focus {
+  background: rgba(76, 175, 80, 0.3);
+  transform: translateX(-4px);
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hire-me-content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .hire-header-section h1 {
+    font-size: 2rem;
+  }
+
+  .hire-tagline {
+    font-size: 1.1rem;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .value-theme-card,
+  .cta-card,
+  .cta-button,
+  .contact-link,
+  .back-link {
+    transition: none;
+  }
+
+  .value-theme-card:hover,
+  .cta-button:hover,
+  .contact-link:hover,
+  .back-link:hover {
+    transform: none;
+  }
+}
