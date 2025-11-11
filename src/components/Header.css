@@ -4,39 +4,55 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: clamp(10px, 3vw, 20px); /* Adjusts padding dynamically */
+  padding: clamp(10px, 3vw, 20px);
   backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(11, 15, 18, 0.9);
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allows items to wrap if needed */
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(53, 240, 224, 0.1);
 }
 
 /* Consistent Styling for Both Buttons and Links */
 .header-button, 
 .nav-links a {
-  font-size: clamp(1rem, 1.5vw, 1.5rem); /* Adjusts font size for responsiveness */
-  color: #66fcf1;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: var(--muted);
   background: none;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
   padding: 5px 10px;
+  position: relative;
 }
 
-/* Hover Effect Consistency */
+/* Hover Effect */
 .header-button:hover, 
 .nav-links a:hover {
-  color: white;
+  color: var(--accent);
 }
 
-/* Active Link Styling (if using react-router) */
+/* Active Link Styling - subtle teal glow underline */
+.header-button:focus,
+.header-button.active,
 .nav-links a.active {
-  border-bottom: 2px solid #66fcf1;
-  font-weight: bold;
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(53, 240, 224, 0.6);
+}
+
+.header-button.active::after,
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(53, 240, 224, 0.8);
 }
 
 /* Centering Nav Links */
@@ -44,7 +60,7 @@
   display: flex;
   justify-content: center;
   flex: 1;
-  gap: clamp(15px, 3vw, 30px); /* Dynamic spacing */
+  gap: clamp(15px, 3vw, 30px);
   align-items: center;
 }
 
@@ -52,8 +68,8 @@
 .logo {
   font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: bold;
-  color: #66fcf1;
-  text-shadow: 0 0 20px rgba(102, 252, 241, 1);
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(53, 240, 224, 0.5);
   margin-left: 20px;
 }
 
@@ -73,5 +89,9 @@
 
   .header-button {
     font-size: 1.2rem;
+  }
+  
+  .logo {
+    margin-left: 0;
   }
 }
