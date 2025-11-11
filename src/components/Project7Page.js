@@ -4,6 +4,7 @@ import './Project7Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
 import SEO, { getProjectStructuredData } from './SEO';
+import ProjectMeta from './ProjectMeta';
 import projectData from '../data/projects.json';
 
 import hero from '../assets/tower-of-greed-hero.jpg';
@@ -48,6 +49,13 @@ function Project7_TowerOfGreedPage() {
             <h1>Tower of Greed</h1>
             <p className="tagline"><em>A dice-driven roguelike RPG where every turn balances risk and payoff.</em></p>
 
+            <ProjectMeta
+              role={project?.role}
+              skills={project?.tags?.disciplines}
+              concepts={project?.tags?.specialties}
+              tools={project?.tags?.tools}
+            />
+
             <div className="hero-media">
               <img src={hero} alt="Tower of Greed concept" className="project-img" />
               <div className="wip-watermark" aria-hidden="true">CONCEPT</div>
@@ -57,14 +65,6 @@ function Project7_TowerOfGreedPage() {
             <div className="meta-chips">
               <span className="chip">Phase: {PHASE}</span>
               <span className="chip">Last updated: {LAST_UPDATED}</span>
-            </div>
-
-            {/* Tech tags */}
-            <div className="tech-tags">
-              <span className="tag">Game Design</span>
-              <span className="tag">Systems Design</span>
-              <span className="tag">Roguelike</span>
-              <span className="tag">Dice Systems</span>
             </div>
 
             {/* Progress */}

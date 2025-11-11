@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './WritingPage.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
 
 import cover from '../assets/HumanityArticleTitle.webp';
 import pdfFile from '../assets/Humanity in Media.pdf';
@@ -16,17 +17,20 @@ function Writing3Page() {
           <Header />
 
           <h1>Humanity in Media: AI, Transhumanism, Control, and How We Prepare</h1>
+
+          <ProjectMeta
+            role="Writer, Media Analyst"
+            skills={['Media Analysis', 'Critical Thinking', 'Policy Synthesis']}
+            concepts={['Transhumanism', 'AI Ethics', 'Governance']}
+            tools={['Research Methods', 'Content Analysis']}
+          />
+
           <img src={cover} alt="Humanity in Media cover" className="Humanity in Media.pdf" />
 
           <p>
             What stories teach us about control, autonomy, and identity — and how to turn those patterns into
             real governance rules and product guardrails.
           </p>
-
-          <div className="tech-tags">
-            <span className="tag">Transhumanism</span><span className="tag">Ethics</span>
-            <span className="tag">Policy</span><span className="tag">Media</span>
-          </div>
         </div>
 
         <div className="skills-contributions-wrapper">

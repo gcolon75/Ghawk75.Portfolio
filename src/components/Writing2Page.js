@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './WritingPage.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
 
 import cover from '../assets/openAILogo.jpg';
 import pdfFile from '../assets/ChatGPT Prompt CaseStudy.docx.pdf';
@@ -16,17 +17,20 @@ function Writing2Page() {
           <Header />
 
           <h1>Prompt Case Study: Prompting for Finance Tasks</h1>
+
+          <ProjectMeta
+            role="AI Researcher, UX Analyst"
+            skills={['Prompt Engineering', 'Experimental Design', 'Data Analysis']}
+            concepts={['AI UX', 'Auditability', 'Output Standardization']}
+            tools={['ChatGPT', 'Excel']}
+          />
+
           <img src={cover} alt="Prompt case study cover" className="openAILogo.jpg" />
 
           <p>
             3 finance tasks × 5 prompt strategies × 5 trials — when prompting changes <em>presentation</em> vs.
             <em> correctness</em>, and how to standardize output for auditability.
           </p>
-
-          <div className="tech-tags">
-            <span className="tag">Prompting</span><span className="tag">Finance</span>
-            <span className="tag">Research</span><span className="tag">UX of AI</span>
-          </div>
         </div>
 
         <div className="skills-contributions-wrapper">

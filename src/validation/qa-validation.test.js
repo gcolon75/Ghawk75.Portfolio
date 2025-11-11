@@ -39,16 +39,16 @@ describe('QA Validation: Hero Features', () => {
     expect(subtitle).toBeInTheDocument();
   });
 
-  test('Hero has social media links', () => {
+  test('Hero has orbital planets', () => {
     renderWithRouter(<Hero />);
     
-    const linkedinLink = screen.getByLabelText(/LinkedIn Profile/i);
-    expect(linkedinLink).toBeInTheDocument();
-    expect(linkedinLink).toHaveAttribute('href');
+    // Check for orbital system
+    const orbitalSystem = screen.getByLabelText(/Focus areas/i);
+    expect(orbitalSystem).toBeInTheDocument();
     
-    const githubLink = screen.getByLabelText(/GitHub Profile/i);
-    expect(githubLink).toBeInTheDocument();
-    expect(githubLink).toHaveAttribute('href');
+    // Check for orbit toggle button
+    const orbitToggle = screen.getByRole('button', { name: /Pause orbits animation/i });
+    expect(orbitToggle).toBeInTheDocument();
   });
 });
 
@@ -175,14 +175,17 @@ describe('QA Validation: SEO and Structured Data', () => {
 });
 
 describe('QA Validation: Accessibility', () => {
-  test('Hero social links have proper ARIA labels', () => {
+  test('Hero orbital planets have proper ARIA labels', () => {
     renderWithRouter(<Hero />);
     
-    const linkedinLink = screen.getByLabelText(/LinkedIn Profile/i);
-    expect(linkedinLink).toHaveAttribute('aria-label');
+    // Check for orbital system accessibility
+    const orbitalSystem = screen.getByLabelText(/Focus areas/i);
+    expect(orbitalSystem).toBeInTheDocument();
     
-    const githubLink = screen.getByLabelText(/GitHub Profile/i);
-    expect(githubLink).toHaveAttribute('aria-label');
+    // Check for orbit toggle button with proper ARIA
+    const orbitToggle = screen.getByRole('button', { name: /Pause orbits animation/i });
+    expect(orbitToggle).toHaveAttribute('aria-label');
+    expect(orbitToggle).toHaveAttribute('aria-pressed');
   });
 
   test('ProjectCard uses semantic article element', () => {

@@ -95,7 +95,7 @@ a.hero-btn,
   border-radius: 10px;
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: var(--bg);
+  color: #000;
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 0 8px rgba(53, 240, 224, .2);
@@ -111,10 +111,10 @@ a.hero-btn:visited,
 .btn:visited,
 .btn-pill:link,
 .btn-pill:visited {
-  color: var(--bg);
+  color: #000;
 }
 
-/* Hover / keyboard focus: white background with black text */
+/* Hover / keyboard focus: darker teal background with black text */
 a.project-link:hover,
 a.project-link:focus-visible,
 a.hero-btn:hover,
@@ -123,18 +123,23 @@ a.hero-btn:focus-visible,
 .btn:focus-visible,
 .btn-pill:hover,
 .btn-pill:focus-visible {
-  background: var(--text);
-  border-color: var(--text);
-  color: var(--bg);
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #000;
   text-decoration: none;
-  outline: none;
-  box-shadow: 0 0 12px rgba(232, 243, 242, .3);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 12px rgba(53, 240, 224, .4);
 }
 
 /* Optional: disabled state helper */
 .btn[aria-disabled="true"],
 .btn-pill[aria-disabled="true"] {
-  opacity: .6;
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  color: #333;
+  opacity: .8;
+  cursor: not-allowed;
   pointer-events: none;
 }
 

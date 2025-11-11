@@ -2,12 +2,16 @@ import React, { useEffect } from 'react';
 import './Project6Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
+import projectData from '../data/projects.json';
 
 // 🔹 Replace with your assets
 import hero from '../assets/discord.png';
 
 function Project8_AmadeusAgentPage() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
+
+  const project = projectData.projects.find(p => p.id === 'amadeus');
 
   return (
     <div className="App">
@@ -16,20 +20,20 @@ function Project8_AmadeusAgentPage() {
           <Header />
 
           <h1>Amadeus — AI Agent for Discord</h1>
+
+          <ProjectMeta
+            role={project?.role}
+            skills={project?.tags?.disciplines}
+            concepts={project?.tags?.specialties}
+            tools={project?.tags?.tools}
+          />
+
           <img src={hero} alt="Amadeus Discord agent hero" className="project-img" />
 
           <p>
             An always-on Windows desktop agent that watches stocks, allows scheduled alerts, and video-game deals,
             computes indicators, and posts <strong>briefs + alerts</strong> to Discord.
           </p>
-
-          <div className="tech-tags">
-            <span className="tag">Python 3.11</span>
-            <span className="tag">Discord</span>
-            <span className="tag">Polygon.io</span>
-            <span className="tag">Automation</span>
-            <span className="tag">Data</span>
-          </div>
         </div>
 
         {/* 🔷 Features */}

@@ -15,9 +15,6 @@ const ProjectCard = ({ project, compact = false }) => {
 
   if (!project) return null;
 
-  const displayTags = compact ? project.techStack.slice(0, 3) : project.techStack.slice(0, 4);
-  const remainingTags = project.techStack.length - displayTags.length;
-
   return (
     <article 
       className={`project-card ${project.phase ? 'in-progress' : ''} ${project.featured ? 'featured' : ''} ${compact ? 'compact' : ''}`}
@@ -57,20 +54,6 @@ const ProjectCard = ({ project, compact = false }) => {
             >
               {project.impactHow}
             </div>
-          )}
-        </div>
-      )}
-      
-      {/* Tech Stack Tags */}
-      {!compact && (
-        <div className="tech-tags" role="list" aria-label="Technologies used">
-          {displayTags.map((tech, idx) => (
-            <span key={idx} className="tag" role="listitem">{tech}</span>
-          ))}
-          {remainingTags > 0 && (
-            <span className="tag more-tags" role="listitem">
-              +{remainingTags} more
-            </span>
           )}
         </div>
       )}

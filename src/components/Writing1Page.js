@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './WritingPage.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
 
 import cover from '../assets/GenZ.jpg';
 import pdfFile from '../assets/AI and Gen Z Final Draft.docx.pdf'; // imported from assets — safe with spaces
@@ -16,17 +17,20 @@ function Writing1Page() {
           <Header />
 
           <h1>AI and Gen Z: A Generation Growing Up With an Algorithm</h1>
+
+          <ProjectMeta
+            role="UX Researcher, Technical Writer"
+            skills={['UX Research Synthesis', 'Evidence-based Writing', 'Ethical Framing']}
+            concepts={['AI Ethics', 'Education Technology', 'Policy Analysis']}
+            tools={['Survey Design', 'Interview Methods']}
+          />
+
           <img src={cover} alt="AI and Gen Z cover" className="project-img" />
 
           <p>
             How a generation learns, copes, and connects alongside AI — and what policies and product choices
             protect growth instead of replacing it.
           </p>
-
-          <div className="tech-tags">
-            <span className="tag">AI</span><span className="tag">Gen Z</span>
-            <span className="tag">Education</span><span className="tag">Ethics</span>
-          </div>
         </div>
 
         {/* Skills & Contributions */}

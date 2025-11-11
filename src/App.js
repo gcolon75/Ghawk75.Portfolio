@@ -7,6 +7,8 @@ import ScrollToHashSection from './components/ScrollToHashSection';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
+import SkillMatrix from './components/SkillMatrix';
+import SkillTree from './components/SkillTree';
 import ContactFooter from './components/ContactFooter';
 
 import Project1Page from './components/Project1Page';
@@ -52,6 +54,12 @@ function App() {
                 <main id="main-content">
                   <section id="projects" className="centered-section">
                     <Projects />
+                  </section>
+                  <section id="skill-matrix" className="centered-section">
+                    <SkillMatrix />
+                  </section>
+                  <section id="skill-tree" className="centered-section">
+                    <SkillTree />
                   </section>
                   <section id="writing" className="centered-section">
                     <Writing />

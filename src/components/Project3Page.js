@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import './Project3Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
+import projectData from '../data/projects.json';
 
 import tritonGoTitle from '../assets/TritonGoTitle.JPG';
 
@@ -10,6 +12,8 @@ function Project3Page() {
         window.scrollTo(0, 0);
       }, []);
 
+  const project = projectData.projects.find(p => p.id === 'tritongoplus');
+
   return (
     <div className="App">
       <div className="content">
@@ -17,6 +21,13 @@ function Project3Page() {
           <Header />
 
           <h1>TritonGo: Social Campus App</h1>
+
+          <ProjectMeta
+            role={project?.role}
+            skills={project?.tags?.disciplines}
+            concepts={project?.tags?.specialties}
+            tools={project?.tags?.tools}
+          />
 
           <img src={tritonGoTitle} alt="TritonGo Title" className="project-img" />
 

@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 import SEO, { getPersonStructuredData } from './SEO';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import planetsData from '../data/hero.planets.json';
 
 function Hero() {
   const personData = getPersonStructuredData();
+  const [orbitsPaused, setOrbitsPaused] = useState(false);
+  const [activePlanet, setActivePlanet] = useState(null);
+
+  // Load orbit pause state from localStorage
+  useEffect(() => {
+    const savedState = localStorage.getItem('orbits-paused');
+    if (savedState === 'true') {
+      setOrbitsPaused(true);
+    }
+  }, []);
+
+  // Save orbit pause state to localStorage
+  const toggleOrbits = () => {
+    const newState = !orbitsPaused;
+    setOrbitsPaused(newState);
+    localStorage.setItem('orbits-paused', newState.toString());
+  };
+
+  // Handle planet keyboard interaction
+  const handlePlanetKeyPress = (e) => {
+    if (e.key === 'Escape') {
+      setActivePlanet(null);
+    }
+  };
 
   return (
     <>
@@ -16,33 +40,58 @@ function Hero() {
       />
       
       <section className="hero-container">
-        <div className="hero-content">
-          <h1>Gabriel Colón</h1>
-          <p className="hero-subtitle">
-            Systems Designer & Game Designer
-          </p>
-          
-          {/* Social Buttons */}
-          <div className="hero-social">
-            <a 
-              href="https://www.linkedin.com/in/gabriel-colon-3b4487253/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-button"
-              aria-label="LinkedIn Profile"
-            >
-              <FaLinkedin />
-            </a>
-            <a 
-              href="https://github.com/gcolon75" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-button"
-              aria-label="GitHub Profile"
-            >
-              <FaGithub />
-            </a>
+        <div className="hero-inner">
+          {/* Central Star - Name */}
+          <div className="hero-star">
+            <h1>Gabriel Colón</h1>
+            <p className="hero-tagline">
+              Systems Designer & Game Designer
+            </p>
           </div>
+
+          {/* Orbital System */}
+          <div className={`orbital-system ${orbitsPaused ? 'paused' : ''}`} aria-label="Focus areas">
+            {planetsData.planets.map((planet, index) => (
+              <div 
+                key={planet.id}
+                className="orbit-container"
+                style={{
+                  '--orbit-radius': `${planet.radius}px`,
+                  '--orbit-duration': `${planet.orbitDuration}s`,
+                  '--orbit-delay': `${index * -5}s`
+                }}
+              >
+                <div
+                  className="orbit-planet"
+                  style={{ '--planet-color': planet.color }}
+                  onKeyDown={(e) => handlePlanetKeyPress(e)}
+                  onFocus={() => setActivePlanet(planet.id)}
+                  onBlur={() => setActivePlanet(null)}
+                  onMouseEnter={() => setActivePlanet(planet.id)}
+                  onMouseLeave={() => setActivePlanet(null)}
+                  aria-label={planet.ariaLabel}
+                  tabIndex="0"
+                >
+                  <span className="planet-label">{planet.label}</span>
+                  {activePlanet === planet.id && (
+                    <span className="planet-tooltip" role="tooltip">
+                      {planet.label}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Orbit Control Toggle */}
+          <button
+            className="orbit-toggle"
+            onClick={toggleOrbits}
+            aria-label={orbitsPaused ? 'Resume orbits animation' : 'Pause orbits animation'}
+            aria-pressed={orbitsPaused}
+          >
+            {orbitsPaused ? '▶ Resume' : '⏸ Pause'} Orbits
+          </button>
         </div>
       </section>
     </>

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import './Project4Page.css';
 import Header from './Header';
 import ContactFooter from './ContactFooter';
+import ProjectMeta from './ProjectMeta';
+import projectData from '../data/projects.json';
 
 import volleyballImage from '../assets/VolleyballMobileTitle.JPG';
 import volleyballPDF from '../assets/Volleyball Mobile.pdf';
@@ -11,6 +13,8 @@ function Project4Page() {
         window.scrollTo(0, 0);
       }, []);
 
+  const project = projectData.projects.find(p => p.id === 'volleyball');
+
   return (
     <div className="App">
       <div className="content">
@@ -18,6 +22,13 @@ function Project4Page() {
           <Header />
 
           <h1>Volleyball Mobile: Community Court App</h1>
+
+          <ProjectMeta
+            role={project?.role}
+            skills={project?.tags?.disciplines}
+            concepts={project?.tags?.specialties}
+            tools={project?.tags?.tools}
+          />
 
           <div className="top-images-row">
             <img src={volleyballImage} alt="Volleyball Mobile Title Screen" />

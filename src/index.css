@@ -4,6 +4,8 @@
   --text: #e8f3f2;
   --muted: #a0bdba;
   --accent: #35f0e0;
+  --accent-dark: #2ab8aa;
+  --accent-light: #6ff4e6;
 }
 
 body {

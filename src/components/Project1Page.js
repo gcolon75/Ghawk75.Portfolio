@@ -4,6 +4,7 @@ import Header from './Header';
 import ContactFooter from './ContactFooter';
 import SEO, { getProjectStructuredData } from './SEO';
 import projectData from '../data/projects.json';
+import ProjectMeta from './ProjectMeta';
 
 import axleImage from '../assets/axleImage.JPG';
 import axleHomepageThumb from '../assets/axle-homepage.JPG';
@@ -45,6 +46,13 @@ function Project1Page() {
           <Header />
 
           <h1>axle: Mobile Mechanic App</h1>
+
+          <ProjectMeta
+            role={project?.role}
+            skills={project?.tags?.disciplines}
+            concepts={project?.tags?.specialties}
+            tools={project?.tags?.tools}
+          />
 
           <img src={axleImage} alt="axle demo" className="project-img" />
 
