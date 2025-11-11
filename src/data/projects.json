@@ -20,6 +20,10 @@
         "Developed turn-based combat loop balancing setup vs. burst timing",
         "Authored comprehensive concept documentation"
       ],
+      "impact": {
+        "statement": "Enhanced player agency through systematic design patterns that reduce RNG frustration while maintaining strategic depth.",
+        "how": "Applied resource-gating mechanics and turn-based sequencing inspired by deck-building roguelikes, ensuring player choices create meaningful decision trees rather than random outcomes."
+      },
       "techStack": ["Game Design", "Systems Design", "Roguelike", "Dice Systems"],
       "tags": {
         "disciplines": ["Game Design", "Systems Design"],
@@ -70,6 +74,10 @@
         "Created innovative content matching features",
         "Coordinating private testing with early users"
       ],
+      "impact": {
+        "statement": "Improved discovery UX through structured filtering patterns and profile architecture that highlights creative work over traditional résumé formats.",
+        "how": "Implemented component-based profile system with reusable search filters, reducing cognitive load through progressive disclosure and prioritizing visual portfolio presentation."
+      },
       "techStack": ["Web Development", "Platform Design", "User Experience"],
       "tags": {
         "disciplines": ["Web Development", "UX Design"],
@@ -194,6 +202,10 @@
         "Developed user flows and interactive prototypes",
         "Maintained consistent design system and visual identity across pages"
       ],
+      "impact": {
+        "statement": "Increased UX clarity through systematic user research and design system consistency, reducing friction in mechanic-customer connection flows.",
+        "how": "Conducted 15+ user interviews to identify pain points, then created component-based design system with reusable patterns for booking, tracking, and payment flows."
+      },
       "techStack": ["UX Design", "Figma", "User Research", "Project Management", "Market Research", "Google Slides"],
       "tags": {
         "disciplines": ["UX Design", "User Research", "Project Management"],

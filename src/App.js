@@ -6,6 +6,7 @@ import ScrollToHashSection from './components/ScrollToHashSection';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
+import QuickStats from './components/QuickStats';
 import Projects from './components/Projects';
 import About from './components/About';
 import SkillTree from './components/SkillTree';
@@ -66,6 +67,9 @@ function App() {
                 <Header />
                 <Hero />
                 <main id="main-content">
+                  <section className="centered-section">
+                    <QuickStats />
+                  </section>
                   <section id="projects" className="centered-section">
                     <Projects />
                   </section>

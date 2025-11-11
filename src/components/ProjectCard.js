@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectCard.css';
 
@@ -11,6 +11,8 @@ import './ProjectCard.css';
  * - compact: Boolean for compact display mode
  */
 const ProjectCard = ({ project, compact = false }) => {
+  const [showImpactHow, setShowImpactHow] = useState(false);
+
   if (!project) return null;
 
   const displayTags = compact ? project.techStack.slice(0, 3) : project.techStack.slice(0, 4);
@@ -32,6 +34,32 @@ const ProjectCard = ({ project, compact = false }) => {
       )}
       
       <p className="project-summary">{project.summary}</p>
+      
+      {/* Impact Evidence (for featured projects) */}
+      {project.impact && !compact && (
+        <div className="project-impact">
+          <div className="impact-statement">
+            <strong>Impact:</strong> {project.impact.statement}
+          </div>
+          <button
+            className="impact-how-toggle"
+            onClick={() => setShowImpactHow(!showImpactHow)}
+            aria-expanded={showImpactHow}
+            aria-controls={`impact-how-${project.id}`}
+          >
+            {showImpactHow ? '▼' : '▶'} How?
+          </button>
+          {showImpactHow && (
+            <div 
+              id={`impact-how-${project.id}`}
+              className="impact-how"
+              role="region"
+            >
+              {project.impact.how}
+            </div>
+          )}
+        </div>
+      )}
       
       {/* Tech Stack Tags */}
       {!compact && (
