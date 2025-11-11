@@ -44,18 +44,6 @@ function Header() {
     }
   };
 
-  const handleAboutClick = () => {
-    if (location.pathname !== '/about') {
-      navigate('/about');
-    }
-  };
-
-  const handleHireMeClick = () => {
-    if (location.pathname !== '/hire-me') {
-      navigate('/hire-me');
-    }
-  };
-
   return (
     <header className="header">
       <div className="logo">
@@ -72,8 +60,6 @@ function Header() {
   <button onClick={handleHomeClick} className="header-button">Home</button>
   <button onClick={handleProjectsClick} className="header-button">Projects</button>
   <button onClick={handleWritingClick} className="header-button">Writing</button>
-  <button onClick={handleAboutClick} className="header-button">About</button>
-  <button onClick={handleHireMeClick} className="header-button">Hire Me</button>
   <button onClick={handleContactClick} className="header-button">Contact</button>
 </nav>
     </header>
