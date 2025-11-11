@@ -36,10 +36,10 @@ const ProjectCard = ({ project, compact = false }) => {
       <p className="project-summary">{project.summary}</p>
       
       {/* Impact Evidence (for featured projects) */}
-      {project.impact && !compact && (
+      {project.impactSummary && !compact && (
         <div className="project-impact">
           <div className="impact-statement">
-            <strong>Impact:</strong> {project.impact.statement}
+            <strong>Impact:</strong> {project.impactSummary}
           </div>
           <button
             className="impact-how-toggle"
@@ -55,7 +55,7 @@ const ProjectCard = ({ project, compact = false }) => {
               className="impact-how"
               role="region"
             >
-              {project.impact.how}
+              {project.impactHow}
             </div>
           )}
         </div>
