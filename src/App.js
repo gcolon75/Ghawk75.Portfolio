@@ -9,6 +9,7 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import About from './components/About';
 import SkillTree from './components/SkillTree';
+import ValueThemes from './components/ValueThemes';
 import ContactFooter from './components/ContactFooter';
 
 import Project1Page from './components/Project1Page';
@@ -77,6 +78,9 @@ function App() {
                   </section>
                   <section id="skilltree" className="centered-section">
                     <SkillTree />
+                  </section>
+                  <section id="value-themes" className="centered-section">
+                    <ValueThemes />
                   </section>
                   <section id="contact" className="centered-section">
                     <ContactFooter />

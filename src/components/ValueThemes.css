@@ -1,0 +1,166 @@
+.value-themes-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  color: #fff;
+}
+
+.value-themes-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4CAF50;
+  text-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+}
+
+.themes-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.theme-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.theme-card:hover,
+.theme-card:focus-within {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.theme-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.theme-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.theme-description {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.theme-projects {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-projects strong {
+  display: block;
+  color: #4CAF50;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.theme-project-link {
+  color: var(--link-color, #4CAF50);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.theme-project-link::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--link-color, #4CAF50);
+  transition: transform 0.2s ease;
+}
+
+.theme-project-link:hover,
+.theme-project-link:focus {
+  text-decoration: underline;
+  padding-left: 1.5rem;
+}
+
+.theme-project-link:hover::before,
+.theme-project-link:focus::before {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .value-themes-section {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .value-themes-section h2 {
+    font-size: 2rem;
+  }
+
+  .themes-intro {
+    font-size: 1rem;
+  }
+
+  .themes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-card {
+    padding: 1.5rem;
+  }
+
+  .theme-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .theme-card,
+  .theme-project-link::before {
+    transition: none;
+  }
+
+  .theme-card:hover {
+    transform: none;
+  }
+
+  .theme-project-link:hover {
+    padding-left: 1.25rem;
+  }
+
+  .theme-project-link:hover::before {
+    transform: none;
+  }
+}
