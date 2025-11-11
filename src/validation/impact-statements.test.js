@@ -5,13 +5,18 @@
 
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import QuickStats from '../components/QuickStats';
 import ProjectCard from '../components/ProjectCard';
 import projectsData from '../data/projects.json';
 
-// Helper to render components with Router
+// Helper to render components with Router and HelmetProvider
 const renderWithRouter = (component) => {
-  return render(<BrowserRouter>{component}</BrowserRouter>);
+  return render(
+    <HelmetProvider>
+      <BrowserRouter>{component}</BrowserRouter>
+    </HelmetProvider>
+  );
 };
 
 describe('QuickStats Component - Enhanced Functionality', () => {
