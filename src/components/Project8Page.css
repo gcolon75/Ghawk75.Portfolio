@@ -1,84 +1,217 @@
 /* ===========================
    Project 8 — project valine
-   Clean, non-overlapping CSS
+   Modern minimal styling
    =========================== */
 
-/* Status */
-.status-banner{
-  margin:1rem 0 1.25rem; padding:.85rem 1rem;
-  border:1px solid #3b8b5c; background:rgba(29,185,84,.12);
-  color:#d9ffe8; border-radius:10px; display:flex; align-items:center; gap:.6rem; font-size:.95rem;
+/* Project page container */
+.project-page {
+  padding: var(--space-5) var(--container-padding);
 }
-.status-dot{ width:10px; height:10px; border-radius:50%; background:#1db954; box-shadow:0 0 10px #1db954; }
+
+.project-page h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--text);
+  margin: var(--space-3) 0;
+  text-shadow: none;
+}
+
+/* Status banner above title */
+.status-banner {
+  margin: 0 0 var(--space-3);
+  padding: 0.85rem 1rem;
+  border: 1px solid #3b8b5c;
+  background: rgba(29, 185, 84, 0.12);
+  color: #d9ffe8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1db954;
+  box-shadow: 0 0 6px #1db954;
+}
 
 /* Hero + tagline */
-.hero-wrap h1{ margin:.25rem 0 .5rem; }
-.tagline{ margin:0 0 1rem; opacity:.9; }
-.hero-media{ position:relative; }
-.project-page .project-img{ width:100%; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
-.wip-watermark{
-  position:absolute; inset:0; display:grid; place-items:center;
-  color:rgba(255,255,255,.08); text-shadow:0 0 30px rgba(0,0,0,.6);
-  font-weight:800; letter-spacing:.2em; user-select:none; pointer-events:none;
+.hero-wrap {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.tagline {
+  margin: 0 0 var(--space-4);
+  opacity: 0.9;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.hero-media {
+  position: relative;
+  margin: var(--space-5) 0;
+}
+
+.project-page .project-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.wip-watermark {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.08);
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  user-select: none;
+  pointer-events: none;
   font-size: clamp(1.5rem, 6vw, 4rem);
 }
 
-/* Pill rows — unified and centered */
-.project-page .meta-chips,
-.project-page .tech-tags{
-  display:flex; flex-wrap:wrap; gap:.6rem;
-  justify-content:center; align-items:center; margin:.9rem 0;
+/* Progress panel - small panel beneath meta */
+.progress-panel {
+  background: rgba(7, 60, 60, 0.3);
+  border: 1px solid #073c3c;
+  border-radius: 8px;
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
 }
-.project-page .meta-chips .chip,
-.project-page .tech-tags .tag{
-  display:inline-flex; align-items:center;
-  padding:.5rem .9rem; border-radius:999px;
-  border:1px solid #66fcf1;
-  background:rgba(102,252,241,.12);
-  color:#e9f1ff; font-size:.9rem; font-weight:500;
-  box-shadow:0 0 .6rem rgba(102,252,241,.25);
-  transition:transform .2s ease;
-}
-.project-page .meta-chips .chip:hover,
-.project-page .tech-tags .tag:hover{ transform:scale(1.05); }
 
-/* Progress */
-.progress-block{ margin:1rem 0; }
-.progress-track{ width:100%; height:10px; border-radius:999px; background:rgba(255,255,255,.08); overflow:hidden; }
-.progress-fill{ height:100%; background:linear-gradient(90deg,#66fcf1,#1db954); box-shadow:0 0 12px rgba(102,252,241,.6); transition:width .6s ease; }
-.progress-label{ margin-top:.35rem; font-size:.9rem; opacity:.8; }
-.inline-links{ margin-bottom:1rem; }
-.back-link{ color:#66fcf1; text-decoration:underline dotted; }
-.back-link:hover{ text-decoration:underline; }
-
-/* Section cards */
-.pv-section{
-  position: relative; z-index: 2;           /* above decorative bg */
-  max-width:1200px; margin:1.5rem auto; padding:2rem;
-  background:rgba(0,0,0,.85);
-  border-radius:20px; border:2px solid #66fcf1;
-  box-shadow:0 0 30px rgba(102,252,241,.5);
-  color:#e9f1ff;                             /* readable text */
+.progress-panel h3 {
+  font-size: 1.1rem;
+  color: var(--btn-bg);
+  margin: 0 0 var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-.pv-section h2{ color:#66fcf1; margin:.25rem 0 .5rem; }
+
+.progress-info {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.progress-item {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--btn-bg), #1db954);
+  box-shadow: 0 0 8px rgba(5, 229, 218, 0.4);
+  transition: width 0.6s ease;
+}
+
+.progress-label {
+  margin-top: var(--space-2);
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: var(--muted);
+}
+
+.inline-links {
+  margin: var(--space-4) 0;
+}
+
+.back-link {
+  color: var(--btn-bg);
+  text-decoration: underline dotted;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Section cards - reduced glow */
+.pv-section {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-max-width);
+  margin: var(--space-5) auto;
+  padding: var(--space-5);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  border: 1px solid #073c3c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: var(--text);
+}
+
+.pv-section h2 {
+  color: var(--text);
+  margin: 0.25rem 0 var(--space-3);
+  text-shadow: 0 0 10px rgba(5, 229, 218, 0.2);
+}
+
 .pv-section p,
-.pv-section li{ color:#e0e8f5; line-height:1.6; }
-.pv-section ul{ margin:.5rem 0 0 1.25rem; }
-.pv-section li{ margin:.35rem 0; }
+.pv-section li {
+  color: #e0e8f5;
+  line-height: 1.6;
+}
+
+.pv-section ul {
+  margin: 0.5rem 0 0 1.25rem;
+}
+
+.pv-section li {
+  margin: 0.35rem 0;
+}
 
 /* Two-column yardstick list */
-.pv-section .grid-2{
-  display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap:.5rem;
+.pv-section .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.5rem;
 }
 
 /* Checklist */
-.checklist ul li{ list-style:none; }
-.checklist ul li::before{ content:"□ "; margin-right:.25rem; color:#9acbff; }
-.one-liner{ margin-top:.75rem; opacity:.9; }
+.checklist ul li {
+  list-style: none;
+}
+
+.checklist ul li::before {
+  content: "□ ";
+  margin-right: 0.25rem;
+  color: #9acbff;
+}
+
+.one-liner {
+  margin-top: 0.75rem;
+  opacity: 0.9;
+}
 
 /* Responsive */
-@media (max-width:720px){
-  .status-banner{ font-size:.9rem; }
-  .wip-watermark{ font-size:clamp(1.3rem,10vw,3rem); }
+@media (max-width: 768px) {
+  .status-banner {
+    font-size: 0.9rem;
+  }
+  
+  .wip-watermark {
+    font-size: clamp(1.3rem, 10vw, 3rem);
+  }
+  
+  .progress-info {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .pv-section {
+    padding: var(--space-4);
+  }
 }
