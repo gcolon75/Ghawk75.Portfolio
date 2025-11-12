@@ -1,34 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Hero.css';
 import SEO, { getPersonStructuredData } from './SEO';
-import planetsData from '../data/hero.planets.json';
 
 function Hero() {
   const personData = getPersonStructuredData();
-  const [orbitsPaused, setOrbitsPaused] = useState(false);
-  const [activePlanet, setActivePlanet] = useState(null);
-
-  // Load orbit pause state from localStorage
-  useEffect(() => {
-    const savedState = localStorage.getItem('orbits-paused');
-    if (savedState === 'true') {
-      setOrbitsPaused(true);
-    }
-  }, []);
-
-  // Save orbit pause state to localStorage
-  const toggleOrbits = () => {
-    const newState = !orbitsPaused;
-    setOrbitsPaused(newState);
-    localStorage.setItem('orbits-paused', newState.toString());
-  };
-
-  // Handle planet keyboard interaction
-  const handlePlanetKeyPress = (e) => {
-    if (e.key === 'Escape') {
-      setActivePlanet(null);
-    }
-  };
 
   return (
     <>
@@ -40,58 +15,24 @@ function Hero() {
       />
       
       <section className="hero-container">
-        <div className="hero-inner">
-          {/* Central Star - Name */}
-          <div className="hero-star">
-            <h1>Gabriel Colón</h1>
-            <p className="hero-tagline">
-              Systems Designer & Game Designer
-            </p>
+        <div className="hero-content container">
+          <h1 className="hero-name">Gabriel Colón</h1>
+          <p className="hero-tagline">
+            Building user‑centered products & AI‑assisted workflows.
+          </p>
+          
+          <div className="hero-cta-row">
+            <a href="#projects" className="hero-btn">View Projects</a>
+            <a href="#writing" className="hero-btn">Read Writing</a>
+            <a 
+              href="/Ghawk75.Portfolio/resume.pdf" 
+              className="hero-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
           </div>
-
-          {/* Orbital System */}
-          <div className={`orbital-system ${orbitsPaused ? 'paused' : ''}`} aria-label="Focus areas">
-            {planetsData.planets.map((planet, index) => (
-              <div 
-                key={planet.id}
-                className="orbit-container"
-                style={{
-                  '--orbit-radius': `${planet.radius}px`,
-                  '--orbit-duration': `${planet.orbitDuration}s`,
-                  '--orbit-delay': `${index * -5}s`
-                }}
-              >
-                <div
-                  className="orbit-planet"
-                  style={{ '--planet-color': planet.color }}
-                  onKeyDown={(e) => handlePlanetKeyPress(e)}
-                  onFocus={() => setActivePlanet(planet.id)}
-                  onBlur={() => setActivePlanet(null)}
-                  onMouseEnter={() => setActivePlanet(planet.id)}
-                  onMouseLeave={() => setActivePlanet(null)}
-                  aria-label={planet.ariaLabel}
-                  tabIndex="0"
-                >
-                  <span className="planet-label">{planet.label}</span>
-                  {activePlanet === planet.id && (
-                    <span className="planet-tooltip" role="tooltip">
-                      {planet.label}
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Orbit Control Toggle */}
-          <button
-            className="orbit-toggle"
-            onClick={toggleOrbits}
-            aria-label={orbitsPaused ? 'Resume orbits animation' : 'Pause orbits animation'}
-            aria-pressed={orbitsPaused}
-          >
-            {orbitsPaused ? '▶ Resume' : '⏸ Pause'} Orbits
-          </button>
         </div>
       </section>
     </>

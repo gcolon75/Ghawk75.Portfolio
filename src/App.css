@@ -77,6 +77,7 @@ a:visited:not(.project-link):not(.hero-btn):not(.btn-pill):not(.btn) {
 
 /* =========================
    Shared Button Styles
+   Teal background with black text (accessible)
    Applies to:
      - .project-link (project cards)
      - .hero-btn (hero CTA)
@@ -91,15 +92,16 @@ a.hero-btn,
 .btn,
 .btn-pill {
   display: inline-block;
-  padding: .5rem .9rem;
+  padding: 0.5rem 0.9rem;
   border-radius: 10px;
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  color: #000;
+  border: 1px solid var(--btn-bg);
+  background: var(--btn-bg);
+  color: var(--btn-text);
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 0 8px rgba(53, 240, 224, .2);
-  transition: background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  box-shadow: 0 0 8px rgba(5, 229, 218, 0.2);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 /* Keep readable text even after visit */
@@ -111,7 +113,7 @@ a.hero-btn:visited,
 .btn:visited,
 .btn-pill:link,
 .btn-pill:visited {
-  color: #000;
+  color: var(--btn-text);
 }
 
 /* Hover / keyboard focus: darker teal background with black text */
@@ -123,24 +125,38 @@ a.hero-btn:focus-visible,
 .btn:focus-visible,
 .btn-pill:hover,
 .btn-pill:focus-visible {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
-  color: #000;
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-bg-hover);
+  color: var(--btn-text);
   text-decoration: none;
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
-  box-shadow: 0 0 12px rgba(53, 240, 224, .4);
+  box-shadow: 0 0 12px rgba(5, 229, 218, 0.4);
 }
 
-/* Optional: disabled state helper */
+/* Active state: darker teal with subtle inset shadow */
+a.project-link:active,
+a.hero-btn:active,
+.btn:active,
+.btn-pill:active {
+  background: var(--btn-bg-active);
+  border-color: var(--btn-bg-active);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled state: no opacity hacks */
 .btn[aria-disabled="true"],
-.btn-pill[aria-disabled="true"] {
-  background: var(--accent-light);
-  border-color: var(--accent-light);
-  color: #333;
-  opacity: .8;
+.btn-pill[aria-disabled="true"],
+.btn:disabled,
+.btn-pill:disabled,
+button.btn:disabled,
+button.btn-pill:disabled {
+  background: var(--btn-disabled-bg);
+  border-color: var(--btn-disabled-bg);
+  color: var(--btn-disabled-text);
   cursor: not-allowed;
   pointer-events: none;
+  opacity: 1;
 }
 
 /* =========================
