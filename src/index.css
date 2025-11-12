@@ -6,6 +6,27 @@
   --accent: #35f0e0;
   --accent-dark: #2ab8aa;
   --accent-light: #6ff4e6;
+  
+  /* Button tokens - teal background with black text */
+  --btn-bg: #05e5da;
+  --btn-bg-hover: #04c8be;
+  --btn-bg-active: #03b3aa;
+  --btn-text: #041a1b;
+  --btn-disabled-bg: #aee9e5;
+  --btn-disabled-text: #355b5a;
+  --focus-ring: #92fff7;
+  
+  /* Spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  
+  /* Container */
+  --container-max-width: 1180px;
+  --container-padding: clamp(1rem, 4vw, 2.5rem);
 }
 
 body {
@@ -22,4 +43,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Root container utility */
+.container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
 }

@@ -19,10 +19,10 @@ function Project8_ProjectValinePage() {
   return (
     <div className="App">
       <div className="content">
-        <div className="project-page">
+        <div className="project-page container">
           <Header />
 
-          {/* Status (kept, but minimal copy) */}
+          {/* Status pill above title */}
           <div className="status-banner" role="status" aria-live="polite">
             <span className="status-dot" aria-hidden="true" />
             <strong>In Development:</strong> project valine is currently {PHASE}. Public summary only.
@@ -33,6 +33,7 @@ function Project8_ProjectValinePage() {
             <h1>project valine</h1>
             <p className="tagline"><em>A modern platform connecting creative professionals.</em></p>
 
+            {/* Meta in 2-column grid near the top */}
             <ProjectMeta
               role={project?.role}
               skills={project?.tags?.disciplines}
@@ -40,19 +41,13 @@ function Project8_ProjectValinePage() {
               tools={project?.tags?.technologies}
             />
 
-            <div className="hero-media">
-              <img src={hero} alt="project valine concept" className="project-img" />
-              <div className="wip-watermark" aria-hidden="true">CONCEPT</div>
-            </div>
-
-            {/* Meta chips (private-friendly: no recruiting chip) */}
-            <div className="meta-chips">
-              <span className="chip">Phase: {PHASE}</span>
-              <span className="chip">Last updated: {LAST_UPDATED}</span>
-            </div>
-
-            {/* Progress (high-level only) */}
-            <div className="progress-block" aria-label="Development progress">
+            {/* Progress panel beneath meta */}
+            <div className="progress-panel" aria-label="Development progress">
+              <h3>Progress</h3>
+              <div className="progress-info">
+                <span className="progress-item">Phase: {PHASE}</span>
+                <span className="progress-item">Last updated: {LAST_UPDATED}</span>
+              </div>
               <div className="progress-track">
                 <div
                   className="progress-fill"
@@ -66,8 +61,13 @@ function Project8_ProjectValinePage() {
               <div className="progress-label">{Math.round(PROGRESS * 100)}% planning & prototyping</div>
             </div>
 
+            <div className="hero-media">
+              <img src={hero} alt="project valine concept" className="project-img" />
+              <div className="wip-watermark" aria-hidden="true">CONCEPT</div>
+            </div>
+
             <div className="inline-links">
-              <Link to="/projects" className="back-link">← Back to Projects</Link>
+              <Link to="/#projects" className="back-link">← Back to Projects</Link>
             </div>
           </div>
         </div>

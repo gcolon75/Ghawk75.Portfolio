@@ -55,14 +55,14 @@ function App() {
                   <section id="projects" className="centered-section">
                     <Projects />
                   </section>
+                  <section id="writing" className="centered-section">
+                    <Writing />
+                  </section>
                   <section id="skill-matrix" className="centered-section">
                     <SkillMatrix />
                   </section>
                   <section id="skill-tree" className="centered-section">
                     <SkillTree />
-                  </section>
-                  <section id="writing" className="centered-section">
-                    <Writing />
                   </section>
                   <section id="contact" className="centered-section">
                     <ContactFooter />
